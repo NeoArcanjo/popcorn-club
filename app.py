@@ -1,47 +1,71 @@
 from flask import Flask, render_template, request, url_for
 import requests
 import random
+from functions import get_data, base_url, img_url
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    # TODO Guardar api key em arquivo de ambiente
-    api = "api_key=f4066aad057be2997b4bc0043b3a4869"
-    base_url = "https://api.themoviedb.org/3"
-    final_url = base_url + "/discover/movie?sort_by=popularity.desc&" + api
-    img_url = "https://image.tmdb.org/t/p/original"
-
-    genres = requests.get(f'{base_url}/genre/movie/list?{api}&language=pt-BR')
-    genres = genres.json()["genres"]
-
-    for genre in genres:
-        results = requests.get(f'{base_url}/discover/movie?{api}&with_genres={genre["id"]}&language=pt-BR')
-        results =  results.json()["results"]
-        genre["results"] = results
-
-    print(genres[0])
-
-    fetchPopular = requests.get(
-        f'{base_url}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&{api}&language=pt-BR')
-    fetchTrending = requests.get(
-        f'{base_url}/trending/all/week?{api}&language=pt-BR')
-    fetchNetflixOriginals = requests.get(
-        f'{base_url}/discover/tv?{api}&with_networks=213&language=pt-BR')
-    
-    popular = fetchPopular.json()
+def index():   
+    popular = get_data('discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
+    # nacionais = get_data('discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&')
     popular = popular["results"]
     secure_random = random.SystemRandom()
     set_movie = secure_random.choice(popular)
 
-    trend = fetchTrending.json()
+    trend = get_data('trending/all/week?')
     trend = trend["results"]
 
-    netflix = fetchNetflixOriginals.json()
+    netflix = get_data('discover/tv?with_networks=213&')
     netflix = netflix["results"]
 
-    return render_template('index.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
+    return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)
 
+@app.route('/filmes')
+def filmes():
+    genres = get_data('genre/movie/list?')
+    genres = genres["genres"]
+
+    for genre in genres:
+        results = get_data(f'discover/movie?&with_genres={genre["id"]}&')
+        genre["results"] = results["results"]
+
+    popular = get_data('discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
+    popular = popular["results"]
+    secure_random = random.SystemRandom()
+    set_movie = secure_random.choice(popular)
+
+    trend = get_data('trending/movie/week?')
+    trend = trend["results"]
+
+    netflix = get_data('discover/movie?with_networks=213&')
+    netflix = netflix["results"]
+
+    return render_template('filmes.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
+
+@app.route('/series')
+def series():
+    # TODO Guardar api key em arquivo de ambiente
+    genres = get_data('genre/tv/list?')
+    genres = genres["genres"]
+
+    for genre in genres:
+        results = get_data(f'discover/tv?&with_genres={genre["id"]}&')
+        genre["results"] = results["results"]
+
+    popular = get_data('discover/tv?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
+    popular = popular["results"]
+    secure_random = random.SystemRandom()
+    set_show = secure_random.choice(popular)
+
+    # trend = get_data('trending/all/week?')
+    trend = get_data('trending/tv/week?')
+    trend = trend["results"]
+
+    netflix = get_data('discover/tv?with_networks=213&')
+    netflix = netflix["results"]
+
+    return render_template('series.html', set_show=set_show, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
 @app.errorhandler(404)
 def page_not_found(e):

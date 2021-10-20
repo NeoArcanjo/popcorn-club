@@ -17,16 +17,17 @@
 </head>
 
 <body>
+  {% block navbar %}
   <nav>
     <div class="leftRow">
-      <img id="logonetflix" src="{{url_for('static', filename = 'img/logo.svg')}}" alt="Logo">
+      <a href="/"><img id="logonetflix" src="{{url_for('static', filename = 'img/logo.svg')}}" alt="Logo"></a>
       <div class="openMenu"><i class="fa fa-bars"></i></div>
       <ul class="mainMenu">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Séries</a></li>
-        <li><a href="#">Filmes</a></li>
-        <li><a href="#">Bombando</a></li>
-        <li><a href="#">Minha lista</a></li>
+        <li><a href="#banner">Início</a></li>
+        <li><a href="series">Séries</a></li>
+        <li><a href="filmes">Filmes</a></li>
+        <li><a href="#trends">Bombando</a></li>
+        <li><a href="#mylist">Minha lista</a></li>
         <div class="closeMenu"><i class="fa fa-times"></i></div>
         <span class="icons">
           <i class="fab fa-facebook"></i>
@@ -43,6 +44,7 @@
         alt="User">
     </div>
   </nav>
+  {% endblock %}
 
   {% block header %}
   {% endblock %}

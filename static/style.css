@@ -221,3 +221,18 @@ nav .mainMenu .closeMenu , .icons i {
   opacity: 1;
 
 }
+
+.title{
+  margin: 0;
+  position:relative;
+  float: left;
+  z-index: 1;
+}
+
+a.title{
+  text-decoration: none;
+}
+
+.title:hover{
+  display: block;
+}

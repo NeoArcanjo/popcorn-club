@@ -7,12 +7,12 @@
 {% block header %}
 <header id="banner" style="background-image: url({{img_url + set_movie["backdrop_path"]}});">
     <div id="banner__contents">
-        <h1 id="banner__title">{{set_movie["name"]}}</h1>
+        <h1 id="banner__title">{{set_movie["title"]}}</h1>
         <div id="banner__buttons">
             <button id="banner__button">Play</button>
             <button id="banner__button">Minha Lista</button>
         </div>
-        <p id="banner__description">{{set_movie["overview"][0:150]}}</p>
+        <p id="banner__description">{{set_movie["overview"][0:200]}}</p>
     </div>
     <div id="banner__fadeBottom"></div>
 </header>

@@ -5,16 +5,10 @@
   {% block head %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
   <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
   <script defer src="{{url_for('static', filename = 'app.js')}}"></script>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Netflix</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Talk about moovies</title>
   <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -51,29 +45,10 @@
   </nav>
 
   {% block header %}
-  <header id="banner">
-    <div id="banner__contents">
-      <h1 id="banner__title"></h1>
-      <div id="banner__buttons">
-        <button id="banner__button">Play</button>
-        <button id="banner__button">Minha Lista</button>
-      </div>
-      <p id="banner__description"></p>
-    </div>
-    <div id="banner__fadeBottom"></div>
-  </header>
   {% endblock %}
 
-  <div class="py-4 bg-light">
-    <div class="container">
-      <div class="row">
-
-        {% block content %}
-        {% endblock %}
-
-      </div>
-    </div>
-  </div>
+  {% block content %}
+  {% endblock %}
 
   {% block script %}
   <!-- Optional JavaScript -->

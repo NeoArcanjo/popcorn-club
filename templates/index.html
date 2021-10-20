@@ -3,11 +3,71 @@
 {% block head %}
 {{ super() }}
 {% endblock %}
+
+{% block header %}
+<header id="banner" style="background-image: url({{img_url + set_movie["backdrop_path"]}});">
+    <div id="banner__contents">
+        <h1 id="banner__title">{{set_movie["name"]}}</h1>
+        <div id="banner__buttons">
+            <button id="banner__button">Play</button>
+            <button id="banner__button">Minha Lista</button>
+        </div>
+        <p id="banner__description">{{set_movie["overview"][0:150]}}</p>
+    </div>
+    <div id="banner__fadeBottom"></div>
+</header>
+{% endblock %}
+
 {% block content %}
+
 <div id="headrow">
     <div class="row">
         <h2 class="row__title"></h2>
         <div class="row__posters"></div>
     </div>
+
+    <div class="row popularrow">
+        <h2 class="row__title">Em alta</h2>
+        <div class="row__posters">
+            {% for movie in popular %}
+                <img src='{{ img_url + movie["poster_path"]}}' id='{{movie["id"]}}' class="row__posterLarge">
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row trendrow">
+        <h2 class="row__title">Mais vistos</h2>
+        <div class="row__posters">
+            {% for movie in trend %}
+            <img src='{{ img_url + movie["poster_path"]}}' id='{{movie["id"]}}' class="row__posterLarge">
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- TODO adicionar abas de filmes e series por serviço de assinatura -->
+    <div class="row netflixrow">
+        <h2 class="row__title">ORIGINAIS NETFLIX</h2>
+        <div class="row__posters">
+            {% for movie in netflix %}
+            <img src='{{ img_url + movie["poster_path"]}}' id='{{movie["id"]}}' class="row__posterLarge">
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Filmes -->
+    {% for genre in genres %}
+        <div class="row">
+            <h2 class="row__title">{{genre["name"]}}</h2>
+            <div class="row__posters">
+                {% for movie in genre["results"] %}
+                    <p> {{movie}}</p>
+                    <img src='{{ img_url + (movie["backdrop_path"] if movie["backdrop_path"] else "")}}' id='{{movie["id"]}}' class="row__posterLarge">
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <!-- TODO criar aba para series, a seguir -->
+    <!-- TODO criar pagina de detalhes para cada filme -->
 </div>
 {% endblock %}

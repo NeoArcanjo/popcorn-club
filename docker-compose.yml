@@ -8,3 +8,28 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 5002:5000
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "testedb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - db
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - db
+
+networks: 
+  mysql-compose-network:
+    driver: bridge
+volumes:
+  mysql_data:

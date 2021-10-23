@@ -1,12 +1,36 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 import requests
 import random
 from functions import get_data, base_url, img_url
 
 app = Flask(__name__)
 
+# TODO Gerar uma secret base64 e adicionar como variavel de ambiente
+app.secret_key = 'BAD_SECRET_KEY'
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+  # if form is submited
+    if request.method == "POST":
+        # record the user name
+        session["name"] = request.form.get("name")
+        # redirect to the main page
+        return redirect("/")
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    session["name"] = None
+    return redirect("/")
+
 @app.route('/')
-def index():   
+def index():
+    # check if the users exist or not
+    if not session.get("name"):
+        # if not there in the session then redirect to the login page
+        return redirect("/login")
+
     popular = get_data('discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
     # nacionais = get_data('discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&')
     popular = popular["results"]
@@ -23,6 +47,11 @@ def index():
 
 @app.route('/filmes')
 def filmes():
+    # check if the users exist or not
+    if not session.get("name"):
+        # if not there in the session then redirect to the login page
+        return redirect("/login")
+
     genres = get_data('genre/movie/list?')
     genres = genres["genres"]
 
@@ -45,6 +74,11 @@ def filmes():
 
 @app.route('/series')
 def series():
+      # check if the users exist or not
+    if not session.get("name"):
+        # if not there in the session then redirect to the login page
+        return redirect("/login")
+
     # TODO Guardar api key em arquivo de ambiente
     genres = get_data('genre/tv/list?')
     genres = genres["genres"]

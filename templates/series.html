@@ -30,8 +30,9 @@
         <h2 class="row__title">Em alta</h2>
         <div class="row__posters">
             {% for show in popular %}
-            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
-            <a href='/filmes/sobre/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}'
+                class="row__posterLarge">
+            <a href='/tv/about/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
                 show["name"]}}</a> {% endfor %}
         </div>
     </div>
@@ -40,32 +41,34 @@
         <h2 class="row__title">Mais vistos</h2>
         <div class="row__posters">
             {% for show in trend %}
-            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
-            <a href='/filmes/sobre/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}'
+                class="row__posterLarge">
+            <a href='/tv/about/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
                 show["name"]}}</a> {% endfor %}
         </div>
     </div>
 
-    <!-- TODO adicionar abas de filmes e series por serviço de assinatura -->
+    <!-- TODO adicionar abas de tv e series por serviço de assinatura -->
     <div class="row netflixrow">
         <h2 class="row__title">ORIGINAIS NETFLIX</h2>
         <div class="row__posters">
             {% for show in netflix %}
-            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
-            <a href='/filmes/sobre/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}'
+                class="row__posterLarge">
+            <a href='/tv/about/{{show["id"]}}' class="title">{{show["title"] if show["title"] else
                 show["name"]}}</a> {% endfor %}
         </div>
     </div>
 
-    <!-- Filmes -->
+    <!-- tv -->
     {% for genre in genres %}
     <div class="row">
         <h2 class="row__title">{{genre["name"]}}</h2>
         <div class="row__posters">
             {% for show in genre["results"] %}
-            <img src='{{ img_url(show["backdrop_path"], show["poster_path"])}}'
-                id='{{show["id"]}}' class="row__posterLarge">
-            <a href='/filmes/sobre/{{show["id"]}}' class="title">{{show["title"]}}</a>
+            <img src='{{ img_url(show["backdrop_path"], show["poster_path"])}}' id='{{show["id"]}}'
+                class="row__posterLarge">
+            <a href='/filmes/about/{{show["id"]}}' class="title">{{show["title"]}}</a>
             {% endfor %}
         </div>
     </div>

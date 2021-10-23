@@ -32,7 +32,7 @@
             {% for movie in results %}
             <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
                 class="row__posterLarge">
-            <a href='/filmes/sobre/{{movie["id"]}}' class="title">{{movie["title"] if movie["title"] else
+            <a href='/filmes/about/{{movie["id"]}}' class="title">{{movie["title"] if movie["title"] else
                 movie["name"]}}</a>
             {% endfor %}
         </div>

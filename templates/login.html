@@ -9,7 +9,7 @@
 <!-- Script: Animated entrance -->
 <script src="{{url_for('static', filename = 'js/animate-in.js')}}"></script>
 
-{% endblock %} {% block content %}
+{% endblock %} {%block navbar %}{% endblock %}{% block content %}
 <!-- Cover -->
 <div class="d-flex align-items-center py-5 photo-overlay cover" style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
     <div class="container">
@@ -37,129 +37,16 @@
     </div>
 </div>
 
-
-<!-- Schedule -->
-<div class="py-5" id="schedule">
-    <div class="container my-5 bg-primary animate-in-down">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-white mt-4">Schedule</h1>
-            </div>
-        </div>
-        <div class="row text-left">
-            <div class="p-4 col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-block text-center card-primary p-2">
-                        <h2>Day 1</h2>
-                        <p class="lead">Prototype</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;09:30-10:00 –&nbsp;
-                            <b>Welcome</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;10:00-12:00 –&nbsp;
-                            <b>Bootstrap for UX</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;12:00-13:00 –&nbsp;
-                            <b>Q&amp;A</b></li>
-                        <li class="list-group-item list-group-item-info"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;13:00-14:30 –&nbsp;
-                            <b>Lunch break</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;14:30-16:00 –&nbsp;
-                            <b>Best practices</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;16:00-18:00 –&nbsp;
-                            <b>Editing workshop</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="p-4 col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-block text-center card-primary p-2">
-                        <h2>Day 2</h2>
-                        <p class="lead">Design</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;09:30-10:00 –&nbsp;
-                            <b>Guest speech</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;10:00-12:00 –&nbsp;
-                            <b>Mobile design</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;12:00-13:00 –&nbsp;
-                            <b>UI trends</b></li>
-                        <li class="list-group-item list-group-item-info"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;13:00-14:30 –&nbsp;
-                            <b>Lunch break</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;14:30-16:00 –&nbsp;
-                            <b>Discussion</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;16:00-18:00 –&nbsp;
-                            <b>Party!</b></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="p-4 col-lg-4">
-                <div class="card">
-                    <div class="card-block text-center p-2">
-                        <h2>Day 3</h2>
-                        <p class="lead">Publish</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;09:30-10:00 –&nbsp;
-                            <b>Intro to WBN</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;10:00-12:00 –&nbsp;
-                            <b>Publishing</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;12:00-13:00 –&nbsp;
-                            <b>Implementation</b></li>
-                        <li class="list-group-item list-group-item-info"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;13:00-14:30 –&nbsp;
-                            <b>Lunch break</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;14:30-16:00 –&nbsp;
-                            <b>Farewell</b></li>
-                        <li class="list-group-item"><i class="mx-auto fa d-inline fa-clock-o text-secondary"></i>&nbsp;16:00-18:00 –&nbsp;
-                            <b>Party!</b></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Sponsor logos -->
-<div class="py-5 section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="mb-4">Sponsors</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-6">
-                <img class="center-block img-fluid d-block" src="assets/conference/logo_1.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <img class="center-block img-fluid d-block" src="assets/conference/logo_4.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <img class="center-block img-fluid d-block" src="assets/conference/logo_3.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <img class="center-block img-fluid d-block" src="assets/conference/logo_2.png">
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Call to action -->
 <div class="py-5 section" id="register">
     <div class="container py-5">
         <div class="row animate-in-down">
             <div class="col-md-8 text-md-left text-center">
-                <h1 class="mb-3 text-white">Registrations are open</h1>
-                <p>Pre-register to get a priority access to the event. Fares will be published later on.&nbsp;
-                    <br>Get the maximum from the lectures together with the possibility of joining exclusive side-events.
-                </p>
+                <h1 class="mb-3 text-white"></h1>
+                <p> </p>
             </div>
-            <div class="col-md-4 align-self-center">
-                <a href="#" class="btn btn-lg btn-primary my-3">Registrar</a>
-
-                <form action="/login" method="POST">
-                    <input placeholder="Name" autocomplete="off" type="text" name="name">
-                    <input type="submit" name="Register">
-                </form>
-            </div>
-
+        </div>
+        <div class="col-md-4 align-self-center">
             <div class="box-login">
                 <h2>Login</h2>
 
@@ -170,9 +57,49 @@
                         <span class="buttonText"><a href="{{url_for('google')}}">Logar com o Google</a></span>
                     </div>
                 </div>
-                <div id="name"></div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %} {% block footer2 %}
+<footer>
+    <div class="container py-5">
+        <div class="col-6 col-md">
+            <div class="row">
+                <div class="my-3 col-lg-4 col-md-6">
+                    <h3>Contato</h3>
+                    <form>
+                        <fieldset class="form-group my-3">
+                            <input type="email" class="form-control" id="Input Email" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="form-group my-3">
+                            <input type="message" class="form-control" id="Input Message" placeholder="Message">
+                        </fieldset>
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-lg-1"> </div>
+                <div class="my-3 col-lg-3">
+                    <h3>Siga-nos</h3>
+                    <a href="https://www.facebook.com" target="blank"><i
+                            class="fa fa-facebook-square text-muted fa-3x m-2"></i></a>
+                    <a href="https://www.instagram.com" target="blank"><i
+                            class="fa fa-3x fa-instagram text-muted m-2"></i></a>
+                    <a href="https://twitter.com" target="blank"><i class="fa fa-3x fa-twitter m-2 text-muted"></i></a>
+                    <a href="https://plus.google.com" target="blank"><i
+                            class="fa fa-3x fa-google-plus-official text-muted m-2"></i></a>
+                    <a href="https://pinterest.com" target="blank"><i
+                            class="fa fa-3x text-muted fa-pinterest-p m-2"></i></a>
+                    <a href="https://www.youtube.com" target="blank"><i
+                            class="fa fa-3x text-muted fa-youtube-play m-2"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">© Copyright 2021 UCL - All rights reserved. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 {% endblock %}

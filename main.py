@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-from apscheduler.schedulers.background import BackgroundScheduler
-
 import sqlalchemy
 
 # initial app configuration
@@ -9,7 +7,7 @@ app.config.from_pyfile('config.cfg')
 
 engine = sqlalchemy.create_engine(app.config['SQLALCHEMY_DATABASE_URI'], pool_pre_ping=True) #, client_encoding="utf8")
 
-# create session and base declarative
+# # create session and base declarative
 from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind=engine)
 
@@ -23,12 +21,4 @@ from models import User
 
 Base.metadata.create_all(engine)
 
-# schedule updates for the TopTracks playlists
-from models import updatePlaylists
-
-scheduler = BackgroundScheduler()
-scheduler.add_job(updatePlaylists, trigger='interval', days=1)
-scheduler.start()
-
 import routes
-bootstrap = Bootstrap(app)

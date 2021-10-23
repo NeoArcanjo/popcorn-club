@@ -1,7 +1,7 @@
 from main import Base, Session
 # from main import Session
 
-from functions import refreshToken, dbAddTracksPlaylist, dbClearPlaylist, dbGetTopTracksURI
+# from functions import refreshToken, dbAddTracksPlaylist, dbClearPlaylist, dbGetTopTracksURI
 import logging
 from sqlalchemy import Column, Index, Integer, String
 
@@ -11,7 +11,7 @@ from sqlalchemy import Column, Index, Integer, String
 class User(Base):
 	__tablename__ = 'users'
 	id = Column(Integer, primary_key=True)
-	username = Column(String(64)) #, index=True)
+	username = Column(String(64), index=True)
 	refresh_token = Column(String(150))
 	playlist_id_short = Column(String(30))
 	playlist_id_medium = Column(String(30))

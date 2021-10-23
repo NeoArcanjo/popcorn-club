@@ -1,10 +1,4 @@
-{% extends "base.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-{{ super() }}
-{% endblock %}
-
-{% block header %}
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block header %}
 <header id="banner" style='background-image: url({{img_url(set_movie["backdrop_path"])}});'>
     <div id="banner__contents">
         <h1 id="banner__title">{{set_movie["title"]}}</h1>
@@ -16,9 +10,7 @@
     </div>
     <div id="banner__fadeBottom"></div>
 </header>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <div id="headrow">
     <div class="row">
@@ -30,11 +22,9 @@
         <h2 class="row__title">Em alta</h2>
         <div class="row__posters">
             {% for movie in popular %}
-            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
-                class="row__posterLarge">
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}' class="row__posterLarge">
             <a href='/movie/about/{{movie["id"]}}' class="title">{{movie["title"] if movie["title"] else
-                movie["name"]}}</a>
-            {% endfor %}
+                movie["name"]}}</a> {% endfor %}
         </div>
     </section>
 
@@ -42,11 +32,9 @@
         <h2 class="row__title">Mais vistos</h2>
         <div class="row__posters">
             {% for movie in trend %}
-            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
-                class="row__posterLarge">
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}' class="row__posterLarge">
             <a href='/movie/about/{{movie["id"]}}' class="title">{{movie["title"] if movie["title"] else
-                movie["name"]}}</a>
-            {% endfor %}
+                movie["name"]}}</a> {% endfor %}
         </div>
     </div>
 
@@ -55,16 +43,10 @@
         <h2 class="row__title">ORIGINAIS NETFLIX</h2>
         <div class="row__posters">
             {% for movie in netflix %}
-            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
-                class="row__posterLarge">
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}' class="row__posterLarge">
             <a href='/movie/about/{{movie["id"]}}' class="title">{{movie["title"] if movie["title"] else
-                movie["name"]}}</a>
-            {% endfor %}
+                movie["name"]}}</a> {% endfor %}
         </div>
     </div>
-
-
-    <!-- TODO criar aba para series, a seguir -->
-    <!-- TODO criar pagina de detalhes para cada filme -->
 </div>
 {% endblock %}

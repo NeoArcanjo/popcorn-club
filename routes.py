@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import requests
 import random
-from functions import get_data, base_url, img_url
-from main import app
-
-app.secret_key = app.config['SECRET_KEY']
+from functions import get_data, base_url, img_url, login_required
+from main import app, oauth
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
@@ -19,7 +17,34 @@ def login():
         return redirect("/")
     return render_template("login.html")
 
+@app.route('/login/google')
+def google():
+    google = oauth.create_client('google')  # create the google oauth client
+    redirect_uri = url_for('authorize', _external=True)
+    return google.authorize_redirect(redirect_uri)
+
+@app.route('/login/callback')
+def authorize():
+    google = oauth.create_client('google')  # create the google oauth client
+    token = google.authorize_access_token()  # Access token from google (needed to get user info)
+    resp = google.get('userinfo')  # userinfo contains stuff u specificed in the scrope
+    user_info = resp.json()
+    user = oauth.google.userinfo()  # uses openid endpoint to fetch user info
+    # Here you use the profile/user data that you got and query your database find/register the user
+    # and set ur own data in the session not the profile from google
+    session['profile'] = user_info
+    session.permanent = True  # make the session permanant so it keeps existing after broweser gets closed
+    return redirect('/')
+
+
+@app.route('/logout')
+def logout():
+    for key in list(session.keys()):
+        session.pop(key)
+    return redirect('/')
+
 @app.route("/search")
+@login_required
 def search():
     search = request.args.get('q')
     results = get_data(f"search/multi?language=en-US&page=1&include_adult=false&query={search}&")
@@ -28,18 +53,9 @@ def search():
 
     return render_template("search_result.html",  set_movie=set_movie, img_url=img_url, results=results)
 
-@app.route("/logout")
-def logout():
-    session["name"] = None
-    return redirect("/")
-
 @app.route('/')
+@login_required
 def index():
-    # check if the users exist or not
-    if not session.get("name"):
-        # if not there in the session then redirect to the login page
-        return redirect("/login")
-
     popular = get_data('discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
     # nacionais = get_data('discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&')
     popular = popular["results"]
@@ -55,12 +71,8 @@ def index():
     return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)
 
 @app.route('/filmes')
+@login_required
 def filmes():
-    # check if the users exist or not
-    if not session.get("name"):
-        # if not there in the session then redirect to the login page
-        return redirect("/login")
-
     genres = get_data('genre/movie/list?')
     genres = genres["genres"]
 
@@ -82,13 +94,8 @@ def filmes():
     return render_template('filmes.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
 @app.route('/series')
+@login_required
 def series():
-      # check if the users exist or not
-    if not session.get("name"):
-        # if not there in the session then redirect to the login page
-        return redirect("/login")
-
-    # TODO Guardar api key em arquivo de ambiente
     genres = get_data('genre/tv/list?')
     genres = genres["genres"]
 
@@ -113,6 +120,4 @@ def series():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('not_found.html')
-
-
 

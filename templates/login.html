@@ -7,7 +7,7 @@
     <!-- PAGE settings -->
     <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
     <title>Conference Elegant - Pingendo template</title>
-    <meta name="description" content="Free Bootstrap 4 Pingendo Elegant template for unique events.">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <meta name="keywords" content="Pingendo conference event elegant free template bootstrap 4">
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="{{url_for('static', filename = 'elegant.css')}}">
@@ -269,6 +269,19 @@
                         <input placeholder="Name" autocomplete="off" type="text" name="name">
                         <input type="submit" name="Register">
                     </form>
+                </div>
+
+                <div class="box-login">
+                    <h2>Login</h2>
+                
+                    <!-- Código html do botão de login -->
+                    <div id="gSignInWrapper">
+                        <div id="customBtn" class="customGPlusSignIn">
+                            <span class="icon"></span>
+                            <span class="buttonText"><a href="{{url_for('google')}}">Logar com o Google</a></span>
+                        </div>
+                    </div>
+                    <div id="name"></div>
                 </div>
             </div>
         </div>

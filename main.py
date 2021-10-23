@@ -34,6 +34,33 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
+# spotify = oauth.register(
+#     name='spotify',
+#     client_id=os.getenv("GOOGLE_CLIENT_ID"),
+#     client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
+#     access_token_url='https://accounts.google.com/o/oauth2/token',
+#     access_token_params=None,
+#     authorize_url='https://accounts.google.com/o/oauth2/auth',
+#     authorize_params=None,
+#     api_base_url='https://www.googleapis.com/oauth2/v1/',
+#     # This is only needed if using openId to fetch user info
+#     userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',
+#     client_kwargs={'scope': 'openid email profile'},
+# )
+
+disqus = oauth.register(
+    name='disqus',
+    client_id=os.getenv("GOOGLE_CLIENT_ID"),
+    client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
+    access_token_url='https://accounts.google.com/o/oauth2/token',
+    access_token_params=None,
+    authorize_url='https://accounts.google.com/o/oauth2/auth',
+    authorize_params=None,
+    api_base_url='https://www.googleapis.com/oauth2/v1/',
+    userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',  # This is only needed if using openId to fetch user info
+    client_kwargs={'scope': 'openid email profile'},
+)
+
 engine = sqlalchemy.create_engine(
     os.getenv('SQLALCHEMY_DATABASE_URI'), pool_pre_ping=True)
 

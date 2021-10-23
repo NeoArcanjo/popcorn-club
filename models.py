@@ -20,8 +20,6 @@ class User(Base):
 
 	ix_users_username = Index('ix_users_username', username, unique=True)
 
-
-
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
 

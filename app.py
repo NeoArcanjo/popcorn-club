@@ -12,6 +12,7 @@ app.secret_key = 'BAD_SECRET_KEY'
 def login():
   # if form is submited
     networks = get_data('networks/list?')
+    print(networks)
 
     if request.method == "POST":
         # record the user name
@@ -26,7 +27,6 @@ def search():
     results = get_data(f"search/multi?language=en-US&page=1&include_adult=false&query={search}&")
     results = results["results"]
     set_movie = results[0]
-    print(set_movie)
 
     return render_template("search_result.html",  set_movie=set_movie, img_url=img_url, results=results)
 

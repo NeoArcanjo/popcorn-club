@@ -8,28 +8,32 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 5002:5000
+    depends_on:
+      - db
+      - adminer
 
   db:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: "password"
       MYSQL_DATABASE: "testedb"
+    restart: always
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-    networks:
-      - db
 
   adminer:
-    image: adminer
-    ports:
-      - 8080:8080
-    networks:
+    image: adminer:latest
+    restart: always
+    depends_on:
       - db
+    environment:
+      ADMINER_DESIGN: nette
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DEFAULT_DB: MySql
+    ports:
+      - "8080:8080"
 
-networks: 
-  mysql-compose-network:
-    driver: bridge
 volumes:
   mysql_data:

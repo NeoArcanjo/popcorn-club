@@ -11,6 +11,8 @@ app.secret_key = 'BAD_SECRET_KEY'
 @app.route("/login", methods=["POST", "GET"])
 def login():
   # if form is submited
+    networks = get_data('networks/list?')
+
     if request.method == "POST":
         # record the user name
         session["name"] = request.form.get("name")
@@ -18,6 +20,15 @@ def login():
         return redirect("/")
     return render_template("login.html")
 
+@app.route("/search")
+def search():
+    search = request.args.get('q')
+    results = get_data(f"search/multi?language=en-US&page=1&include_adult=false&query={search}&")
+    results = results["results"]
+    set_movie = results[0]
+    print(set_movie)
+
+    return render_template("search_result.html",  set_movie=set_movie, img_url=img_url, results=results)
 
 @app.route("/logout")
 def logout():

@@ -9,11 +9,33 @@ from main import app, oauth
 def login():
     return render_template('login.html')
 
+@app.route('/disqus')
+def disqus():
+    disqus = oauth.create_client('disqus')  # create the disqus oauth client
+    redirect_uri = url_for('authorize', _external=True)
+    return disqus.authorize_redirect(redirect_uri)
+
 @app.route('/login/google')
 def google():
     google = oauth.create_client('google')  # create the google oauth client
-    redirect_uri = url_for('authorize', _external=True)
+    redirect_uri = url_for('authorize_disqus', _external=True)
     return google.authorize_redirect(redirect_uri)
+
+@app.route('/login/disqus')
+def authorize_disqus():
+    disqus = oauth.create_client('disqus')  # create the disqus oauth client
+    # Access token from google (needed to get user info)
+    token = disqus.authorize_access_token()
+    # userinfo contains stuff u specificed in the scrope
+    resp = disqus.get('userinfo')
+    user_info = resp.json()
+    user = oauth.disqus.userinfo()  # uses openid endpoint to fetch user info
+    # Here you use the profile/user data that you got and query your database find/register the user
+    # and set ur own data in the session not the profile from disqus
+    session['profile'] = user_info
+    # make the session permanant so it keeps existing after broweser gets closed
+    session.permanent = True
+    return redirect('/')
 
 
 @app.route('/login/callback')

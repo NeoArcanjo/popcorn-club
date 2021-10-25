@@ -30,7 +30,8 @@ google = oauth.register(
     authorize_url=os.getenv("GOOGLE_AUTHORIZE_URL"),
     authorize_params=os.getenv("GOOGLE_AUTHORIZE_PARAMS"), # None,
     api_base_url=os.getenv("GOOGLE_API_BASE_URL"),
-    userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',  # This is only needed if using openId to fetch user info
+    # This is only needed if using openId to fetch user info
+    userinfo_endpoint=os.getenv('GOOGLE_USER_INFO_URL'),
     # os.getenv("GOOGLE_CLIENT_KWARGS")
     client_kwargs={'scope': 'openid email profile'},
 )
@@ -56,9 +57,10 @@ disqus = oauth.register(
     access_token_url=os.getenv("DISQUS_ACCESS_TOKEN"),
     access_token_params={'type': 'code'},
     authorize_url=os.getenv("DISQUS_AUTHORIZE_URL"),
-    authorize_params={'type': 'code'},
+    authorize_params={'grant_type': 'authorization_code'},
     api_base_url=os.getenv("DISQUS_API_BASE_URL"),
-    client_kwargs={'scope': 'read write'}  ,# os.getenv("DISQUS_CLIENT_KWARGS"),
+    userinfo_endpoint=os.getenv("DISQUS_USER_INFO_URL"),
+    client_kwargs={'scope': "read,write"} , # os.getenv("DISQUS_CLIENT_KWARGS"),
 )
 
 engine = sqlalchemy.create_engine(

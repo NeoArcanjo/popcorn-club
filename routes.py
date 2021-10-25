@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import requests
 import random
+import os
 from functions import get_data, base_url, img_url, login_required
 from main import app, oauth
 
@@ -28,19 +29,25 @@ def google():
 @app.route('/disqus/callback')
 def authorize_disqus():
     disqus = oauth.create_client('disqus')  # create the disqus oauth client
-    print(disqus)
     # Access token from disqus (needed to get user info)
-    token = disqus.authorize_access_token()
-    print(token)
+    token = disqus.authorize_access_token(
+        client_id=os.getenv("DISQUS_API_KEY"),
+        client_secret=os.getenv("DISQUS_API_SECRET"))
     # userinfo contains stuff u specificed in the scrope
+    print(token)
+    user_id=token['user_id']
+    print(user_id)
     resp = disqus.get('userinfo')
-    user_info = resp.json()
+    print(resp)
+    # user_info = resp.json()
+    user_info = {'username': token['username'], 'given_name': token['username'], 'picture': f'https://disqus.com/api/users/avatars/{token["username"]}.jpg'}
+    print(f'https://disqus.com/api/users/avatars/{token["username"]}.jpg')
     # user = oauth.disqus.userinfo()  # uses openid endpoint to fetch user info
     # Here you use the profile/user data that you got and query your database find/register the user
     # and set ur own data in the session not the profile from disqus
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
-    session.permanent = True
+    session.permanent = False
     return redirect('/')
 
 

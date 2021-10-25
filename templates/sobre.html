@@ -7,7 +7,7 @@
 {% block header %}
 <header id="banner" style='background-image: url({{img_url(movie["backdrop_path"])}});'>
     <div id="banner__contents">
-        <h1 id="banner__title">{{movie["title"]}}</h1>
+        <h1 id="banner__title">{{movie["title"] or movie["name"]}}</h1>
         <div id="banner__buttons">
         </div>
         <p id="banner__description">{{movie["overview"]}}</p>
@@ -22,10 +22,12 @@
     <div class="row">
         <h2 class="row__title">Imagens</h2>
         <div class="row__posters">
-            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}' class="row__posterLarge">
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
+                class="row__posterLarge">
         </div>
     </div>
 
+    {% if movie["belongs_to_collection"] %}
     <div class="row">
         <h2 class="row__title">Coleção: {{movie["belongs_to_collection"]["name"]}}</h2>
         <div class="row__posters">
@@ -35,6 +37,7 @@
                 class="row__posterLarge">
         </div>
     </div>
+    {% endif %}
 
     {% for key, value in movie.items() %}
     <section class="row">
@@ -45,4 +48,5 @@
     </section>
     {% endfor %}
 </div>
+{%include "disqus.html" %}
 {% endblock %}

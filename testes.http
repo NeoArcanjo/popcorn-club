@@ -1,0 +1,25 @@
+@GOOGLE_CLIENT_ID = "870050928495-tgbfkjemgdf56grfbl0ssj2au37cno0v.apps.googleusercontent.com"
+@GOOGLE_CLIENT_SECRET ="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"
+
+@GOOGLE_ACCESS_TOKEN_URL= 'https://accounts.google.com/o/oauth2/token'
+@GOOGLE_AUTHORIZE_URL= 'https://accounts.google.com/o/oauth2/auth'
+@GOOGLE_API_BASE_URL= 'https://www.googleapis.com/oauth2/v1/'
+@GOOGLE_CLIENT_KWARGS= {'scope': 'openid email profile'}
+
+@TMDB_API_KEY="f4066aad057be2997b4bc0043b3a4869"
+@TMDB_API_URL="https://api.themoviedb.org/3"
+@TMDB_API_URL_v4="https://api.themoviedb.org/4"
+
+@DISQUS_CLIENT_ID= SG45yqKWc7buD0CFBThiaDKske6YRpzveZGiAYYoT8dNffAiqI9EgNQ8Te4IWRPJ
+@DISQUS_CLIENT_SECRET= "ZyDskTNboYJFOnVvNyfHrO0areWPzp1E7JEpTBQKg23F5OM3e5pEGJY9VTo9IhgA"
+@DISQUS_REQUEST_TOKEN_PARAMS=
+@DISQUS_ACCESS_TOKEN_URL= "https://disqus.com/api/oauth/2.0/access_token/"
+@DISQUS_ACCESS_TOKEN_PARAMS= 
+@DISQUS_AUTHORIZE_URL= "https://disqus.com/api/oauth/2.0/authorize/"
+@DISQUS_AUTHORIZE_PARAMS={'type': 'code'}
+@DISQUS_API_BASE_URL= 'https://disqus.com/api/oauth/2.0/'
+@DISQUS_CLIENT_KWARGS= {'scope': 'read write'}
+
+###################################################################################
+GET /api/oauth/2.0/authorize/?client_id={{DISQUS_CLIENT_ID}}&scope=read,write&response_type=code&redirect_uri=http://localhost:5000/disqus/callback HTTP 1.1
+Host: disqus.com

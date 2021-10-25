@@ -28,7 +28,8 @@
 		"ms-python.python",
 		"github.copilot",
 		"github.codespaces",
-		"knisterpeter.vscode-github"
+		"knisterpeter.vscode-github",
+		"humao.rest-client"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -54,6 +54,7 @@
             {% endblock %}
 
             <img src="{{url_for('static', filename = 'img/bell.svg')}}" alt="Notificação"> {% if session %}
+            {{print(session)}}
             <img id="userAvatar" src="{{ dict(session)['profile']['picture'] }}" alt="User">
             <ul>
                 <li>

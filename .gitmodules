@@ -1,0 +1,3 @@
+[submodule "example-oauth2-server"]
+	path = example-oauth2-server
+	url = https://github.com/authlib/example-oauth2-server.git

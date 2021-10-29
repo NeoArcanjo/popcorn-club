@@ -36,19 +36,20 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
-# spotify = oauth.register(
-#     name='spotify',
-#     client_id=os.getenv("GOOGLE_CLIENT_ID"),
-#     client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-#     access_token_url='https://accounts.google.com/o/oauth2/token',
-#     access_token_params=None,
-#     authorize_url='https://accounts.google.com/o/oauth2/auth',
-#     authorize_params=None,
-#     api_base_url='https://www.googleapis.com/oauth2/v1/',
-#     # This is only needed if using openId to fetch user info
-#     userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',
-#     client_kwargs={'scope': 'openid email profile'},
-# )
+spotify = oauth.register(
+    name='spotify',
+    client_id=os.getenv("SPOTIFY_CLIENT_ID"),
+    client_secret=os.getenv("SPOTIFY_CLIENT_SECRET"),
+    access_token_url=os.getenv("SPOTIFY_ACCESS_TOKEN_URL"),
+    access_token_params=os.getenv("SPOTIFY_ACCESS_TOKEN_PARAMS"),  # None,
+    authorize_url=os.getenv("SPOTIFY_AUTHORIZE_URL"),
+    authorize_params=os.getenv("SPOTIFY_AUTHORIZE_PARAMS"), # None,
+    api_base_url=os.getenv("SPOTIFY_API_BASE_URL"),
+    # This is only needed if using openId to fetch user info
+    userinfo_endpoint=os.getenv('SPOTIFY_USER_INFO_URL'),
+    # os.getenv("SPOTIFY_CLIENT_KWARGS")
+    client_kwargs={'scope': 'openid email profile'},
+)
 
 disqus = oauth.register(
     name='disqus',

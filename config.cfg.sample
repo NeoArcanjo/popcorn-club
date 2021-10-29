@@ -7,3 +7,5 @@ SPOTIFY_AUTHORIZE_PARAMS={'type': 'code'}
 SPOTIFY_API_BASE_URL='https://spotify.com/api/oauth/2.0/'
 SPOTIFY_USER_INFO_URL="https://spotify.com/api/3.0/users/details.json"
 SPOTIFY_CLIENT_KWARGS={'scope': 'read write'}
+
+

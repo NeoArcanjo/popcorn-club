@@ -25,7 +25,11 @@ def google():
     redirect_uri = url_for('authorize', _external=True)
     return google.authorize_redirect(redirect_uri)
 
-
+@app.route('/login/google')
+def google():
+    google = oauth.create_client('google')  # create the google oauth client
+    redirect_uri = url_for('authorize', _external=True)
+    return google.authorize_redirect(redirect_uri)
 @app.route('/disqus/callback')
 def authorize_disqus():
     disqus = oauth.create_client('disqus')  # create the disqus oauth client
@@ -163,7 +167,9 @@ def about(type, id):
     movie = get_data(f'{type}/{id}?')
     return render_template('sobre.html', movie=movie, img_url=img_url)
 
-
 @app.errorhandler(404)
 def page_not_found(e):
+    print(e)
+    resp = requests.get("http://http.cat/404")
+    print(resp)
     return render_template('not_found.html')

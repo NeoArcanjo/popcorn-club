@@ -1,9 +1,9 @@
-AUTHORIZATION=""
-SECRET_KEY='BAD_SECRET_KEY'
-API_KEY=""
-SQLALCHEMY_DATABASE_URI=""
-GOOGLE_CLIENT_ID = ""
-GOOGLE_CLIENT_SECRET =""
-GOOGLE_DISCOVERY_URL = (
-    "https://accounts.google.com/.well-known/openid-configuration"
-)
+SPOTIFY_CLIENT_ID="b8ccc1ca86724c34ac1f8aa7e7efdb64"
+SPOTIFY_CLIENT_SECRET="a443353e1f994837b54b3153bd6f10f4"
+SPOTIFY_ACCESS_TOKEN_URL="https://spotify.com/api/oauth/2.0/access_token/"
+SPOTIFY_ACCESS_TOKEN_PARAMS=
+SPOTIFY_AUTHORIZE_URL="https://spotify.com/api/oauth/2.0/authorize/"
+SPOTIFY_AUTHORIZE_PARAMS={'type': 'code'}
+SPOTIFY_API_BASE_URL='https://spotify.com/api/oauth/2.0/'
+SPOTIFY_USER_INFO_URL="https://spotify.com/api/3.0/users/details.json"
+SPOTIFY_CLIENT_KWARGS={'scope': 'read write'}

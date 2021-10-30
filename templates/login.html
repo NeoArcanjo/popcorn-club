@@ -3,7 +3,8 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 <!-- CSS dependencies -->
 <link rel="stylesheet" href="{{url_for('static', filename = 'elegant.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
 <!-- Script: Make my navbar transparent when the document is scrolled to top -->
 <script src="{{url_for('static', filename = 'js/navbar-ontop.js')}}"></script>
 <!-- Script: Animated entrance -->
@@ -11,7 +12,8 @@
 
 {% endblock %} {%block navbar %}{% endblock %}{% block content %}
 <!-- Cover -->
-<div class="d-flex align-items-center py-5 photo-overlay cover" style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
+<div class="d-flex align-items-center py-5 photo-overlay cover"
+    style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
     <div class="container">
         <div class="row">
             <div class="text-white p-5 bg-dark-opaque col-12 col-lg-8 mx-auto">
@@ -72,13 +74,13 @@
             </div>
 
             <div class="box-login">
-                <h2>SPOTIFY</h2>
+                <h2>Spotify</h2>
 
                 <!-- Código html do botão de login -->
                 <div id="gSignInWrapper">
                     <div id="customBtn" class="customGPlusSignIn">
                         <span class="icon"></span>
-                        <span class="buttonText"><a href="{{url_for('spotify')}}">Logar com SPOTIFY</a></span>
+                        <span class="buttonText"><a href="{{url_for('spotify')}}">Logar com Spotify</a></span>
                     </div>
                 </div>
             </div>

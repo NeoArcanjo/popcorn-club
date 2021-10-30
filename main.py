@@ -52,10 +52,12 @@ spotify = oauth.register(
 )
 
 disqus = oauth.register(
-    name='disqus',
-    client_id=os.getenv("DISQUS_API_KEY"),
-    client_secret=os.getenv("DISQUS_API_SECRET"),
-    access_token_url=os.getenv("DISQUS_ACCESS_TOKEN"),
+    name='disqus',    
+    api_key=os.getenv("DISQUS_CLIENT_ID"),
+    api_secret=os.getenv("DISQUS_CLIENT_SECRET"),
+    client_id=os.getenv("DISQUS_CLIENT_ID"),
+    client_secret=os.getenv("DISQUS_CLIENT_SECRET"),
+    access_token_url=os.getenv("DISQUS_ACCESS_TOKEN_URL"),
     access_token_params={'type': 'code'},
     authorize_url=os.getenv("DISQUS_AUTHORIZE_URL"),
     authorize_params={'grant_type': 'authorization_code'},

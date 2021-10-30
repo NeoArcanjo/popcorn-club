@@ -1,0 +1,56 @@
+<nav>
+    <div class="leftRow">
+        <a href="/"><img id="logo" src="{{url_for('static', filename = 'img/logo.png')}}" alt="Logo"></a>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+            <li><a href="{{url_for('dashboard')}}">Dashboard</a></li>
+            <li><a href="#banner">Início</a></li>
+            <li><a href="series">Séries</a></li>
+            <li><a href="filmes">Filmes</a></li>
+            <li><a href="#trends">Bombando</a></li>
+            <li><a href="#mylist">Minha lista</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+    </div>
+    <div class="rightRow">
+        {% block search %}
+
+        <form class="form-inline" action="/search" method="get">
+            <div class="input-group">
+
+                <input type="text" name="q" class="form-control form-control-sm" id="inlineFormInputGroup"
+                    placeholder="Busca">
+
+                <div class="input-group-append">
+                    <button class="btn btn-primary btn-sm" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        {% endblock %}
+
+        <div class="topbar-divider d-none d-sm-block"></div>
+        
+        <!-- Nav Item - Alerts -->
+        {% include "components/navbar/alerts.html" %}
+        
+        <!-- Nav Item - Messages -->
+        {% include "components/navbar/messages.html" %}
+        
+
+        {% if session %}
+        <!-- Nav Item - User Information -->
+        {% include "components/navbar/user_info.html" %}
+
+        <!-- Logout Modal-->
+        {% include 'components/logout_modal.html' %}
+        {% else %} <a href="/login">Entrar</a>. {% endif %}
+    </div>
+</nav>

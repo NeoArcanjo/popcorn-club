@@ -37,16 +37,11 @@
 
         </div>
         <!-- End of Main Content -->
-        {% endblock %}
-        {% block footer %}
-        {{super()}}
-        <!-- End of Footer -->
-        {% endblock %}
+
 
 
     </div>
     <!-- End of Content Wrapper -->
-    {% endblock %}
 
 
 </div>
@@ -55,11 +50,15 @@
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#wrapper">
     <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
+</a><!-- Logout Modal-->
 {% include 'components/logout_modal.html' %}
+{% endblock %}
 
+
+{% block footer %}
+{{super()}}
+<!-- End of Footer -->
+{% endblock %}
 {% block scripts %}
 {{super()}}
 

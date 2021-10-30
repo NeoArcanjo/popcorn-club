@@ -25,6 +25,12 @@ def google():
     redirect_uri = url_for('authorize', _external=True)
     return google.authorize_redirect(redirect_uri)
 
+@app.route('/login/spotify')
+def spotify():
+    spotify = oauth.create_client('spotify')  # create the spotify oauth client
+    redirect_uri = url_for('authorize_spotify', _external=True)
+    return spotify.authorize_redirect(redirect_uri)
+
 
 @app.route('/disqus/callback')
 def authorize_disqus():
@@ -50,6 +56,29 @@ def authorize_disqus():
     session.permanent = False
     return redirect('/')
 
+@app.route('/spotify/callback')
+def authorize_spotify():
+    spotify = oauth.create_client('spotify')  # create the spotify oauth client
+    # Access token from spotify (needed to get user info)
+    token = spotify.authorize_access_token(
+        client_id=os.getenv("SPOTIFY_API_KEY"),
+        client_secret=os.getenv("SPOTIFY_API_SECRET"))
+    # userinfo contains stuff u specificed in the scrope
+    print(token)
+    user_id=token['user_id']
+    print(user_id)
+    resp = spotify.get('userinfo')
+    print(resp)
+    # user_info = resp.json()
+    user_info = {'username': token['username'], 'given_name': token['username'], 'picture': f'https://spotify.com/api/users/avatars/{token["username"]}.jpg'}
+    print(f'https://spotify.com/api/users/avatars/{token["username"]}.jpg')
+    # user = oauth.spotify.userinfo()  # uses openid endpoint to fetch user info
+    # Here you use the profile/user data that you got and query your database find/register the user
+    # and set ur own data in the session not the profile from spotify
+    session['profile'] = user_info
+    # make the session permanant so it keeps existing after broweser gets closed
+    session.permanent = False
+    return redirect('/')
 
 @app.route('/login/callback')
 def authorize():
@@ -163,7 +192,9 @@ def about(type, id):
     movie = get_data(f'{type}/{id}?')
     return render_template('sobre.html', movie=movie, img_url=img_url)
 
-
 @app.errorhandler(404)
 def page_not_found(e):
+    print(e)
+    resp = requests.get("http://http.cat/404")
+    print(resp)
     return render_template('not_found.html')

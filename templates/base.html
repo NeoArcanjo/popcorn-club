@@ -14,9 +14,9 @@
     
     <script defer src="{{url_for('static', filename = 'js/app.js')}}"></script>
     <link rel="icon" href="{{url_for('static', filename = 'img/favicon.ico')}}">
-    <link href="{{url_for('static', filename = 'vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"> -->
+    <!-- <link href="{{url_for('static', filename = 'vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>{% block title %}{% endblock %} - Popcorn Club</title>
     {% endblock %}
 </head>
@@ -33,13 +33,9 @@
     
     {% block footer %}
     <!-- Footer -->
-    <footer class="sticky-footer">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; UCL 2021 - All rights reserved.</span>
-            </div>
-        </div>
-    </footer>
+        {%include "components/footer.html" %}
+
+    
     {% endblock %}
     
     {% block script %}

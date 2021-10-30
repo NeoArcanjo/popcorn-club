@@ -305,3 +305,33 @@ span.buttonText {
     /* Use the Roboto font that is loaded in the <head> */
     font-family: 'Roboto', sans-serif;
 }
+
+
+.bg {
+    object-fit: cover;
+    height: 98vh;
+    /* width: 80vw;
+    margin: auto; */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-image: url("http://http.cat/404");
+}
+
+.bg_404 {
+    background-image: url("http://http.cat/404");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg_500 {
+    background-image: url("http://http.cat/500");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

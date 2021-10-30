@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
+from werkzeug.exceptions import HTTPException
 import requests
 import random
 import os
 from functions import get_data, base_url, img_url, login_required
+from base64 import b64encode
 from main import app, oauth
 
 
@@ -63,16 +65,10 @@ def authorize_spotify():
     token = spotify.authorize_access_token(
         client_id=os.getenv("SPOTIFY_API_KEY"),
         client_secret=os.getenv("SPOTIFY_API_SECRET"))
-    # userinfo contains stuff u specificed in the scrope
-    print(token)
-    user_id=token['user_id']
-    print(user_id)
-    resp = spotify.get('userinfo')
-    print(resp)
-    # user_info = resp.json()
-    user_info = {'username': token['username'], 'given_name': token['username'], 'picture': f'https://spotify.com/api/users/avatars/{token["username"]}.jpg'}
-    print(f'https://spotify.com/api/users/avatars/{token["username"]}.jpg')
-    # user = oauth.spotify.userinfo()  # uses openid endpoint to fetch user info
+    # userinfo contains stuff u specificed in the scrope    
+    user = oauth.spotify.userinfo()
+    
+    user_info = {'username': user['display_name'], 'given_name': user['display_name'], 'picture': user['images'][0]['url']}
     # Here you use the profile/user data that you got and query your database find/register the user
     # and set ur own data in the session not the profile from spotify
     session['profile'] = user_info
@@ -192,9 +188,19 @@ def about(type, id):
     movie = get_data(f'{type}/{id}?')
     return render_template('sobre.html', movie=movie, img_url=img_url)
 
-@app.errorhandler(404)
-def page_not_found(e):
-    print(e)
-    resp = requests.get("http://http.cat/404")
-    print(resp)
-    return render_template('not_found.html')
+
+@app.errorhandler(HTTPException)
+def handle_exception(e):
+    code = e.code
+    resp = requests.get(f"http://http.cat/{code}")
+    obj = resp.content
+    image = b64encode(obj).decode("utf-8")
+    return render_template("error_generic.html", title=e.name, description=e.description, image=image, code=code), code
+
+# @app.errorhandler(404)
+# def page_not_found(e):
+#     print(e)
+#     resp = requests.get("http://http.cat/404")
+#     obj = resp.content
+#     image = b64encode(obj).decode("utf-8")
+#     return render_template('not_found.html', obj=obj, image=image), 404

@@ -18,8 +18,6 @@ class User(Base):
 	playlist_id_medium = Column(String(30), index=True, unique=True)
 	playlist_id_long = Column(String(30), index=True, unique=True)
 
-	ix_users_username = Index('ix_users_username', username, unique=True)
-
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
 

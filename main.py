@@ -41,14 +41,14 @@ spotify = oauth.register(
     client_id=os.getenv("SPOTIFY_CLIENT_ID"),
     client_secret=os.getenv("SPOTIFY_CLIENT_SECRET"),
     access_token_url=os.getenv("SPOTIFY_ACCESS_TOKEN_URL"),
-    access_token_params=os.getenv("SPOTIFY_ACCESS_TOKEN_PARAMS"),  # None,
+    access_token_params={'type': 'code'},
     authorize_url=os.getenv("SPOTIFY_AUTHORIZE_URL"),
-    authorize_params=os.getenv("SPOTIFY_AUTHORIZE_PARAMS"), # None,
+    authorize_params={'grant_type': 'authorization_code'},
     api_base_url=os.getenv("SPOTIFY_API_BASE_URL"),
     # This is only needed if using openId to fetch user info
     userinfo_endpoint=os.getenv('SPOTIFY_USER_INFO_URL'),
     # os.getenv("SPOTIFY_CLIENT_KWARGS")
-    client_kwargs={'scope': 'openid email profile'},
+    client_kwargs={'scope': 'user-read-private user-read-email'},
 )
 
 disqus = oauth.register(

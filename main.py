@@ -5,9 +5,6 @@ import os
 from datetime import timedelta
 import logging
 
-# # decorator for routes that should be accessible only by logged in users
-# from auth_decorator import login_required
-
 # dotenv setup
 from dotenv import load_dotenv
 load_dotenv()
@@ -70,7 +67,7 @@ disqus = oauth.register(
 engine = sqlalchemy.create_engine(
     os.getenv('SQLALCHEMY_DATABASE_URI'), pool_pre_ping=True)
 
-logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
+# logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
 
 # # create session and base declarative
 from sqlalchemy.orm import sessionmaker

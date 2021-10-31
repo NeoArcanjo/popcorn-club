@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   trabalhosistemasweb2021:
@@ -13,6 +13,15 @@ services:
     depends_on:
       - adminer
 
+  adminer:
+    image: adminer:latest
+    restart: always
+    environment:
+      ADMINER_DESIGN: nette
+      ADMINER_DEFAULT_SERVER: ec2-23-23-199-57.compute-1.amazonaws.com
+    ports:
+      - "8080:8080"
+
   # db:
   #   image: postgres:13
   #   container_name: popcornclub-db
@@ -24,16 +33,5 @@ services:
   #     - pgdata:/var/lib/postgresql/data
   #   ports:
   #     - "5432:5432"
-
-
-  adminer:
-    image: adminer:latest
-    restart: always
-    environment:
-      ADMINER_DESIGN: nette
-      ADMINER_DEFAULT_SERVER: ec2-23-23-199-57.compute-1.amazonaws.com
-    ports:
-      - "8080:8080"
-
 # volumes:
 #   pg_data:

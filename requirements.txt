@@ -1,6 +1,7 @@
 attrs==21.2.0
 Authlib==0.15.5
 autopep8==1.5.7
+backports.entry-points-selectable==1.1.0
 cachelib==0.4.1
 cachetools==4.2.4
 certifi==2021.10.8
@@ -8,6 +9,8 @@ cffi==1.15.0
 charset-normalizer==2.0.7
 click==8.0.3
 cryptography==35.0.0
+distlib==0.3.3
+filelock==3.3.2
 Flask==2.0.2
 greenlet==1.1.2
 gunicorn==20.0.4
@@ -18,10 +21,11 @@ itsdangerous==2.0.1
 Jinja2==3.0.2
 MarkupSafe==2.0.1
 packaging==21.2
+pipenv==2021.5.29
+platformdirs==2.4.0
 pluggy==1.0.0
 protobuf==3.19.0
 py==1.10.0
-pypenv
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.8.0
@@ -37,4 +41,6 @@ SQLAlchemy==1.4.26
 toml==0.10.2
 uritemplate==4.1.1
 urllib3==1.26.7
+virtualenv==20.9.0
+virtualenv-clone==0.5.7
 Werkzeug==2.0.2

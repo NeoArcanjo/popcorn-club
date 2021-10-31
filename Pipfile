@@ -48,6 +48,7 @@ Jinja2 = "*"
 MarkupSafe = "*"
 SQLAlchemy = "*"
 Werkzeug = "*"
+pg8000 = "*"
 
 [dev-packages]
 

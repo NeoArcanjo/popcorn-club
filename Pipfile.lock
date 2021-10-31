@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "86efc85bf0cbe66a7674a4c591574b26d145fc066f2e6a0040e0c0ffb9a915c0"
+            "sha256": "8f4b82b149b91b9bc11e195ba363f03d5458eec1e6a90b4291c853e00e6917ad"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,13 @@
         ]
     },
     "default": {
+        "asn1crypto": {
+            "hashes": [
+                "sha256:4bcdf33c861c7d40bdcd74d8e4dd7661aac320fcdf40b9a3f95b4ee12fde2fa8",
+                "sha256:f4f6e119474e58e04a2b1af817eb585b4fd72bdd89b998624712b5c99be7641c"
+            ],
+            "version": "==1.4.0"
+        },
         "attrs": {
             "hashes": [
                 "sha256:149e90d6d8ac20db7a955ad60cf0e6881a3f20d37096140088356da6c716b0b1",
@@ -381,6 +388,14 @@
             "markers": "python_version >= '3.6'",
             "version": "==21.2"
         },
+        "pg8000": {
+            "hashes": [
+                "sha256:a0e82542f4a56b2139c41ff09c1aeff294c10b6500bb6c57890c0c1c551cbc03",
+                "sha256:c5172252fc92142ec104cd5e7231be4580a1a0a814403707bafbf7bb8383a29a"
+            ],
+            "index": "pypi",
+            "version": "==1.22.0"
+        },
         "pipenv": {
             "hashes": [
                 "sha256:05958fadcd70b2de6a27542fcd2bd72dd5c59c6d35307fdac3e06361fb06e30e",
@@ -497,14 +512,6 @@
             "index": "pypi",
             "version": "==2.20"
         },
-        "pymysql": {
-            "hashes": [
-                "sha256:41fc3a0c5013d5f039639442321185532e3e2c8924687abe6537de157d403641",
-                "sha256:816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36"
-            ],
-            "index": "pypi",
-            "version": "==1.0.2"
-        },
         "pyparsing": {
             "hashes": [
                 "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1",
@@ -544,6 +551,14 @@
             ],
             "index": "pypi",
             "version": "==4.7.2"
+        },
+        "scramp": {
+            "hashes": [
+                "sha256:93c9cc2ffe54a451e02981c07a5a23cbd830701102789939cfb4ff91efd6ca8c",
+                "sha256:f964801077be9be2a1416ffe255d2d78834b3d9d5c8ce5d28f76a856f209f70e"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==1.4.1"
         },
         "six": {
             "hashes": [

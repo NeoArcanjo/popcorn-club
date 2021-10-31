@@ -1,3 +1,6 @@
 [submodule "example-oauth2-server"]
 	path = example-oauth2-server
 	url = https://github.com/authlib/example-oauth2-server.git
+[submodule "python-getting-started"]
+	path = python-getting-started
+	url = https://github.com/heroku/python-getting-started.git

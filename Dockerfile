@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
 RUN python -m pipenv install
-RUN python -m pipenv shell
+# RUN python -m pipenv shell
 
 WORKDIR /app
 COPY . /app

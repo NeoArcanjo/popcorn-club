@@ -14,29 +14,27 @@ services:
       - db
       - adminer
 
-  db:
-    image: postgres:13
-    container_name: popcornclub-db
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: T5sbHDJPfGk2QBqRlD02UBbC6Vb23JR9ePoJvX5SuxCKFOildxyTDIHJ56hIRyHX
-    restart: always
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+  # db:
+  #   image: postgres:13
+  #   container_name: popcornclub-db
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: T5sbHDJPfGk2QBqRlD02UBbC6Vb23JR9ePoJvX5SuxCKFOildxyTDIHJ56hIRyHX
+  #   restart: always
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
 
 
   adminer:
     image: adminer:latest
     restart: always
-    depends_on:
-      - db
     environment:
       ADMINER_DESIGN: nette
-      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DEFAULT_SERVER: ec2-23-23-199-57.compute-1.amazonaws.com
     ports:
       - "8080:8080"
 
-volumes:
-  pg_data:
+# volumes:
+#   pg_data:

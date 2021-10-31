@@ -15,15 +15,17 @@ services:
       - adminer
 
   db:
-    image: mysql:5.7
+    image: postgres:13
+    container_name: popcornclub-db
     environment:
-      MYSQL_ROOT_PASSWORD: "password"
-      MYSQL_DATABASE: "testedb"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: T5sbHDJPfGk2QBqRlD02UBbC6Vb23JR9ePoJvX5SuxCKFOildxyTDIHJ56hIRyHX
     restart: always
-    ports:
-      - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
 
   adminer:
     image: adminer:latest
@@ -33,9 +35,8 @@ services:
     environment:
       ADMINER_DESIGN: nette
       ADMINER_DEFAULT_SERVER: db
-      ADMINER_DEFAULT_DB: MySql
     ports:
       - "8080:8080"
 
 volumes:
-  mysql_data:
+  pg_data:

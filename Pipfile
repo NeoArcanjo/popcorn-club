@@ -46,7 +46,6 @@ Authlib = "*"
 Flask = "*"
 Jinja2 = "*"
 MarkupSafe = "*"
-PyMySQL = "*"
 SQLAlchemy = "*"
 Werkzeug = "*"
 

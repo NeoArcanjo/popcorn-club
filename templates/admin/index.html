@@ -28,7 +28,6 @@
 
             <!-- Topbar -->
             {% include "components/topbar.html" %}
-
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -37,13 +36,13 @@
 
         </div>
         <!-- End of Main Content -->
-
-
-
+{% endblock %}
+{% block footer %}
+{{super()}}
+<!-- End of Footer -->
+{% endblock %}
     </div>
     <!-- End of Content Wrapper -->
-
-
 </div>
 <!-- End of Page Wrapper -->
 
@@ -52,13 +51,7 @@
     <i class="fas fa-angle-up"></i>
 </a><!-- Logout Modal-->
 {% include 'components/logout_modal.html' %}
-{% endblock %}
 
-
-{% block footer %}
-{{super()}}
-<!-- End of Footer -->
-{% endblock %}
 {% block scripts %}
 {{super()}}
 

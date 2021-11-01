@@ -49,6 +49,7 @@ MarkupSafe = "*"
 SQLAlchemy = "*"
 Werkzeug = "*"
 psycopg2-binary = "*"
+fontawesomefree = "*"
 
 [dev-packages]
 

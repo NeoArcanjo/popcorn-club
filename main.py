@@ -64,8 +64,8 @@ disqus = oauth.register(
     client_kwargs={'scope': "read,write"} , # os.getenv("DISQUS_CLIENT_KWARGS"),
 )
 
-engine = sqlalchemy.create_engine(
-    os.getenv('DATABASE_URL'), pool_pre_ping=True)
+# engine = sqlalchemy.create_engine(
+#     os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
 # logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
 

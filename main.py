@@ -3,7 +3,7 @@ import sqlalchemy
 from authlib.integrations.flask_client import OAuth
 import os
 from datetime import timedelta
-import logging
+# import logging
 
 # dotenv setup
 from dotenv import load_dotenv
@@ -65,23 +65,23 @@ disqus = oauth.register(
 )
 
 engine = sqlalchemy.create_engine(
-    os.getenv('SQLALCHEMY_DATABASE_URI'), pool_pre_ping=True)
+    os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
 # logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
 
 # # create session and base declarative
-from sqlalchemy.orm import sessionmaker
+# from sqlalchemy.orm import sessionmaker
 
-from sqlalchemy.ext.declarative import declarative_base
-Base = declarative_base()
-Session = sessionmaker(engine)
+# from sqlalchemy.ext.declarative import declarative_base
+# Base = declarative_base()
+# Session = sessionmaker(engine)
 # Session = sessionmaker(bind=engine)
 
-insp = sqlalchemy.inspect(engine)  # will be a PGInspector
+# insp = sqlalchemy.inspect(engine)  # will be a PGInspector
 
-# make sure user table is created
-from models import User
-Base.metadata.create_all(engine)
+# # make sure user table is created
+# from models import User
+# Base.metadata.create_all(engine)
 
 # with Session() as session:
 #     session.add(User)

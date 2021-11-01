@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 <!-- CSS dependencies -->
 <link rel="stylesheet" href="{{url_for('static', filename = 'css/elegant.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/buttons.css')}}">
 <!-- Script: Make my navbar transparent when the document is scrolled to top -->
 <script src="{{url_for('static', filename = 'js/navbar-ontop.js')}}"></script>
 <!-- Script: Animated entrance -->
@@ -28,8 +29,8 @@
                 <!-- Código html do botão de login -->
                 <div id="dSignInWrapper">
                     <div id="customBtn" class="customDPlusSignIn">
-                        <i class="fab fa-disqus fa-fw">
-                            <span class="buttonText"><a href="{{url_for('disqus')}}">Logar com Disqus</a></span>
+                        <i class="fa-brands fa-spotify fa-fw"></i>
+                        <span class="buttonText"><a href="{{url_for('disqus')}}">Logar com Disqus</a></span>
                     </div>
                 </div>
 
@@ -44,3 +45,4 @@
         </div>
     </div>
 </div>
+{% endblock %}

@@ -1,7 +1,11 @@
 import schedule
-import time
 from fetch import get_genres, get_outliers, get_movie, get_tv
+from apscheduler.schedulers.background import BackgroundScheduler
+import time
 
+scheduler = BackgroundScheduler()
+
+@scheduler.scheduled_job('interval', days=1)
 def job():
     print("Rodando Tarefa...")
     print("Obtendo gêneros...")
@@ -13,13 +17,9 @@ def job():
     print("Obtendo séries...")
     get_tv()
 
-def test_job():
-    print("Funcionando...")
 
+@scheduler.scheduled_job('interval', seconds=10)
+def job2():
+    print("Rodando Tarefa...")
 
-schedule.every(10).seconds.do(test_job)
-schedule.every().day.at("00:00").do(job)
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+scheduler.start()

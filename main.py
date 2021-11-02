@@ -4,7 +4,7 @@ from authlib.integrations.flask_client import OAuth
 import os
 from datetime import timedelta
 import logging
-# import scheduler
+import scheduler
 
 logging.info("Starting...")
 

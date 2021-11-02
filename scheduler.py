@@ -2,6 +2,7 @@ from fetch import get_genres, get_outliers, get_movie, get_tv
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
 
+print("Scheduler started")
 scheduler = BackgroundScheduler()
 
 @scheduler.scheduled_job('interval', days=1)

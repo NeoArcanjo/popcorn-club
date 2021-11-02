@@ -1,7 +1,6 @@
+from src.films.functions import get_data
 import os
 import json
-from functions import get_data
-
 
 def maybe_create(path):
     if not os.path.exists(path):
@@ -12,7 +11,7 @@ def maybe_create(path):
 def get_genres():
     movie = get_data('genre/movie/list?')
     tv = get_data('genre/tv/list?')
-    
+
     for name, data in {"movie": movie, "tv": tv}.items():
         path = f'static/tmp/json/{name}'
         maybe_create(path)

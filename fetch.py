@@ -128,7 +128,7 @@ def get_tv():
     return True
 
 
-get_genres()
-get_outliers()
-get_movie()
-get_tv()
+# get_genres()
+# get_outliers()
+# get_movie()
+# get_tv()

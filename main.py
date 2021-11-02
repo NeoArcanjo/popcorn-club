@@ -1,12 +1,16 @@
+import routes
+from dotenv import load_dotenv
 from flask import Flask
 import sqlalchemy
 from authlib.integrations.flask_client import OAuth
 import os
 from datetime import timedelta
-# import logging
+import logging
+import scheduler
+
+print("Starting...")
 
 # dotenv setup
-from dotenv import load_dotenv
 load_dotenv()
 
 # App config
@@ -26,7 +30,7 @@ google = oauth.register(
     access_token_url=os.getenv("GOOGLE_ACCESS_TOKEN_URL"),
     access_token_params=os.getenv("GOOGLE_ACCESS_TOKEN_PARAMS"),  # None,
     authorize_url=os.getenv("GOOGLE_AUTHORIZE_URL"),
-    authorize_params=os.getenv("GOOGLE_AUTHORIZE_PARAMS"), # None,
+    authorize_params=os.getenv("GOOGLE_AUTHORIZE_PARAMS"),  # None,
     api_base_url=os.getenv("GOOGLE_API_BASE_URL"),
     # This is only needed if using openId to fetch user info
     userinfo_endpoint=os.getenv('GOOGLE_USER_INFO_URL'),
@@ -42,7 +46,7 @@ facebook = oauth.register(
     access_token_url=os.getenv("FACEBOOK_ACCESS_TOKEN_URL"),
     access_token_params=os.getenv("FACEBOOK_ACCESS_TOKEN_PARAMS"),  # None,
     authorize_url=os.getenv("FACEBOOK_AUTHORIZE_URL"),
-    authorize_params=os.getenv("FACEBOOK_AUTHORIZE_PARAMS"), # None,
+    authorize_params=os.getenv("FACEBOOK_AUTHORIZE_PARAMS"),  # None,
     api_base_url=os.getenv("FACEBOOK_API_BASE_URL"),
     # This is only needed if using openId to fetch user info
     userinfo_endpoint=os.getenv('FACEBOOK_USER_INFO_URL'),
@@ -66,7 +70,7 @@ spotify = oauth.register(
 )
 
 disqus = oauth.register(
-    name='disqus',    
+    name='disqus',
     api_key=os.getenv("DISQUS_CLIENT_ID"),
     api_secret=os.getenv("DISQUS_CLIENT_SECRET"),
     client_id=os.getenv("DISQUS_CLIENT_ID"),
@@ -77,7 +81,8 @@ disqus = oauth.register(
     authorize_params={'grant_type': 'authorization_code'},
     api_base_url=os.getenv("DISQUS_API_BASE_URL"),
     userinfo_endpoint=os.getenv("DISQUS_USER_INFO_URL"),
-    client_kwargs={'scope': "read,write"} , # os.getenv("DISQUS_CLIENT_KWARGS"),
+    # os.getenv("DISQUS_CLIENT_KWARGS"),
+    client_kwargs={'scope': "read,write"},
 )
 
 # engine = sqlalchemy.create_engine(
@@ -102,5 +107,3 @@ disqus = oauth.register(
 # with Session() as session:
 #     session.add(User)
 #     session.commit()
-
-import routes

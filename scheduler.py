@@ -1,4 +1,3 @@
-import schedule
 from fetch import get_genres, get_outliers, get_movie, get_tv
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
@@ -18,8 +17,8 @@ def job():
     get_tv()
 
 
-@scheduler.scheduled_job('interval', seconds=10)
-def job2():
+@scheduler.scheduled_job('interval', days=1)
+def songs():
     print("Rodando Tarefa...")
 
 scheduler.start()

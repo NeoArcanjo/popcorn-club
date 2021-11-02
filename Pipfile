@@ -51,6 +51,7 @@ Werkzeug = "*"
 psycopg2-binary = "*"
 fontawesomefree = "*"
 schedule = "*"
+l = "*"
 
 [dev-packages]
 

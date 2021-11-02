@@ -34,6 +34,22 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
+# oAuth Setup
+facebook = oauth.register(
+    name='facebook',
+    client_id=os.getenv("FACEBOOK_CLIENT_ID"),
+    client_secret=os.getenv("FACEBOOK_CLIENT_SECRET"),
+    access_token_url=os.getenv("FACEBOOK_ACCESS_TOKEN_URL"),
+    access_token_params=os.getenv("FACEBOOK_ACCESS_TOKEN_PARAMS"),  # None,
+    authorize_url=os.getenv("FACEBOOK_AUTHORIZE_URL"),
+    authorize_params=os.getenv("FACEBOOK_AUTHORIZE_PARAMS"), # None,
+    api_base_url=os.getenv("FACEBOOK_API_BASE_URL"),
+    # This is only needed if using openId to fetch user info
+    userinfo_endpoint=os.getenv('FACEBOOK_USER_INFO_URL'),
+    # os.getenv("FACEBOOK_CLIENT_KWARGS")
+    client_kwargs={'scope': 'openid email profile'},
+)
+
 spotify = oauth.register(
     name='spotify',
     client_id=os.getenv("SPOTIFY_CLIENT_ID"),

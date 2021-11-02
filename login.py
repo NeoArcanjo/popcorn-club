@@ -35,6 +35,39 @@ def spotify():
     return spotify.authorize_redirect(redirect_uri)
 
 
+@app.route('/login/facebook')
+def facebook():
+    # create the facebook oauth client
+    facebook = oauth.create_client('facebook')
+    redirect_uri = url_for('authorize_facebook', _external=True)
+    return facebook.authorize_redirect(redirect_uri)
+
+
+@app.route('/facebook/callback')
+def authorize_facebook():
+    # create the facebook oauth client
+    facebook = oauth.create_client('facebook')
+    # Access token from facebook (needed to get user info)
+    token = facebook.authorize_access_token(client_id=facebook.client_id,
+                                            client_secret=facebook.client_secret)
+    # userinfo contains stuff u specificed in the scrope
+    print(token)
+    user_id = token['user_id']
+    resp = disqus.userinfo()
+    print(resp)
+    # user_info = resp.json()
+    user_info = {'username': token['username'], 'given_name': token['username'],
+                 'picture': f'https://disqus.com/api/users/avatars/{token["username"]}.jpg'}
+    print(f'https://facebook.com/api/users/avatars/{token["username"]}.jpg')
+    # user = oauth.facebook.userinfo()  # uses openid endpoint to fetch user info
+    # Here you use the profile/user data that you got and query your database find/register the user
+    # and set ur own data in the session not the profile from facebook
+    session['profile'] = user_info
+    # make the session permanant so it keeps existing after broweser gets closed
+    session.permanent = False
+    return redirect('/')
+
+
 @app.route('/disqus/callback')
 def authorize_disqus():
     disqus = oauth.create_client('disqus')  # create the disqus oauth client

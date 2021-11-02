@@ -50,6 +50,8 @@ SQLAlchemy = "*"
 Werkzeug = "*"
 psycopg2-binary = "*"
 fontawesomefree = "*"
+l = "*"
+apscheduler = "*"
 
 [dev-packages]
 

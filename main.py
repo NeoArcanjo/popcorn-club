@@ -3,7 +3,10 @@ import sqlalchemy
 from authlib.integrations.flask_client import OAuth
 import os
 from datetime import timedelta
-# import logging
+import logging
+import scheduler
+
+logging.info("Starting...")
 
 # dotenv setup
 from dotenv import load_dotenv

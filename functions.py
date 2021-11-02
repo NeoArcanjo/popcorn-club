@@ -29,8 +29,6 @@ def final_url():
 
 def get_data(path):
     api_key = os.getenv("TMDB_API_KEY")
-
-    print(f'{base_url()}/{path}api_key={api_key}&language=pt-BR')
     return (requests.get(f'{base_url()}/{path}api_key={api_key}&language=pt-BR')).json()
 
 def get_data_v4(path):

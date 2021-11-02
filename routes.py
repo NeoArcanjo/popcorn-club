@@ -3,6 +3,7 @@ from werkzeug.exceptions import HTTPException
 import requests
 import random
 import os
+import json
 from functions import get_data, base_url, img_url, login_required
 from base64 import b64encode
 from main import app, oauth
@@ -26,18 +27,17 @@ def search():
 @app.route('/home')
 @login_required
 def index():
-    popular = get_data(
-        'discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
-    # nacionais = get_data('discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&')
-    popular = popular["results"]
+    with open('static/tmp/json/popular.json', 'r') as f:
+        popular = json.load(f)
+
+    with open('static/tmp/json/trend.json', 'r') as f:
+        trend = json.load(f)
+
+    with open('static/tmp/json/netflix.json', 'r') as f:
+        netflix = json.load(f)
+    
     secure_random = random.SystemRandom()
     set_movie = secure_random.choice(popular)
-
-    trend = get_data('trending/all/week?')
-    trend = trend["results"]
-
-    netflix = get_data('discover/tv?with_networks=213&')
-    netflix = netflix["results"]
 
     return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)
 
@@ -45,24 +45,25 @@ def index():
 @app.route('/movie')
 @login_required
 def movie():
-    genres = get_data('genre/movie/list?')
+    with open(f'static/tmp/json/movie/genres.json', 'r') as f:
+        genres = json.load(f)
     genres = genres["genres"]
 
     for genre in genres:
-        results = get_data(f'discover/movie?&with_genres={genre["id"]}&')
-        genre["results"] = results["results"]
+        with open(f'static/tmp/json/movie/{genre["name"]}.json', 'r') as f:
+            genre["results"] = json.load(f)
 
-    popular = get_data(
-        'discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
-    popular = popular["results"]
+    with open('static/tmp/json/movie/popular.json', 'r') as f:
+        popular = json.load(f)
+
+    with open('static/tmp/json/movie/trend.json', 'r') as f:
+        trend = json.load(f)
+
+    with open('static/tmp/json/movie/netflix.json', 'r') as f:
+        netflix = json.load(f)
+
     secure_random = random.SystemRandom()
     set_movie = secure_random.choice(popular)
-
-    trend = get_data('trending/movie/week?')
-    trend = trend["results"]
-
-    netflix = get_data('discover/movie?with_networks=213&')
-    netflix = netflix["results"]
 
     return render_template('filmes.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
@@ -71,25 +72,25 @@ def movie():
 @app.route('/tv')
 @login_required
 def series():
-    genres = get_data('genre/tv/list?')
+    with open(f'static/tmp/json/tv/genres.json', 'r') as f:
+        genres = json.load(f)
     genres = genres["genres"]
 
     for genre in genres:
-        results = get_data(f'discover/tv?&with_genres={genre["id"]}&')
-        genre["results"] = results["results"]
+        with open(f'static/tmp/json/tv/{genre["name"]}.json', 'r') as f:
+            genre["results"] = json.load(f)
 
-    popular = get_data(
-        'discover/tv?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
-    popular = popular["results"]
+    with open('static/tmp/json/tv/popular.json', 'r') as f:
+        popular = json.load(f)
+
+    with open('static/tmp/json/tv/trend.json', 'r') as f:
+        trend = json.load(f)
+
+    with open('static/tmp/json/tv/netflix.json', 'r') as f:
+        netflix = json.load(f)
+
     secure_random = random.SystemRandom()
     set_show = secure_random.choice(popular)
-
-    # trend = get_data('trending/all/week?')
-    trend = get_data('trending/tv/week?')
-    trend = trend["results"]
-
-    netflix = get_data('discover/tv?with_networks=213&')
-    netflix = netflix["results"]
 
     return render_template('series.html', set_show=set_show, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
@@ -109,10 +110,3 @@ def handle_exception(e):
     image = b64encode(obj).decode("utf-8")
     return render_template("error_generic.html", title=e.name, description=e.description, image=image, code=code), code
 
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     print(e)
-#     resp = requests.get("http://http.cat/404")
-#     obj = resp.content
-#     image = b64encode(obj).decode("utf-8")
-#     return render_template('not_found.html', obj=obj, image=image), 404

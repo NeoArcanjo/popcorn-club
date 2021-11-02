@@ -9,9 +9,11 @@ services:
     env_file:
       - .env
     ports:
-      - 5002:5000
-    depends_on:
-      - adminer
+      - 5000:5000
+    volumes:
+      - api_data:/tmp/json
+    # depends_on:
+    #   - adminer
 
   adminer:
     image: adminer:latest
@@ -33,5 +35,6 @@ services:
   #     - pgdata:/var/lib/postgresql/data
   #   ports:
   #     - "5432:5432"
-# volumes:
-#   pg_data:
+volumes:
+  api_data:
+  # pg_data:

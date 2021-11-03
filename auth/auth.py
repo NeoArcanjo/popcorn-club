@@ -1,20 +1,20 @@
-import os
-from functools import wraps
+# import os
+# from functools import wraps
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
-from werkzeug.security import check_password_hash, generate_password_hash
-# , HTTPException
-from base64 import b64encode
-import requests
-import random
-# from src.films.functions import get_data, base_url, img_url
-from app.main import app, oauth
-from app.db import get_db
+# from werkzeug.security import check_password_hash, generate_password_hash
+# from base64 import b64encode
+# import requests
+# import random
+# from main import app, oauth
+# # from app.db import get_db
 
-bp = Blueprint('auth', __name__, url_prefix='/auth')
+# print("5")
+# bp = Blueprint('auth', __name__, url_prefix='/auth')
 
-# @bp.route('/login')
-# def login():
-#     return render_template('auth/login.html')
+
+# # @bp.route('/login')
+# # def login():
+# #     return render_template('auth/login.html')
 
 
 # @bp.route('/disqus')
@@ -55,11 +55,8 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 #     token = facebook.authorize_access_token(client_id=facebook.client_id,
 #                                             client_secret=facebook.client_secret)
 #     # userinfo contains stuff u specificed in the scrope
-#     print(token)
 #     user_id = token['user_id']
 #     resp = disqus.userinfo()
-#     print(resp)
-#     # user_info = resp.json()
 #     user_info = {'username': token['username'], 'given_name': token['username'],
 #                  'picture': f'https://disqus.com/api/users/avatars/{token["username"]}.jpg'}
 #     print(f'https://facebook.com/api/users/avatars/{token["username"]}.jpg')
@@ -79,10 +76,8 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 #     token = disqus.authorize_access_token(client_id=disqus.client_id,
 #                                           client_secret=disqus.client_secret)
 #     # userinfo contains stuff u specificed in the scrope
-#     print(token)
 #     user_id = token['user_id']
 #     resp = disqus.userinfo()
-#     print(resp)
 #     # user_info = resp.json()
 #     user_info = {'username': token['username'], 'given_name': token['username'],
 #                  'picture': f'https://disqus.com/api/users/avatars/{token["username"]}.jpg'}
@@ -131,103 +126,104 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 #     return redirect('/')
 
 
-@bp.route('/logout')
-def logout():
-    for key in list(session.keys()):
-        session.pop(key)
-    return redirect('/')
+# @bp.route('/logout')
+# def logout():
+#     for key in list(session.keys()):
+#         session.pop(key)
+#     session.clear()
+#     return redirect(url_for('index'))
 
 
-@bp.route('/register', methods=('GET', 'POST'))
-def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        db = get_db()
-        error = None
+# @bp.route('/register', methods=('GET', 'POST'))
+# def register():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         password = request.form['password']
+#         db = get_db()
+#         error = None
 
-        if not username:
-            error = 'Username is required.'
-        elif not password:
-            error = 'Password is required.'
+#         if not username:
+#             error = 'Username is required.'
+#         elif not password:
+#             error = 'Password is required.'
 
-        if error is None:
-            try:
-                db.execute(
-                    "INSERT INTO user (username, password) VALUES (?, ?)",
-                    (username, generate_password_hash(password)),
-                )
-                db.commit()
-            except db.IntegrityError:
-                error = f"User {username} is already registered."
-            else:
-                return redirect(url_for("auth.login"))
+#         if error is None:
+#             try:
+#                 db.execute(
+#                     "INSERT INTO user (username, password) VALUES (?, ?)",
+#                     (username, generate_password_hash(password)),
+#                 )
+#                 db.commit()
+#             except db.IntegrityError:
+#                 error = f"User {username} is already registered."
+#             else:
+#                 return redirect(url_for("auth.login"))
 
-        flash(error)
+#         flash(error)
 
-    return render_template('auth/register.html')
-
-
-@bp.route('/login', methods=('GET', 'POST'))
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        db = get_db()
-        error = None
-        user = db.execute(
-            'SELECT * FROM user WHERE username = ?', (username,)
-        ).fetchone()
-
-        if user is None:
-            error = 'Incorrect username.'
-        elif not check_password_hash(user['password'], password):
-            error = 'Incorrect password.'
-
-        if error is None:
-            session.clear()
-            session['user_id'] = user['id']
-            return redirect(url_for('index'))
-
-        flash(error)
-
-    return render_template('auth/login.html')
+#     return render_template('auth/register.html')
 
 
-@bp.before_app_request
-def load_logged_in_user():
-    user_id = session.get('user_id')
+# @bp.route('/login', methods=('GET', 'POST'))
+# def login():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         password = request.form['password']
+#         db = get_db()
+#         error = None
+#         user = db.execute(
+#             'SELECT * FROM user WHERE username = ?', (username,)
+#         ).fetchone()
 
-    if user_id is None:
-        g.user = None
-    else:
-        g.user = get_db().execute(
-            'SELECT * FROM user WHERE id = ?', (user_id,)
-        ).fetchone()
+#         if user is None:
+#             error = 'Incorrect username.'
+#         elif not check_password_hash(user['password'], password):
+#             error = 'Incorrect password.'
+
+#         if error is None:
+#             session.clear()
+#             session['user_id'] = user['id']
+#             return redirect(url_for('index'))
+
+#         flash(error)
+
+#     return render_template('auth/login.html')
 
 
-@bp.route('/logout')
-def logout():
-    session.clear()
-    return redirect(url_for('index'))
+# @bp.before_app_request
+# def load_logged_in_user():
+#     user_id = session.get('user_id')
+#     print(user_id)
+#     if user_id is None:
+#         g.user = None
+#     else:
+#         g.user = get_db().execute(
+#             'SELECT * FROM user WHERE id = ?', (user_id,)
+#         ).fetchone()
+
+
+# # # @bp.route('/logout')
+# # # def logout():
+# # #     session.clear()
+# # #     return redirect(url_for('index'))
+
+
+# # def login_required(view):
+# #     @wraps(view)
+# #     def wrapped_view(**kwargs):
+# #         if g.user is None:
+# #             return redirect(url_for('auth.login'))
+
+# #         return view(**kwargs)
+
+# #     return wrapped_view
 
 
 # def login_required(view):
 #     @wraps(view)
-#     def wrapped_view(**kwargs):
-#         if g.user is None:
-#             return redirect(url_for('auth.login'))
-
-#         return view(**kwargs)
-
-#     return wrapped_view
-
-
-def login_required(view):
-    @wraps(view)
-    def decorated_function(*args, **kwargs):
-        user = dict(session).get('profile', None)
-        if user:
-            return f(*args, **kwargs)
-        return redirect(url_for('login', next=request.url))
-    return decorated_function
+#     def decorated_function(*args, **kwargs):
+#         user = dict(session).get('profile', None)
+#         if user:
+#             return f(*args, **kwargs)
+#         return redirect(url_for('login', next=request.url))
+#     return decorated_function

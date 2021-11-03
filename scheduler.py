@@ -1,6 +1,6 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
-from src.films.fetch import get_genres, get_outliers, get_movie, get_tv
+from popcorn_club.club.fetch import get_genres, get_outliers, get_movie, get_tv
 
 print("Scheduler started")
 scheduler = BackgroundScheduler()

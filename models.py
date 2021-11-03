@@ -1,4 +1,4 @@
-from main import Base, Session
+from app import Base, Session
 
 import logging
 from sqlalchemy import Column, Index, Integer, String

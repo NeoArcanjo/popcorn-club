@@ -2,16 +2,19 @@ import os
 import requests
 import random
 import json
-from flask import Flask, render_template, request, redirect, url_for, session
+# from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
 from werkzeug.exceptions import HTTPException
 from base64 import b64encode
-from src.films.functions import get_data, base_url, img_url, login_required
-from src.main import app, oauth
-import src.routes.dashboard
-import src.routes.login
+from popcorn_club.club.functions import get_data, base_url, img_url
+from popcorn_club.app import app, oauth
+from popcorn_club.dashboard import dashboard
+from popcorn_club.auth import auth
+
+bp = Blueprint('club', __name__, url_prefix='/club')
 
 
-@app.route("/search")
+@bp.route("/search")
 @login_required
 def search():
     search = request.args.get('q')
@@ -23,9 +26,9 @@ def search():
     return render_template("search_result.html",  set_movie=set_movie, img_url=img_url, results=results)
 
 
-@app.route('/')
-@app.route('/index')
-@app.route('/home')
+@bp.route('/')
+@bp.route('/index')
+@bp.route('/home')
 @login_required
 def index():
     with open('static/tmp/json/popular.json', 'r') as f:
@@ -43,8 +46,8 @@ def index():
     return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)
 
 
-@app.route('/filmes')
-@app.route('/movie')
+@bp.route('/filmes')
+@bp.route('/movie')
 @login_required
 def movie():
     with open(f'static/tmp/json/movie/genres.json', 'r') as f:
@@ -70,8 +73,8 @@ def movie():
     return render_template('filmes.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
 
-@app.route('/series')
-@app.route('/tv')
+@bp.route('/series')
+@bp.route('/tv')
 @login_required
 def series():
     with open(f'static/tmp/json/tv/genres.json', 'r') as f:
@@ -97,14 +100,14 @@ def series():
     return render_template('series.html', set_show=set_show, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
 
-@app.route("/<type>/about/<id>")
+@bp.route("/<type>/about/<id>")
 @login_required
 def about(type, id):
     movie = get_data(f'{type}/{id}?')
     return render_template('sobre.html', movie=movie, img_url=img_url)
 
 
-@app.errorhandler(HTTPException)
+@bp.errorhandler(HTTPException)
 def handle_exception(e):
     code = e.code
     resp = requests.get(f"http://http.cat/{code}")

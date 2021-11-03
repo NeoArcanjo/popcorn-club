@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, session
-from films.functions import get_data, base_url, img_url, login_required
-from src.main import app, oauth
+from popcorn_club.club.functions import get_data, base_url, img_url, login_required
+from popcorn_club.app import app, oauth
 
 @app.route("/dashboard")
 @login_required

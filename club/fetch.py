@@ -1,6 +1,7 @@
-from src.films.functions import get_data
+from popcorn_club.club.functions import get_data
 import os
 import json
+
 
 def maybe_create(path):
     if not os.path.exists(path):

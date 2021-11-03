@@ -1,107 +1,130 @@
 import os
 import logging
-import scheduler
+# import scheduler
 import sqlalchemy
-from dotenv import load_dotenv
 from authlib.integrations.flask_client import OAuth
+import os
 from datetime import timedelta
+from flask import Flask
+from dotenv import load_dotenv
 
-logging.info("Starting...")
-
+print("2")
 # dotenv setup
 load_dotenv()
+
+print("3")
+
+def create_app():
+
+    # App config
+    from popcorn_club.auth import auth
+    # from popcorn_club.club import club
+    app = Flask(__name__)
+
+    # Session config
+    app.secret_key = os.getenv("APP_SECRET_KEY")
+    app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
+    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
+    # app.register_blueprint(auth.bp)
+    # app.register_blueprint(films.bp)
+    return app
+
+
+print("4")
+
+
 app = create_app()
-# Session config
-app.secret_key = os.getenv("APP_SECRET_KEY")
-app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
-oauth = OAuth(app)
 
-# oAuth Setup
-google = oauth.register(
-    name='google',
-    client_id=os.getenv("GOOGLE_CLIENT_ID"),
-    client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-    access_token_url=os.getenv("GOOGLE_ACCESS_TOKEN_URL"),
-    access_token_params=os.getenv("GOOGLE_ACCESS_TOKEN_PARAMS"),  # None,
-    authorize_url=os.getenv("GOOGLE_AUTHORIZE_URL"),
-    authorize_params=os.getenv("GOOGLE_AUTHORIZE_PARAMS"),  # None,
-    api_base_url=os.getenv("GOOGLE_API_BASE_URL"),
-    # This is only needed if using openId to fetch user info
-    userinfo_endpoint=os.getenv('GOOGLE_USER_INFO_URL'),
-    # os.getenv("GOOGLE_CLIENT_KWARGS")
-    client_kwargs={'scope': 'openid email profile'},
-)
+print("5")
 
-# oAuth Setup
-facebook = oauth.register(
-    name='facebook',
-    client_id=os.getenv("FACEBOOK_CLIENT_ID"),
-    client_secret=os.getenv("FACEBOOK_CLIENT_SECRET"),
-    access_token_url=os.getenv("FACEBOOK_ACCESS_TOKEN_URL"),
-    access_token_params=os.getenv("FACEBOOK_ACCESS_TOKEN_PARAMS"),  # None,
-    authorize_url=os.getenv("FACEBOOK_AUTHORIZE_URL"),
-    authorize_params=os.getenv("FACEBOOK_AUTHORIZE_PARAMS"),  # None,
-    api_base_url=os.getenv("FACEBOOK_API_BASE_URL"),
-    # This is only needed if using openId to fetch user info
-    userinfo_endpoint=os.getenv('FACEBOOK_USER_INFO_URL'),
-    # os.getenv("FACEBOOK_CLIENT_KWARGS")
-    client_kwargs={'scope': 'openid email profile'},
-)
+# print(app)
+# oauth = OAuth(app)
 
-spotify = oauth.register(
-    name='spotify',
-    client_id=os.getenv("SPOTIFY_CLIENT_ID"),
-    client_secret=os.getenv("SPOTIFY_CLIENT_SECRET"),
-    access_token_url=os.getenv("SPOTIFY_ACCESS_TOKEN_URL"),
-    access_token_params={'type': 'code'},
-    authorize_url=os.getenv("SPOTIFY_AUTHORIZE_URL"),
-    authorize_params={'grant_type': 'authorization_code'},
-    api_base_url=os.getenv("SPOTIFY_API_BASE_URL"),
-    # This is only needed if using openId to fetch user info
-    userinfo_endpoint=os.getenv('SPOTIFY_USER_INFO_URL'),
-    # os.getenv("SPOTIFY_CLIENT_KWARGS")
-    client_kwargs={'scope': 'user-read-private user-read-email'},
-)
+# # oAuth Setup
+# google = oauth.register(
+#     name='google',
+#     client_id=os.getenv("GOOGLE_CLIENT_ID"),
+#     client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
+#     access_token_url=os.getenv("GOOGLE_ACCESS_TOKEN_URL"),
+#     access_token_params=os.getenv("GOOGLE_ACCESS_TOKEN_PARAMS"),  # None,
+#     authorize_url=os.getenv("GOOGLE_AUTHORIZE_URL"),
+#     authorize_params=os.getenv("GOOGLE_AUTHORIZE_PARAMS"),  # None,
+#     api_base_url=os.getenv("GOOGLE_API_BASE_URL"),
+#     # This is only needed if using openId to fetch user info
+#     userinfo_endpoint=os.getenv('GOOGLE_USER_INFO_URL'),
+#     # os.getenv("GOOGLE_CLIENT_KWARGS")
+#     client_kwargs={'scope': 'openid email profile'},
+# )
 
-disqus = oauth.register(
-    name='disqus',
-    api_key=os.getenv("DISQUS_CLIENT_ID"),
-    api_secret=os.getenv("DISQUS_CLIENT_SECRET"),
-    client_id=os.getenv("DISQUS_CLIENT_ID"),
-    client_secret=os.getenv("DISQUS_CLIENT_SECRET"),
-    access_token_url=os.getenv("DISQUS_ACCESS_TOKEN_URL"),
-    access_token_params={'type': 'code'},
-    authorize_url=os.getenv("DISQUS_AUTHORIZE_URL"),
-    authorize_params={'grant_type': 'authorization_code'},
-    api_base_url=os.getenv("DISQUS_API_BASE_URL"),
-    userinfo_endpoint=os.getenv("DISQUS_USER_INFO_URL"),
-    # os.getenv("DISQUS_CLIENT_KWARGS"),
-    client_kwargs={'scope': "read,write"},
-)
+# # oAuth Setup
+# facebook = oauth.register(
+#     name='facebook',
+#     client_id=os.getenv("FACEBOOK_CLIENT_ID"),
+#     client_secret=os.getenv("FACEBOOK_CLIENT_SECRET"),
+#     access_token_url=os.getenv("FACEBOOK_ACCESS_TOKEN_URL"),
+#     access_token_params=os.getenv("FACEBOOK_ACCESS_TOKEN_PARAMS"),  # None,
+#     authorize_url=os.getenv("FACEBOOK_AUTHORIZE_URL"),
+#     authorize_params=os.getenv("FACEBOOK_AUTHORIZE_PARAMS"),  # None,
+#     api_base_url=os.getenv("FACEBOOK_API_BASE_URL"),
+#     # This is only needed if using openId to fetch user info
+#     userinfo_endpoint=os.getenv('FACEBOOK_USER_INFO_URL'),
+#     # os.getenv("FACEBOOK_CLIENT_KWARGS")
+#     client_kwargs={'scope': 'openid email profile'},
+# )
 
-# engine = sqlalchemy.create_engine(
-#     os.getenv('DATABASE_URL'), pool_pre_ping=True)
+# spotify = oauth.register(
+#     name='spotify',
+#     client_id=os.getenv("SPOTIFY_CLIENT_ID"),
+#     client_secret=os.getenv("SPOTIFY_CLIENT_SECRET"),
+#     access_token_url=os.getenv("SPOTIFY_ACCESS_TOKEN_URL"),
+#     access_token_params={'type': 'code'},
+#     authorize_url=os.getenv("SPOTIFY_AUTHORIZE_URL"),
+#     authorize_params={'grant_type': 'authorization_code'},
+#     api_base_url=os.getenv("SPOTIFY_API_BASE_URL"),
+#     # This is only needed if using openId to fetch user info
+#     userinfo_endpoint=os.getenv('SPOTIFY_USER_INFO_URL'),
+#     # os.getenv("SPOTIFY_CLIENT_KWARGS")
+#     client_kwargs={'scope': 'user-read-private user-read-email'},
+# )
 
-# logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
+# disqus = oauth.register(
+#     name='disqus',
+#     api_key=os.getenv("DISQUS_CLIENT_ID"),
+#     api_secret=os.getenv("DISQUS_CLIENT_SECRET"),
+#     client_id=os.getenv("DISQUS_CLIENT_ID"),
+#     client_secret=os.getenv("DISQUS_CLIENT_SECRET"),
+#     access_token_url=os.getenv("DISQUS_ACCESS_TOKEN_URL"),
+#     access_token_params={'type': 'code'},
+#     authorize_url=os.getenv("DISQUS_AUTHORIZE_URL"),
+#     authorize_params={'grant_type': 'authorization_code'},
+#     api_base_url=os.getenv("DISQUS_API_BASE_URL"),
+#     userinfo_endpoint=os.getenv("DISQUS_USER_INFO_URL"),
+#     # os.getenv("DISQUS_CLIENT_KWARGS"),
+#     client_kwargs={'scope': "read,write"},
+# )
 
-# # create session and base declarative
-# from sqlalchemy.orm import sessionmaker
+# # engine = sqlalchemy.create_engine(
+# #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
-# from sqlalchemy.ext.declarative import declarative_base
-# Base = declarative_base()
-# Session = sessionmaker(engine)
-# Session = sessionmaker(bind=engine)
+# # logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
 
-# insp = sqlalchemy.inspect(engine)  # will be a PGInspector
+# # # create session and base declarative
+# # from sqlalchemy.orm import sessionmaker
 
-# # make sure user table is created
-# from models import User
-# Base.metadata.create_all(engine)
+# # from sqlalchemy.ext.declarative import declarative_base
+# # Base = declarative_base()
+# # Session = sessionmaker(engine)
+# # Session = sessionmaker(bind=engine)
 
-# with Session() as session:
-#     session.add(User)
-#     session.commit()
+# # insp = sqlalchemy.inspect(engine)  # will be a PGInspector
+
+# # # make sure user table is created
+# # from models import User
+# # Base.metadata.create_all(engine)
+
+# # with Session() as session:
+# #     session.add(User)
+# #     session.commit()
 
 
 

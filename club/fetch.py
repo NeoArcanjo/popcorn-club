@@ -1,4 +1,4 @@
-from popcorn_club.club.functions import get_data
+from functions import get_data
 import os
 import json
 

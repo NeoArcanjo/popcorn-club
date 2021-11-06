@@ -1,44 +1,17 @@
-import os
-import logging
-# import scheduler
-import sqlalchemy
-from authlib.integrations.flask_client import OAuth
-import os
-from datetime import timedelta
-from flask import Flask
-from dotenv import load_dotenv
+# import os
+# import logging
+# # import scheduler
+# import sqlalchemy
+# from authlib.integrations.flask_client import OAuth
+# import os
+# from dotenv import load_dotenv
 
-print("2")
-# dotenv setup
-load_dotenv()
+# # dotenv setup
+# load_dotenv()
 
-print("3")
-
-def create_app():
-
-    # App config
-    from popcorn_club.auth import auth
-    # from popcorn_club.club import club
-    app = Flask(__name__)
-
-    # Session config
-    app.secret_key = os.getenv("APP_SECRET_KEY")
-    app.config['SESSION_COOKIE_NAME'] = 'google-login-session'
-    app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=5)
-    # app.register_blueprint(auth.bp)
-    # app.register_blueprint(films.bp)
-    return app
-
-
-print("4")
-
-
-app = create_app()
-
-print("5")
-
-# print(app)
+# # print(app)
 # oauth = OAuth(app)
+# print(oauth)
 
 # # oAuth Setup
 # google = oauth.register(
@@ -103,28 +76,25 @@ print("5")
 #     client_kwargs={'scope': "read,write"},
 # )
 
-# # engine = sqlalchemy.create_engine(
-# #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
+# # # engine = sqlalchemy.create_engine(
+# # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
-# # logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
+# # # logging.getLogger('sqlalchemy.dialects.postgresql').setLevel(logging.INFO)
 
-# # # create session and base declarative
-# # from sqlalchemy.orm import sessionmaker
+# # # # create session and base declarative
+# # # from sqlalchemy.orm import sessionmaker
 
-# # from sqlalchemy.ext.declarative import declarative_base
-# # Base = declarative_base()
-# # Session = sessionmaker(engine)
-# # Session = sessionmaker(bind=engine)
+# # # from sqlalchemy.ext.declarative import declarative_base
+# # # Base = declarative_base()
+# # # Session = sessionmaker(engine)
+# # # Session = sessionmaker(bind=engine)
 
-# # insp = sqlalchemy.inspect(engine)  # will be a PGInspector
+# # # insp = sqlalchemy.inspect(engine)  # will be a PGInspector
 
-# # # make sure user table is created
-# # from models import User
-# # Base.metadata.create_all(engine)
+# # # # make sure user table is created
+# # # from models import User
+# # # Base.metadata.create_all(engine)
 
-# # with Session() as session:
-# #     session.add(User)
-# #     session.commit()
-
-
-
+# # # with Session() as session:
+# # #     session.add(User)
+# # #     session.commit()

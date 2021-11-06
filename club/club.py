@@ -6,13 +6,11 @@ import json
 from flask import Blueprint, flash, g, redirect, render_template, request, session, url_for
 from werkzeug.exceptions import HTTPException
 from base64 import b64encode
-from popcorn_club.club.functions import get_data, base_url, img_url
-from popcorn_club.app import app, oauth
-from popcorn_club.dashboard import dashboard
-from popcorn_club.auth import auth
+from functions import get_data, base_url, img_url
+from main import app, oauth
+from auth.auth import login_required
 
 bp = Blueprint('club', __name__, url_prefix='/club')
-
 
 @bp.route("/search")
 @login_required

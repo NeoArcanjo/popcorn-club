@@ -1,5 +1,4 @@
-[
-    {
+[{
         "label": "wraps",
         "importPath": "functools",
         "description": "functools",
@@ -1104,7 +1103,7 @@
         "kind": 2,
         "importPath": "auth.auth",
         "description": "auth.auth",
-        "peekOfCode": "def disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)\n@bp.route('/google')\ndef google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)",
+        "peekOfCode": "def disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('auth.authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)\n@bp.route('/google')\ndef google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('auth.authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)",
         "detail": "auth.auth",
         "documentation": {}
     },
@@ -1113,7 +1112,7 @@
         "kind": 2,
         "importPath": "auth.auth",
         "description": "auth.auth",
-        "peekOfCode": "def google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)\n@bp.route('/spotify')\ndef spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')",
+        "peekOfCode": "def google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('auth.authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)\n@bp.route('/spotify')\ndef spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('auth.authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')",
         "detail": "auth.auth",
         "documentation": {}
     },
@@ -1122,7 +1121,7 @@
         "kind": 2,
         "importPath": "auth.auth",
         "description": "auth.auth",
-        "peekOfCode": "def spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')\ndef facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)",
+        "peekOfCode": "def spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('auth.authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')\ndef facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('auth.authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)",
         "detail": "auth.auth",
         "documentation": {}
     },
@@ -1131,7 +1130,7 @@
         "kind": 2,
         "importPath": "auth.auth",
         "description": "auth.auth",
-        "peekOfCode": "def facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)\n@bp.route('/facebook/callback')\ndef authorize_facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    # Access token from facebook (needed to get user info)",
+        "peekOfCode": "def facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('auth.authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)\n@bp.route('/facebook/callback')\ndef authorize_facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    # Access token from facebook (needed to get user info)",
         "detail": "auth.auth",
         "documentation": {}
     },
@@ -1221,7 +1220,7 @@
         "kind": 5,
         "importPath": "auth.auth",
         "description": "auth.auth",
-        "peekOfCode": "bp = Blueprint('auth', __name__, url_prefix='/auth')\n# @bp.route('/login')\n# def login():\n#     return render_template('auth/login.html')\n@bp.route('/disqus')\ndef disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)",
+        "peekOfCode": "bp = Blueprint('auth', __name__, url_prefix='/auth')\n# @bp.route('/login')\n# def login():\n#     return render_template('auth/login.html')\n@bp.route('/disqus')\ndef disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('auth.authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)",
         "detail": "auth.auth",
         "documentation": {}
     },

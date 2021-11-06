@@ -6,10 +6,12 @@ from popcorn_club.auth.auth import login_required
 bp = Blueprint('admin', __name__, url_prefix='/admin',
                template_folder='templates', static_folder='static')
 
+
 @bp.route("/dashboard")
 @login_required
 def dashboard():
     return render_template('index.html')
+
 
 @bp.route("/buttons")
 @login_required
@@ -72,4 +74,3 @@ def tables():
 @bp.route("/blank")
 def blank():
     return render_template('blank.html')
-

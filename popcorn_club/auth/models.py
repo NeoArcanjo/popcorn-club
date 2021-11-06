@@ -1,4 +1,4 @@
-from app import Base, Session
+from popcorn_club import Base, Session
 
 import logging
 from sqlalchemy import Column, Index, Integer, String

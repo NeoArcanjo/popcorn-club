@@ -6,10 +6,12 @@ from flask import Blueprint, flash, g, render_template, request
 from flask import current_app as app
 from werkzeug.exceptions import HTTPException
 from base64 import b64encode
-from popcorn_club.club.functions import get_data, img_url
+from .functions import get_data, img_url
 from popcorn_club.auth.auth import login_required
 
-bp = Blueprint('club', __name__, url_prefix='/club', template_folder='templates', static_folder='static')
+bp = Blueprint('club', __name__, url_prefix='/club',
+               template_folder='templates', static_folder='static')
+
 
 @bp.route("/search")
 @login_required

@@ -1,4 +1,4 @@
-from popcorn_club.club.functions import get_data
+from .functions import get_data
 import os
 import json
 
@@ -6,7 +6,6 @@ def maybe_create(path):
     if not os.path.exists(path):
         os.mkdir(path)
     return True
-
 
 def get_genres():
     movie = get_data('genre/movie/list?')

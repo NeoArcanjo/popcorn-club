@@ -224,6 +224,6 @@ def login_required(view):
     def decorated_function(*args, **kwargs):
         user = dict(session).get('profile', None)
         if user:
-            return f(*args, **kwargs)
-        return redirect(url_for('login', next=request.url))
+            return view(*args, **kwargs)
+        return redirect(url_for('auth.login', next=request.url))
     return decorated_function

@@ -1,19 +1,10 @@
-# import os
-# import logging
+import logging
 # # import scheduler
 # import sqlalchemy
-# from authlib.integrations.flask_client import OAuth
-# import os
-# from dotenv import load_dotenv
-
-# # dotenv setup
-# load_dotenv()
 import os
 from datetime import timedelta
-from flask import Flask
-# from scheduler import scheduler
-import time
-# from club.fetch import get_genres, get_outliers, get_movie, get_tv
+from flask import Flask, redirect, url_for
+# from .scheduler import scheduler
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -37,11 +28,16 @@ import time
 # # # with Session() as session:
 # # #     session.add(User)
 # # #     session.commit()
+
+# dotenv setup
+from dotenv import load_dotenv
+load_dotenv()
+
 def create_app(test_config=None):
-    from popcorn_club.auth import auth
-    from popcorn_club.dashboard import dashboard
-    from popcorn_club.club import club
-    # from popcorn_club.spotify import spotify
+    from .auth import auth
+    from .dashboard import dashboard
+    from .club import club
+    # from .spotify import spotify
     
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -65,6 +61,10 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    @app.route('/')
+    def index():
+        return redirect(url_for('club.index'))
+    
     app.register_blueprint(auth.bp)
     app.register_blueprint(club.bp)
     app.register_blueprint(dashboard.bp)

@@ -51,6 +51,7 @@ Werkzeug = "*"
 fontawesomefree = "*"
 l = "*"
 apscheduler = "*"
+flask-assets = "*"
 
 [dev-packages]
 

@@ -1,6 +1,6 @@
 # from main import Session
 
-from functions import refreshToken, dbAddTracksPlaylist, dbClearPlaylist, dbGetTopTracksURI
+from .functions import refreshToken, dbAddTracksPlaylist, dbClearPlaylist, dbGetTopTracksURI
 import logging
 from sqlalchemy import Column, Index, Integer, String
 

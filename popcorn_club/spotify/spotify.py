@@ -74,7 +74,6 @@ def tracks():
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
-        print(current_user["id"])
         session['user_id'] = current_user['id']
 
     track_ids = getAllTopTracks(session)
@@ -125,8 +124,6 @@ def timer():
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
-        print(current_user["id"])
-
         session['user_id'] = current_user['id']
 
     device_names = getUserDevices(session)

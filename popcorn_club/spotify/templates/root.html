@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Rafael Arcanjo">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('spotify.static',filename='styles/main.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -31,7 +31,7 @@
     {% block navbar %}
     <nav class="navbar navbar-expand-md nav-scheme navbar-light">
         <a class="navbar-brand logo" href="/" aria-label="DiscoverDaily home">
-            <img src="{{url_for('static', filename='styles/logo.png')}}" alt="discover-logo" id="logo" width="150">
+            <img src="{{url_for('spotify.static', filename='styles/logo.png')}}" alt="discover-logo" id="logo" width="150">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

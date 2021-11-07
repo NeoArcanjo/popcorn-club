@@ -96,12 +96,13 @@ def authorize_spotify():
     session['refresh_token'] = token['refresh_token']
     session['token_expiration'] = time.time() + token['expires_in']
     
-    user_info = {'username': user['display_name'],
-                 'given_name': user['display_name'], 'picture': user['images'][0]['url']}
+    user['username'] = user['display_name']
+    user['given_name'] = user['display_name']
+    user['picture'] = user['images'][0]['url']
     # Here you use the profile/user data that you got and query your database find/register the user
     # and set ur own data in the session not the profile from spotify
-    session['profile'] = user_info
-    session['user_id'] = user
+    session['profile'] = user
+    session['user_id'] = user['id']
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
     return redirect(url_for('club.index'))
@@ -195,7 +196,6 @@ def login():
 @bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
-    print(user_id)
     if user_id is None:
         g.user = None
     else:

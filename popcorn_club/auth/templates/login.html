@@ -1,17 +1,8 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block head %} {{ super() }}
-<!-- PAGE settings -->
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-<!-- CSS dependencies -->
-<link rel="stylesheet" href="{{url_for('static', filename = 'css/elegant.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename = 'css/buttons.css')}}">
-<!-- Script: Make my navbar transparent when the document is scrolled to top -->
-<script src="{{url_for('static', filename = 'js/navbar-ontop.js')}}"></script>
-<!-- Script: Animated entrance -->
-<script src="{{url_for('static', filename = 'js/animate-in.js')}}"></script>
-
-{% endblock %} {%block navbar %}{% endblock %}{% block content %}
+{% extends "base_auth.html" %} {% block title %}Login{% endblock %} 
+ {%block navbar %}{% endblock %}{% block content %}
 <!-- Cover -->
-<div class="d-flex align-items-center py-5 photo-overlay cover" style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
+<div class="d-flex align-items-center py-5 photo-overlay cover"
+    style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
     <div class="container">
         <div class="row">
             <div class="text-white p-5 bg-dark-opaque col-12 col-lg-8 mx-auto">
@@ -24,10 +15,12 @@
                 </div>
                 <form class="user">
                     <div class="form-group">
-                        <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                            aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                        <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                            placeholder="Password">
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox small">

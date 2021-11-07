@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block header %}
+<header id="banner" style='background-image: url({{img_url(set_show["backdrop_path"])}});'>
+    <div id="banner__contents">
+        <h1 id="banner__title">{{set_show["name"]}}</h1>
+        <div id="banner__buttons">
+            <button id="banner__button">Play</button>
+            <button id="banner__button">Minha Lista</button>
+        </div>
+        <p id="banner__description">{{set_show["overview"][0:200]}}</p>
+    </div>
+    <div id="banner__fadeBottom"></div>
+</header>
+{% endblock %} {% block content %}
+
+<div id="headrow">
+    <div class="row">
+        <h2 class="row__title"></h2>
+        <div class="row__posters"></div>
+    </div>
+
+    <div class="row popularrow">
+        <h2 class="row__title">Em alta</h2>
+        <div class="row__posters">
+            {% for show in popular %}
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
+            <a href="{{url_for('club.about', type='tv', id=show['id'])}}" class="title">{{show["title"] if show["title"] else
+                show["name"]}}</a> {% endfor %}
+        </div>
+    </div>
+
+    <div class="row trendrow">
+        <h2 class="row__title">Mais vistos</h2>
+        <div class="row__posters">
+            {% for show in trend %}
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
+            <a href="{{url_for('club.about', type='tv', id=show['id'])}}" class="title">{{show["title"] if show["title"] else
+                show["name"]}}</a> {% endfor %}
+        </div>
+    </div>
+
+    <!-- TODO adicionar abas de tv e series por serviço de assinatura -->
+    <div class="row netflixrow">
+        <h2 class="row__title">ORIGINAIS NETFLIX</h2>
+        <div class="row__posters">
+            {% for show in netflix %}
+            <img src='{{ img_url(show["poster_path"], show["backdrop_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
+            <a href="{{url_for('club.about', type='tv', id=show['id'])}}" class="title">{{show["title"] if show["title"] else
+                show["name"]}}</a> {% endfor %}
+        </div>
+    </div>
+
+    <!-- tv -->
+    {% for genre in genres %}
+    <div class="row">
+        <h2 class="row__title">{{genre["name"]}}</h2>
+        <div class="row__posters">
+            {% for show in genre["results"] %}
+            <img src='{{ img_url(show["backdrop_path"], show["poster_path"])}}' id='{{show["id"]}}' class="row__posterLarge">
+            <a href="{{url_for('club.about', type='tv', id=show['id'])}}" class="title">{{show["title"]}}</a> {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- TODO criar aba para series, a seguir -->
+    <!-- TODO criar pagina de detalhes para cada filme -->
+</div>
+{% endblock %}

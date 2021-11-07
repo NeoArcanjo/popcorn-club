@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Rafael Arcanjo Fagundes de Souza">
+    <link href="{{url_for('.static', filename = 'css/style.css')}}" rel="stylesheet">
+    <script defer src="{{url_for('.static', filename = 'js/app.js')}}"></script>
+    <link rel="icon" href="{{url_for('.static', filename = 'img/favicon.ico')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %} - Popcorn Club</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block navbar %} {% include "components/medias_navbar.html" %} {% endblock %} {% block header %} {% endblock %} {% block content %} {% endblock %} {% block footer %}
+    <!-- Footer -->
+    {%include "components/footer.html" %} {% endblock %} {% block script %}
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="{{url_for('.static', filename = 'vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('.static', filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{url_for('.static', filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{url_for('.static', filename = 'js/sb-admin-2.min.js')}}"></script>
+    {% endblock %}
+</body>
+
+</html>

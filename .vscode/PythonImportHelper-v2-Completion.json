@@ -1,0 +1,3261 @@
+[{
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oauth",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oauth",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oauth",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "werkzeug.exceptions",
+        "description": "werkzeug.exceptions",
+        "isExtraImport": true,
+        "detail": "werkzeug.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "b64encode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "get_data",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "base_url",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "img_url",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "get_data",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "refreshToken",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbAddTracksPlaylist",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbClearPlaylist",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbGetTopTracksURI",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "createStateKey",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getToken",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "refreshToken",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "checkTokenStatus",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserInformation",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getAllTopTracks",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopTracksID",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopTracksURI",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopArtists",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getRecommendedTracks",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "startPlayback",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "startPlaybackContext",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "pausePlayback",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserPlaylists",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserDevices",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "skipTrack",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTrack",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTrackAfterResume",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "createPlaylist",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "addTracksPlaylist",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "searchSpotify",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "isExtraImport": true,
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_data",
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "isExtraImport": true,
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "base_url",
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "isExtraImport": true,
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "img_url",
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "isExtraImport": true,
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "isExtraImport": true,
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemy",
+        "importPath": "flask_sqlalchemy",
+        "description": "flask_sqlalchemy",
+        "isExtraImport": true,
+        "detail": "flask_sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2ClientMixin",
+        "importPath": "authlib.integrations.sqla_oauth2",
+        "description": "authlib.integrations.sqla_oauth2",
+        "isExtraImport": true,
+        "detail": "authlib.integrations.sqla_oauth2",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2AuthorizationCodeMixin",
+        "importPath": "authlib.integrations.sqla_oauth2",
+        "description": "authlib.integrations.sqla_oauth2",
+        "isExtraImport": true,
+        "detail": "authlib.integrations.sqla_oauth2",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2TokenMixin",
+        "importPath": "authlib.integrations.sqla_oauth2",
+        "description": "authlib.integrations.sqla_oauth2",
+        "isExtraImport": true,
+        "detail": "authlib.integrations.sqla_oauth2",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "routes",
+        "description": "routes",
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "updatePlaylists",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "addUser",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Bootstrap",
+        "importPath": "flask_bootstrap",
+        "description": "flask_bootstrap",
+        "isExtraImport": true,
+        "detail": "flask_bootstrap",
+        "documentation": {}
+    },
+    {
+        "label": "BackgroundScheduler",
+        "importPath": "apscheduler.schedulers.background",
+        "description": "apscheduler.schedulers.background",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.background",
+        "documentation": {}
+    },
+    {
+        "label": "BackgroundScheduler",
+        "importPath": "apscheduler.schedulers.background",
+        "description": "apscheduler.schedulers.background",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.background",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Index",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Index",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "click",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "click",
+        "description": "click",
+        "detail": "click",
+        "documentation": {}
+    },
+    {
+        "label": "with_appcontext",
+        "importPath": "flask.cli",
+        "description": "flask.cli",
+        "isExtraImport": true,
+        "detail": "flask.cli",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth",
+        "importPath": "authlib.integrations.flask_client",
+        "description": "authlib.integrations.flask_client",
+        "isExtraImport": true,
+        "detail": "authlib.integrations.flask_client",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_genres",
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "isExtraImport": true,
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_outliers",
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "isExtraImport": true,
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_movie",
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "isExtraImport": true,
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_tv",
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "isExtraImport": true,
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "disqus",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('auth.authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)\n@bp.route('/google')\ndef google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('auth.authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "google",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def google():\n    google = oauth.create_client('google')  # create the google oauth client\n    redirect_uri = url_for('auth.authorize', _external=True)\n    return google.authorize_redirect(redirect_uri)\n@bp.route('/spotify')\ndef spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('auth.authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "spotify",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    redirect_uri = url_for('auth.authorize_spotify', _external=True)\n    return spotify.authorize_redirect(redirect_uri)\n@bp.route('/facebook')\ndef facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('auth.authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "facebook",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    redirect_uri = url_for('auth.authorize_facebook', _external=True)\n    return facebook.authorize_redirect(redirect_uri)\n@bp.route('/facebook/callback')\ndef authorize_facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    # Access token from facebook (needed to get user info)",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authorize_facebook",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def authorize_facebook():\n    # create the facebook oauth client\n    facebook = oauth.create_client('facebook')\n    # Access token from facebook (needed to get user info)\n    token = facebook.authorize_access_token(client_id=facebook.client_id,\n                                            client_secret=facebook.client_secret)\n    # userinfo contains stuff u specificed in the scrope\n    user_id = token['user_id']\n    resp = disqus.userinfo()\n    user_info = {'username': token['username'], 'given_name': token['username'],",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authorize_disqus",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def authorize_disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    # Access token from disqus (needed to get user info)\n    token = disqus.authorize_access_token(client_id=disqus.client_id,\n                                          client_secret=disqus.client_secret)\n    # userinfo contains stuff u specificed in the scrope\n    user_id = token['user_id']\n    resp = disqus.userinfo()\n    # user_info = resp.json()\n    user_info = {'username': token['username'], 'given_name': token['username'],",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authorize_spotify",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def authorize_spotify():\n    spotify = oauth.create_client('spotify')  # create the spotify oauth client\n    # Access token from spotify (needed to get user info)\n    token = spotify.authorize_access_token()\n    # userinfo contains stuff u specificed in the scrope\n    user = oauth.spotify.userinfo()\n    user_info = {'username': user['display_name'],\n                 'given_name': user['display_name'], 'picture': user['images'][0]['url']}\n    # Here you use the profile/user data that you got and query your database find/register the user\n    # and set ur own data in the session not the profile from spotify",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authorize",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def authorize():\n    google = oauth.create_client('google')  # create the google oauth client\n    # Access token from google (needed to get user info)\n    token = google.authorize_access_token()\n    # userinfo contains stuff u specificed in the scrope\n    resp = google.get('userinfo')\n    user_info = resp.json()\n    user = oauth.google.userinfo()  # uses openid endpoint to fetch user info\n    # Here you use the profile/user data that you got and query your database find/register the user\n    # and set ur own data in the session not the profile from google",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def logout():\n    for key in list(session.keys()):\n        session.pop(key)\n    session.clear()\n    return redirect(url_for('index'))\n@bp.route('/register', methods=('GET', 'POST'))\ndef register():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def register():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        db = get_db()\n        error = None\n        if not username:\n            error = 'Username is required.'\n        elif not password:\n            error = 'Password is required.'",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def login():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        db = get_db()\n        error = None\n        user = db.execute(\n            'SELECT * FROM user WHERE username = ?', (username,)\n        ).fetchone()\n        if user is None:",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "load_logged_in_user",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def load_logged_in_user():\n    user_id = session.get('user_id')\n    print(user_id)\n    if user_id is None:\n        g.user = None\n    else:\n        g.user = get_db().execute(\n            'SELECT * FROM user WHERE id = ?', (user_id,)\n        ).fetchone()\n# # @bp.route('/logout')",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "kind": 2,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "def login_required(view):\n    @wraps(view)\n    def decorated_function(*args, **kwargs):\n        user = dict(session).get('profile', None)\n        if user:\n            return f(*args, **kwargs)\n        return redirect(url_for('login', next=request.url))\n    return decorated_function",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "bp",
+        "kind": 5,
+        "importPath": "auth.auth",
+        "description": "auth.auth",
+        "peekOfCode": "bp = Blueprint('auth', __name__, url_prefix='/auth')\n# @bp.route('/login')\n# def login():\n#     return render_template('auth/login.html')\n@bp.route('/disqus')\ndef disqus():\n    disqus = oauth.create_client('disqus')  # create the disqus oauth client\n    redirect_uri = url_for('auth.authorize_disqus', _external=True)\n    print(redirect_uri)\n    return disqus.authorize_redirect(redirect_uri)",
+        "detail": "auth.auth",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def search():\n    search = request.args.get('q')\n    results = get_data(\n        f\"search/multi?language=en-US&page=1&include_adult=false&query={search}&\")\n    results = results[\"results\"]\n    set_movie = results[0]\n    return render_template(\"search_result.html\",  set_movie=set_movie, img_url=img_url, results=results)\n@bp.route('/')\n@bp.route('/index')\n@bp.route('/home')",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def index():\n    with open('static/tmp/json/popular.json', 'r') as f:\n        popular = json.load(f)\n    with open('static/tmp/json/trend.json', 'r') as f:\n        trend = json.load(f)\n    with open('static/tmp/json/netflix.json', 'r') as f:\n        netflix = json.load(f)\n    secure_random = random.SystemRandom()\n    set_movie = secure_random.choice(popular)\n    return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "movie",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def movie():\n    with open(f'static/tmp/json/movie/genres.json', 'r') as f:\n        genres = json.load(f)\n    genres = genres[\"genres\"]\n    for genre in genres:\n        with open(f'static/tmp/json/movie/{genre[\"name\"]}.json', 'r') as f:\n            genre[\"results\"] = json.load(f)\n    with open('static/tmp/json/movie/popular.json', 'r') as f:\n        popular = json.load(f)\n    with open('static/tmp/json/movie/trend.json', 'r') as f:",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "series",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def series():\n    with open(f'static/tmp/json/tv/genres.json', 'r') as f:\n        genres = json.load(f)\n    genres = genres[\"genres\"]\n    for genre in genres:\n        with open(f'static/tmp/json/tv/{genre[\"name\"]}.json', 'r') as f:\n            genre[\"results\"] = json.load(f)\n    with open('static/tmp/json/tv/popular.json', 'r') as f:\n        popular = json.load(f)\n    with open('static/tmp/json/tv/trend.json', 'r') as f:",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def about(type, id):\n    movie = get_data(f'{type}/{id}?')\n    return render_template('sobre.html', movie=movie, img_url=img_url)\n@bp.errorhandler(HTTPException)\ndef handle_exception(e):\n    code = e.code\n    resp = requests.get(f\"http://http.cat/{code}\")\n    obj = resp.content\n    image = b64encode(obj).decode(\"utf-8\")\n    return render_template(\"error_generic.html\", title=e.name, description=e.description, image=image, code=code), code",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "handle_exception",
+        "kind": 2,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "def handle_exception(e):\n    code = e.code\n    resp = requests.get(f\"http://http.cat/{code}\")\n    obj = resp.content\n    image = b64encode(obj).decode(\"utf-8\")\n    return render_template(\"error_generic.html\", title=e.name, description=e.description, image=image, code=code), code",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "bp",
+        "kind": 5,
+        "importPath": "club.club",
+        "description": "club.club",
+        "peekOfCode": "bp = Blueprint('club', __name__, url_prefix='/club')\n@bp.route(\"/search\")\n@login_required\ndef search():\n    search = request.args.get('q')\n    results = get_data(\n        f\"search/multi?language=en-US&page=1&include_adult=false&query={search}&\")\n    results = results[\"results\"]\n    set_movie = results[0]\n    return render_template(\"search_result.html\",  set_movie=set_movie, img_url=img_url, results=results)",
+        "detail": "club.club",
+        "documentation": {}
+    },
+    {
+        "label": "maybe_create",
+        "kind": 2,
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "peekOfCode": "def maybe_create(path):\n    if not os.path.exists(path):\n        os.mkdir(path)\n    return True\ndef get_genres():\n    movie = get_data('genre/movie/list?')\n    tv = get_data('genre/tv/list?')\n    for name, data in {\"movie\": movie, \"tv\": tv}.items():\n        path = f'static/tmp/json/{name}'\n        maybe_create(path)",
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_genres",
+        "kind": 2,
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "peekOfCode": "def get_genres():\n    movie = get_data('genre/movie/list?')\n    tv = get_data('genre/tv/list?')\n    for name, data in {\"movie\": movie, \"tv\": tv}.items():\n        path = f'static/tmp/json/{name}'\n        maybe_create(path)\n        with open(f'{path}/genres.tmp.json', 'w') as f:\n            f.write(json.dumps(data))\n        os.rename(f'{path}/genres.tmp.json', f'{path}/genres.json')\ndef get_outliers():",
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_outliers",
+        "kind": 2,
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "peekOfCode": "def get_outliers():\n    path = f'static/tmp/json'\n    maybe_create(path)\n    popular = get_data(\n        'discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')\n    popular = popular[\"results\"]\n    nacionais = get_data(\n        'discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&')\n    nacionais = nacionais[\"results\"]\n    trend = get_data('trending/all/week?')",
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_movie",
+        "kind": 2,
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "peekOfCode": "def get_movie():\n    path = f'static/tmp/json/movie/'\n    maybe_create(path)\n    with open(f'static/tmp/json/movie/genres.json', 'r') as f:\n        genres = json.load(f)\n    genres = genres[\"genres\"]\n    for genre in genres:\n        results = get_data(f'discover/movie?&with_genres={genre[\"id\"]}&')\n        genre[\"results\"] = results[\"results\"]\n        with open(f'{path}/{genre[\"name\"]}.tmp.json', 'w') as f:",
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "get_tv",
+        "kind": 2,
+        "importPath": "club.fetch",
+        "description": "club.fetch",
+        "peekOfCode": "def get_tv():\n    path = f'static/tmp/json/tv'\n    maybe_create(path)\n    with open(f'static/tmp/json/tv/genres.json', 'r') as f:\n        genres = json.load(f)\n    genres = genres[\"genres\"]\n    for genre in genres:\n        results = get_data(f'discover/tv?&with_genres={genre[\"id\"]}&')\n        genre[\"results\"] = results[\"results\"]\n        with open(f'{path}/{genre[\"name\"]}.tmp.json', 'w') as f:",
+        "detail": "club.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "base_url",
+        "kind": 2,
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "peekOfCode": "def base_url():\n    return os.getenv(\"TMDB_API_URL\")\ndef img_url(path=None, alt=None):\n    url = \"https://image.tmdb.org/t/p/original\"\n    if path != None:\n        return url + path\n    elif alt != None:\n        return url + alt\n    else:\n        return url",
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "img_url",
+        "kind": 2,
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "peekOfCode": "def img_url(path=None, alt=None):\n    url = \"https://image.tmdb.org/t/p/original\"\n    if path != None:\n        return url + path\n    elif alt != None:\n        return url + alt\n    else:\n        return url\ndef final_url():\n    return get_data(\"/discover/movie?sort_by=popularity.desc&\")",
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "final_url",
+        "kind": 2,
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "peekOfCode": "def final_url():\n    return get_data(\"/discover/movie?sort_by=popularity.desc&\")\ndef get_data(path):\n    api_key = os.getenv(\"TMDB_API_KEY\")\n    return (requests.get(f'{base_url()}/{path}api_key={api_key}&language=pt-BR')).json()\ndef get_data_v4(path):\n    url = os.getenv(\"TMDB_API_URL_v4\")\n    api_key = os.getenv(\"TMDB_API_KEY\")\n    payload = \"{}\"\n    headers = {",
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "get_data",
+        "kind": 2,
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "peekOfCode": "def get_data(path):\n    api_key = os.getenv(\"TMDB_API_KEY\")\n    return (requests.get(f'{base_url()}/{path}api_key={api_key}&language=pt-BR')).json()\ndef get_data_v4(path):\n    url = os.getenv(\"TMDB_API_URL_v4\")\n    api_key = os.getenv(\"TMDB_API_KEY\")\n    payload = \"{}\"\n    headers = {\n        'content-type': \"application/json;charset=utf-8\",\n        'authorization': \"Bearer <<access_token>>\"",
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_v4",
+        "kind": 2,
+        "importPath": "club.functions",
+        "description": "club.functions",
+        "peekOfCode": "def get_data_v4(path):\n    url = os.getenv(\"TMDB_API_URL_v4\")\n    api_key = os.getenv(\"TMDB_API_KEY\")\n    payload = \"{}\"\n    headers = {\n        'content-type': \"application/json;charset=utf-8\",\n        'authorization': \"Bearer <<access_token>>\"\n    }\n    response = request(\n        \"GET\", f'{url}/{path}api_key={api_key}&language=pt-BR', data=payload, headers=headers)",
+        "detail": "club.functions",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def dashboard():\n    return render_template('admin/index.html')\n@app.route(\"/buttons\")\n@login_required\ndef buttons():\n    return render_template('admin/buttons.html')\n@app.route(\"/cards\")\n@login_required\ndef cards():\n    return render_template('admin/cards.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "buttons",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def buttons():\n    return render_template('admin/buttons.html')\n@app.route(\"/cards\")\n@login_required\ndef cards():\n    return render_template('admin/cards.html')\n@app.route(\"/utilities-color\")\n@login_required\ndef utilities_color():\n    return render_template('admin/utilities-color.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "cards",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def cards():\n    return render_template('admin/cards.html')\n@app.route(\"/utilities-color\")\n@login_required\ndef utilities_color():\n    return render_template('admin/utilities-color.html')\n@app.route(\"/utilities-border\")\n@login_required\ndef utilities_border():\n    return render_template('admin/utilities-border.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "utilities_color",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def utilities_color():\n    return render_template('admin/utilities-color.html')\n@app.route(\"/utilities-border\")\n@login_required\ndef utilities_border():\n    return render_template('admin/utilities-border.html')\n@app.route(\"/utilities-animation\")\n@login_required\ndef utilities_animation():\n    return render_template('admin/utilities-animation.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "utilities_border",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def utilities_border():\n    return render_template('admin/utilities-border.html')\n@app.route(\"/utilities-animation\")\n@login_required\ndef utilities_animation():\n    return render_template('admin/utilities-animation.html')\n@app.route(\"/utilities-other\")\n@login_required\ndef utilities_other():\n    return render_template('admin/utilities-other.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "utilities_animation",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def utilities_animation():\n    return render_template('admin/utilities-animation.html')\n@app.route(\"/utilities-other\")\n@login_required\ndef utilities_other():\n    return render_template('admin/utilities-other.html')\n@app.route(\"/login2\")\ndef login2():\n    return render_template('admin/login.html')\n@app.route(\"/register\")",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "utilities_other",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def utilities_other():\n    return render_template('admin/utilities-other.html')\n@app.route(\"/login2\")\ndef login2():\n    return render_template('admin/login.html')\n@app.route(\"/register\")\ndef register():\n    return render_template('admin/register.html')\n@app.route(\"/404\")\ndef e404():",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "login2",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def login2():\n    return render_template('admin/login.html')\n@app.route(\"/register\")\ndef register():\n    return render_template('admin/register.html')\n@app.route(\"/404\")\ndef e404():\n    return render_template('admin/404.html')\n@app.route(\"/charts\")\n@login_required",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def register():\n    return render_template('admin/register.html')\n@app.route(\"/404\")\ndef e404():\n    return render_template('admin/404.html')\n@app.route(\"/charts\")\n@login_required\ndef charts():\n    return render_template('admin/charts.html')\n@app.route(\"/tables\")",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "e404",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def e404():\n    return render_template('admin/404.html')\n@app.route(\"/charts\")\n@login_required\ndef charts():\n    return render_template('admin/charts.html')\n@app.route(\"/tables\")\n@login_required\ndef tables():\n    return render_template('admin/tables.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "charts",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def charts():\n    return render_template('admin/charts.html')\n@app.route(\"/tables\")\n@login_required\ndef tables():\n    return render_template('admin/tables.html')\n@app.route(\"/forgot-password\")\n@login_required\ndef forgot_password():\n    return render_template('admin/forgot-password.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "tables",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def tables():\n    return render_template('admin/tables.html')\n@app.route(\"/forgot-password\")\n@login_required\ndef forgot_password():\n    return render_template('admin/forgot-password.html')\n@app.route(\"/blank\")\ndef blank():\n    return render_template('admin/blank.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_password",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def forgot_password():\n    return render_template('admin/forgot-password.html')\n@app.route(\"/blank\")\ndef blank():\n    return render_template('admin/blank.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "blank",
+        "kind": 2,
+        "importPath": "dashboard.dashboard",
+        "description": "dashboard.dashboard",
+        "peekOfCode": "def blank():\n    return render_template('admin/blank.html')",
+        "detail": "dashboard.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "refs.ref",
+        "description": "refs.ref",
+        "peekOfCode": "class User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(40), unique=True)\n    def __str__(self):\n        return self.username\n    def get_user_id(self):\n        return self.id\n    def check_password(self, password):\n        return password == 'valid'\nclass OAuth2Client(db.Model, OAuth2ClientMixin):",
+        "detail": "refs.ref",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2Client",
+        "kind": 6,
+        "importPath": "refs.ref",
+        "description": "refs.ref",
+        "peekOfCode": "class OAuth2Client(db.Model, OAuth2ClientMixin):\n    __tablename__ = 'oauth2_client'\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(\n        db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'))\n    user = db.relationship('User')\nclass OAuth2AuthorizationCode(db.Model, OAuth2AuthorizationCodeMixin):\n    __tablename__ = 'oauth2_code'\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(",
+        "detail": "refs.ref",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2AuthorizationCode",
+        "kind": 6,
+        "importPath": "refs.ref",
+        "description": "refs.ref",
+        "peekOfCode": "class OAuth2AuthorizationCode(db.Model, OAuth2AuthorizationCodeMixin):\n    __tablename__ = 'oauth2_code'\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(\n        db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'))\n    user = db.relationship('User')\nclass OAuth2Token(db.Model, OAuth2TokenMixin):\n    __tablename__ = 'oauth2_token'\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(",
+        "detail": "refs.ref",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2Token",
+        "kind": 6,
+        "importPath": "refs.ref",
+        "description": "refs.ref",
+        "peekOfCode": "class OAuth2Token(db.Model, OAuth2TokenMixin):\n    __tablename__ = 'oauth2_token'\n    id = db.Column(db.Integer, primary_key=True)\n    user_id = db.Column(\n        db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'))\n    user = db.relationship('User')\n    def is_refresh_token_active(self):\n        if self.revoked:\n            return False\n        expires_at = self.issued_at + self.expires_in * 2",
+        "detail": "refs.ref",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "refs.ref",
+        "description": "refs.ref",
+        "peekOfCode": "db = SQLAlchemy()\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(40), unique=True)\n    def __str__(self):\n        return self.username\n    def get_user_id(self):\n        return self.id\n    def check_password(self, password):\n        return password == 'valid'",
+        "detail": "refs.ref",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 2,
+        "importPath": "refs.ref2",
+        "description": "refs.ref2",
+        "peekOfCode": "def page(page):\n    if page not in pages:\n        return redirect(url_for('index'))\n    offset = request.args.get('offset')\n    limit = request.args.get('limit')\n    url = f\"https://pokeapi.co/api/v2/{page}?offset={offset}&limit={limit}\"\n    results = requests.get(url)\n    results = results.json()\n    if 'results' in results.keys():\n        collection = []",
+        "detail": "refs.ref2",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "kind": 2,
+        "importPath": "refs.ref2",
+        "description": "refs.ref2",
+        "peekOfCode": "def search(page):\n    if page not in pages:\n        return redirect(url_for('index'))\n    search = request.args.get('q')\n    url = f\"https://pokeapi.co/api/v2/{page}/{search}\"\n    results = requests.get(url)\n    if results.status_code == 200:\n        results = results.json()\n        if 'results' in results.keys():\n            collection = []",
+        "detail": "refs.ref2",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "refs.ref2",
+        "description": "refs.ref2",
+        "peekOfCode": "def about(page, name):\n    if page not in pages:\n        return redirect(url_for('index'))\n    url = f\"https://pokeapi.co/api/v2/{page}/{name}\"\n    results = requests.get(url)\n    return render_template('about-%s.html' % page, result=results.json())",
+        "detail": "refs.ref2",
+        "documentation": {}
+    },
+    {
+        "label": "createStateKey",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def createStateKey(size):\n    # https://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits\n    return ''.join(rand.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(size))\ndef getToken(code):\n    token_url = 'https://accounts.spotify.com/api/token'\n    authorization = str(base64.urlsafe_b64encode(\n        f\"{app.config['CLIENT_ID']}:{app.config['CLIENT_SECRET']}\".encode('utf-8')), 'utf-8')\n    app.config['AUTHORIZATION'] = authorization\n    redirect_uri = app.config['REDIRECT_URI']\n    headers = {'Authorization': f\"basic {authorization}\", 'Accept': 'application/json',",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getToken",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getToken(code):\n    token_url = 'https://accounts.spotify.com/api/token'\n    authorization = str(base64.urlsafe_b64encode(\n        f\"{app.config['CLIENT_ID']}:{app.config['CLIENT_SECRET']}\".encode('utf-8')), 'utf-8')\n    app.config['AUTHORIZATION'] = authorization\n    redirect_uri = app.config['REDIRECT_URI']\n    headers = {'Authorization': f\"basic {authorization}\", 'Accept': 'application/json',\n               'Content-Type': 'application/x-www-form-urlencoded'}\n    body = {'code': code, 'redirect_uri': redirect_uri,\n            'grant_type': 'authorization_code'}",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "refreshToken",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def refreshToken(refresh_token):\n    token_url = 'https://accounts.spotify.com/api/token'\n    authorization = app.config['AUTHORIZATION']\n    headers = {'Authorization': authorization, 'Accept': 'application/json',\n               'Content-Type': 'application/x-www-form-urlencoded'}\n    body = {'refresh_token': refresh_token, 'grant_type': 'refresh_token'}\n    post_response = requests.post(token_url, headers=headers, data=body)\n    # 200 code indicates access token was properly granted\n    if post_response.status_code == 200:\n        return post_response.json()['access_token'], post_response.json()['expires_in']",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "checkTokenStatus",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def checkTokenStatus(session):\n    if time.time() > session['token_expiration']:\n        payload = refreshToken(session['refresh_token'])\n        if payload != None:\n            session['token'] = payload[0]\n            session['token_expiration'] = time.time() + payload[1]\n        else:\n            logging.error('checkTokenStatus')\n            return None\n    return \"Success\"",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "makeGetRequest",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def makeGetRequest(session, url, params={}):\n    headers = {\"Authorization\": \"Bearer {}\".format(session['token'])}\n    response = requests.get(url, headers=headers, params=params)\n    # 200 code indicates request was successful\n    if response.status_code == 200:\n        return response.json()\n    # if a 401 error occurs, update the access token\n    elif response.status_code == 401 and checkTokenStatus(session) != None:\n        return makeGetRequest(session, url, params)\n    else:",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "makePutRequest",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def makePutRequest(session, url, params={}, data={}):\n    headers = {\"Authorization\": \"Bearer {}\".format(\n        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'}\n    response = requests.put(url, headers=headers, params=params, data=data)\n    # if request succeeds or specific errors occured, status code is returned\n    if response.status_code == 204 or response.status_code == 403 or response.status_code == 404 or response.status_code == 500:\n        return response.status_code\n    # if a 401 error occurs, update the access token\n    elif response.status_code == 401 and checkTokenStatus(session) != None:\n        return makePutRequest(session, url, data)",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "makePostRequest",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def makePostRequest(session, url, data):\n    headers = {\"Authorization\": \"Bearer {}\".format(\n        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/json'}\n    response = requests.post(url, headers=headers, data=data)\n    # both 201 and 204 indicate success, however only 201 responses have body information\n    if response.status_code == 201:\n        return response.json()\n    if response.status_code == 204:\n        return response\n    # if a 401 error occurs, update the access token",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "makeDeleteRequest",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def makeDeleteRequest(session, url, data):\n    headers = {\"Authorization\": \"Bearer {}\".format(\n        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/json'}\n    response = requests.delete(url, headers=headers, data=data)\n    # 200 code indicates request was successful\n    if response.status_code == 200:\n        return response.json()\n    # if a 401 error occurs, update the access token\n    elif response.status_code == 401 and checkTokenStatus(session) != None:\n        return makeDeleteRequest(session, url, data)",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserInformation",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getUserInformation(session):\n    url = 'https://api.spotify.com/v1/me'\n    payload = makeGetRequest(session, url)\n    if payload == None:\n        return None\n    return payload\ndef getAllTopTracks(session, limit=10):\n    url = 'https://api.spotify.com/v1/me/top/tracks'\n    track_ids = []\n    time_range = ['short_term', 'medium_term', 'long_term']",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getAllTopTracks",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getAllTopTracks(session, limit=10):\n    url = 'https://api.spotify.com/v1/me/top/tracks'\n    track_ids = []\n    time_range = ['short_term', 'medium_term', 'long_term']\n    for time in time_range:\n        track_range_ids = []\n        params = {'limit': limit, 'time_range': time}\n        payload = makeGetRequest(session, url, params)\n        if payload == None:\n            return None",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopTracksID",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTopTracksID(session, time, limit=25):\n    url = 'https://api.spotify.com/v1/me/top/tracks'\n    params = {'limit': limit, 'time_range': time}\n    payload = makeGetRequest(session, url, params)\n    if payload == None:\n        return None\n    track_ids = []\n    for track in payload['items']:\n        track_ids.append(track['id'])\n    return track_ids",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopTracksURI",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTopTracksURI(session, time, limit=25):\n    url = 'https://api.spotify.com/v1/me/top/tracks'\n    params = {'limit': limit, 'time_range': time}\n    payload = makeGetRequest(session, url, params)\n    if payload == None:\n        return None\n    track_uri = []\n    for track in payload['items']:\n        track_uri.append(track['uri'])\n    return track_uri",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTopArtists",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTopArtists(session, time, limit=10):\n    url = 'https://api.spotify.com/v1/me/top/artists'\n    params = {'limit': limit, 'time_range': time}\n    payload = makeGetRequest(session, url, params)\n    if payload == None:\n        return None\n    artist_ids = []\n    for artist in payload['items']:\n        artist_ids.append(artist['id'])\n    return artist_ids",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getRecommendedTracks",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getRecommendedTracks(session, search, tuneable_dict, limit=25):\n    track_ids = \"\"\n    artist_ids = \"\"\n    for item in search:\n        # tracks IDs start with a 't:' to identify them\n        if item[0:2] == 't:':\n            track_ids += item[2:] + \",\"\n        # artist IDs start with an 'a:' to identify them\n        if item[0:2] == 'a:':\n            artist_ids += item[2:] + \",\"",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserPlaylists",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getUserPlaylists(session, limit=20):\n    url = 'https://api.spotify.com/v1/me/playlists'\n    offset = 0\n    playlist = []\n    # iterate through all playlists of a user (Spotify limits amount returned with one call)\n    total = 1\n    while total > offset:\n        params = {'limit': limit, 'offset': offset}\n        payload = makeGetRequest(session, url, params)\n        if payload == None:",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getUserDevices",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getUserDevices(session):\n    url = 'https://api.spotify.com/v1/me/player/devices'\n    payload = makeGetRequest(session, url)\n    if payload == None:\n        return None\n    device_list = []\n    for device in payload['devices']:\n        # restricted devices cannot be accessed by the application\n        if device['is_restricted'] != True:\n            device_list.append([device['name'], device['id']])",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "startPlayback",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def startPlayback(session, device):\n    url = 'https://api.spotify.com/v1/me/player/play'\n    params = {'device_id': device}\n    payload = makePutRequest(session, url, params)\n    return payload\ndef startPlaybackContext(session, playlist, device):\n    url = 'https://api.spotify.com/v1/me/player/play'\n    params = {'device_id': device}\n    data = \"{\\\"context_uri\\\":\\\"\" + playlist + \\\n        \"\\\",\\\"offset\\\":{\\\"position\\\":0},\\\"position_ms\\\":0}\"",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "startPlaybackContext",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def startPlaybackContext(session, playlist, device):\n    url = 'https://api.spotify.com/v1/me/player/play'\n    params = {'device_id': device}\n    data = \"{\\\"context_uri\\\":\\\"\" + playlist + \\\n        \"\\\",\\\"offset\\\":{\\\"position\\\":0},\\\"position_ms\\\":0}\"\n    payload = makePutRequest(session, url, params, data)\n    return payload\ndef pausePlayback(session):\n    url = 'https://api.spotify.com/v1/me/player/pause'\n    payload = makePutRequest(session, url)",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "pausePlayback",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def pausePlayback(session):\n    url = 'https://api.spotify.com/v1/me/player/pause'\n    payload = makePutRequest(session, url)\n    return payload\ndef shuffle(session, device, is_shuffle=True):\n    url = 'https://api.spotify.com/v1/me/player/shuffle'\n    params = {'state': is_shuffle, 'device_id': device}\n    payload = makePutRequest(session, url, params)\n    return payload\ndef skipTrack(session):",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def shuffle(session, device, is_shuffle=True):\n    url = 'https://api.spotify.com/v1/me/player/shuffle'\n    params = {'state': is_shuffle, 'device_id': device}\n    payload = makePutRequest(session, url, params)\n    return payload\ndef skipTrack(session):\n    url = 'https://api.spotify.com/v1/me/player/next'\n    data = {}\n    payload = makePostRequest(session, url, data)\n    return payload",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "skipTrack",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def skipTrack(session):\n    url = 'https://api.spotify.com/v1/me/player/next'\n    data = {}\n    payload = makePostRequest(session, url, data)\n    return payload\ndef getTrack(session):\n    url = 'https://api.spotify.com/v1/me/player/currently-playing'\n    payload = makeGetRequest(session, url)\n    if payload == None:\n        return None",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTrack",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTrack(session):\n    url = 'https://api.spotify.com/v1/me/player/currently-playing'\n    payload = makeGetRequest(session, url)\n    if payload == None:\n        return None\n    # check to make sure the newest track is being grabbed (progress must be under 5000ms)\n    if payload['progress_ms'] != None and payload['progress_ms'] > 5000:\n        time.sleep(0.2)\n        payload = makeGetRequest(session, url)\n        if payload == None:",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTrackAfterResume",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTrackAfterResume(session):\n    url = 'https://api.spotify.com/v1/me/player/currently-playing'\n    payload = makeGetRequest(session, url)\n    if payload == None:\n        return None\n    name = payload['item']['name']\n    img = payload['item']['album']['images'][0]['url']\n    return {'name': name, 'img': img}\ndef createPlaylist(session, playlist_name):\n    url = 'https://api.spotify.com/v1/users/' + \\",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "createPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def createPlaylist(session, playlist_name):\n    url = 'https://api.spotify.com/v1/users/' + \\\n        session['user_id'] + '/playlists'\n    data = \"{\\\"name\\\":\\\"\" + playlist_name + \\\n        \"\\\",\\\"description\\\":\\\"Created by Discover Daily\\\"}\"\n    payload = makePostRequest(session, url, data)\n    if payload == None:\n        return None\n    return payload['id'], payload['uri']\ndef addTracksPlaylist(session, playlist_id, uri_list):",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "addTracksPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def addTracksPlaylist(session, playlist_id, uri_list):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'\n    uri_str = \"\"\n    for uri in uri_list:\n        uri_str += \"\\\"\" + uri + \"\\\",\"\n    data = \"{\\\"uris\\\": [\" + uri_str[0:-1] + \"]}\"\n    makePostRequest(session, url, data)\n    return\ndef getTracksPlaylist(session, playlist_id, limit=100):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "getTracksPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def getTracksPlaylist(session, playlist_id, limit=100):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'\n    offset = 0\n    track_uri = []\n    # iterate through all tracks in a playlist (Spotify limits number per request)\n    total = 1\n    while total > offset:\n        params = {'limit': limit,\n                  'fields': 'total,items(track(uri))', 'offset': offset}\n        payload = makeGetRequest(session, url, params)",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "searchSpotify",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def searchSpotify(session, search, limit=4):\n    url = 'https://api.spotify.com/v1/search'\n    params = {'limit': limit, 'q': search + \"*\", 'type': 'artist,track'}\n    payload = makeGetRequest(session, url, params)\n    if payload == None:\n        return None\n    # response includes both artist and track names\n    results = []\n    for item in payload['artists']['items']:\n        # append 'a:' to artist URIs so artists and tracks can be distinguished",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbAddTracksPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def dbAddTracksPlaylist(access_token, playlist_id, uri_list):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'\n    headers = {\"Authorization\": \"Bearer {}\".format(\n        access_token), 'Accept': 'application/json', 'Content-Type': 'application/json'}\n    uri_str = \"\"\n    for uri in uri_list:\n        uri_str += \"\\\"\" + uri + \"\\\",\"\n    data = \"{\\\"uris\\\": [\" + uri_str[0:-1] + \"]}\"\n    payload = requests.post(url, headers=headers, data=data)\n    if payload.status_code == 201:",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbGetTracksPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def dbGetTracksPlaylist(access_token, playlist_id, limit=100):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'\n    headers = {\"Authorization\": \"Bearer {}\".format(access_token)}\n    offset = 0\n    track_uri = []\n    # iterate through all tracks in a playlist (Spotify limits number per request)\n    total = 1\n    while total > offset:\n        params = {'limit': limit,\n                  'fields': 'total,items(track(uri))', 'offset': offset}",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbClearPlaylist",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def dbClearPlaylist(access_token, playlist_id):\n    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'\n    uri_list = dbGetTracksPlaylist(access_token, playlist_id)\n    uri_str = \"\"\n    for uri in uri_list:\n        uri_str += \"{\\\"uri\\\":\\\"\" + uri + \"\\\"},\"\n    data = \"{\\\"tracks\\\": [\" + uri_str[0:-1] + \"]}\"\n    headers = {\"Authorization\": \"Bearer {}\".format(\n        access_token), 'Accept': 'application/json', 'Content-Type': 'application/json'}\n    payload = requests.delete(url, headers=headers, data=data)",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "dbGetTopTracksURI",
+        "kind": 2,
+        "importPath": "spotify.functions",
+        "description": "spotify.functions",
+        "peekOfCode": "def dbGetTopTracksURI(access_token, time, limit=25):\n    url = 'https://api.spotify.com/v1/me/top/tracks'\n    params = {'limit': limit, 'time_range': time}\n    headers = {\"Authorization\": \"Bearer {}\".format(access_token)}\n    payload = requests.get(url, headers=headers, params=params)\n    if payload.status_code == 200:\n        payload = payload.json()\n    else:\n        return None\n    track_uri = []",
+        "detail": "spotify.functions",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "app = Flask(__name__)\napp.config.from_pyfile('config.cfg')\nengine = sqlalchemy.create_engine(\n    app.config['SQLALCHEMY_DATABASE_URI'], pool_pre_ping=True)  # , client_encoding=\"utf8\")\n# create session and base declarative\nSession = sessionmaker(bind=engine)\nBase = declarative_base()\ninsp = sqlalchemy.inspect(engine)  # will be a PGInspector\n# make sure user table is created\nBase.metadata.create_all(engine)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "engine = sqlalchemy.create_engine(\n    app.config['SQLALCHEMY_DATABASE_URI'], pool_pre_ping=True)  # , client_encoding=\"utf8\")\n# create session and base declarative\nSession = sessionmaker(bind=engine)\nBase = declarative_base()\ninsp = sqlalchemy.inspect(engine)  # will be a PGInspector\n# make sure user table is created\nBase.metadata.create_all(engine)\n# schedule updates for the TopTracks playlists\nscheduler = BackgroundScheduler()",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "Session = sessionmaker(bind=engine)\nBase = declarative_base()\ninsp = sqlalchemy.inspect(engine)  # will be a PGInspector\n# make sure user table is created\nBase.metadata.create_all(engine)\n# schedule updates for the TopTracks playlists\nscheduler = BackgroundScheduler()\nscheduler.add_job(updatePlaylists, trigger='interval', days=1)\nscheduler.start()\nbootstrap = Bootstrap(app)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "Base = declarative_base()\ninsp = sqlalchemy.inspect(engine)  # will be a PGInspector\n# make sure user table is created\nBase.metadata.create_all(engine)\n# schedule updates for the TopTracks playlists\nscheduler = BackgroundScheduler()\nscheduler.add_job(updatePlaylists, trigger='interval', days=1)\nscheduler.start()\nbootstrap = Bootstrap(app)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "insp",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "insp = sqlalchemy.inspect(engine)  # will be a PGInspector\n# make sure user table is created\nBase.metadata.create_all(engine)\n# schedule updates for the TopTracks playlists\nscheduler = BackgroundScheduler()\nscheduler.add_job(updatePlaylists, trigger='interval', days=1)\nscheduler.start()\nbootstrap = Bootstrap(app)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "scheduler = BackgroundScheduler()\nscheduler.add_job(updatePlaylists, trigger='interval', days=1)\nscheduler.start()\nbootstrap = Bootstrap(app)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "bootstrap",
+        "kind": 5,
+        "importPath": "spotify.main",
+        "description": "spotify.main",
+        "peekOfCode": "bootstrap = Bootstrap(app)",
+        "detail": "spotify.main",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "class User(Base):\n\t__tablename__ = 'users'\n\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64))  # , index=True)\n\trefresh_token = Column(String(150))\n\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "addUser",
+        "kind": 2,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "def addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short,\n\t\t            playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "updatePlaylists",
+        "kind": 2,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "def updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t__tablename__",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t__tablename__ = 'users'\n\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64))  # , index=True)\n\trefresh_token = Column(String(150))\n\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tid",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64))  # , index=True)\n\trefresh_token = Column(String(150))\n\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tusername",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tusername = Column(String(64))  # , index=True)\n\trefresh_token = Column(String(150))\n\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)\n\t# playlist_id_long = Column(String(30), index=True, unique=True)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\trefresh_token",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\trefresh_token = Column(String(150))\n\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)\n\t# playlist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_short",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tplaylist_id_short = Column(String(30))\n\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)\n\t# playlist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_medium",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tplaylist_id_medium = Column(String(30))\n\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)\n\t# playlist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_long",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tplaylist_id_long = Column(String(30))\n\t# ix_users_username = Index('ix_users_username', username, unique=True)\n\t# refresh_token = Column(String(150), index=True, unique=True)\n\t# playlist_id_short = Column(String(30), index=True, unique=True)\n\t# playlist_id_medium = Column(String(30), index=True, unique=True)\n\t# playlist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short,\n\t\t            playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tid_exists",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short,\n\t\t            playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:\n\t\tuser = session.query(User).get(id_exists)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tuser",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short,\n\t\t            playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:\n\t\tuser = session.query(User).get(id_exists)\n\t\tlogging.info('Auto user updated: ' + user.username)\n\t\t# only update playlist IDs that are new\n\t\tif playlist_id_short != None:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tuser",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\tuser = session.query(User).get(id_exists)\n\t\tlogging.info('Auto user updated: ' + user.username)\n\t\t# only update playlist IDs that are new\n\t\tif playlist_id_short != None:\n\t\t\tuser.playlist_id_short = playlist_id_short\n\t\tif playlist_id_medium != None:\n\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_short",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tuser.playlist_id_short = playlist_id_short\n\t\tif playlist_id_medium != None:\n\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_medium",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_long",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tis_active",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:\n\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tpayload",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:\n\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\taccess_token",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_short",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_medium",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()\n\tlogging.info('Updated TopTracks Playlists')",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_long",
+        "kind": 5,
+        "importPath": "spotify.models",
+        "description": "spotify.models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()\n\tlogging.info('Updated TopTracks Playlists')",
+        "detail": "spotify.models",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def index():\n\treturn render_template('index.html')\n\"\"\"\nChamado pelo backend quando um usuário não autorizou o pedido a\nAcesse sua conta Spotify.Tenta autorizar um novo usuário redirecionando\neles para a página de autorização do Spotify.\n\"\"\"\n@app.route('/authorize')\ndef authorize():\n\tclient_id = app.config['CLIENT_ID']",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "authorize",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def authorize():\n\tclient_id = app.config['CLIENT_ID']\n\t# client_secret = app.config['CLIENT_SECRET']\n\tredirect_uri = app.config['REDIRECT_URI']\n\tscope = app.config['SCOPE']\n\t# state key used to protect against cross-site forgery attacks\n\tstate_key = createStateKey(15)\n\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "callback",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def callback():\n\t# make sure the response came from Spotify\n\tif request.args.get('state') != session['state_key']:\n\t\treturn render_template('index.html', error='State failed.')\n\tif request.args.get('error'):\n\t\treturn render_template('index.html', error='Spotify error.')\n\telse:\n\t\tcode = request.args.get('code')\n\t\tprint(session)\n\t\tsession.pop('state_key', None)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "information",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def information():\n\treturn render_template('information.html')\n\"\"\"\nTopTracks Feature: This page displays a users TopTracks over several different time\nperiods.\n\"\"\"\n@app.route('/tracks',  methods=['GET'])\ndef tracks():\n\t# make sure application is authorized for user\n\tif session.get('token') == None or session.get('token_expiration') == None:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "tracks",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def tracks():\n\t# make sure application is authorized for user\n\tif session.get('token') == None or session.get('token_expiration') == None:\n\t\tsession['previous_url'] = '/tracks'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\ttrack_ids = getAllTopTracks(session)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "create",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def create():\n\t# make sure application is authorized for user\n\tif session.get('token') == None or session.get('token_expiration') == None:\n\t\tsession['previous_url'] = '/create'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\treturn render_template('create.html')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "timer",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def timer():\n\t# make sure application is authorized for user\n\tif session.get('token') == None or session.get('token_expiration') == None:\n\t\tsession['previous_url'] = '/timer'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\tdevice_names = getUserDevices(session)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "createTopPlaylist",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def createTopPlaylist():\n\t# save IDs in case user chose autoupdate\n\tplaylist_id_short = None\n\tplaylist_id_medium = None\n\tplaylist_id_long = None\n\tplaylist_uri = ''\n\t# create playlist, then get TopTracks, then fill playlist with TopTracks\n\tif 'short_term' in request.form:\n\tplaylist_id_short, playlist_uri = createPlaylist(\n            session, request.form['short_term_name'])",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "createSelectedPlaylist",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def createSelectedPlaylist():\n\t# collect the IDs of the artists/tracks the user entered\n\tsearch = []\n\tfor i in range(0, 5):\n\t\tif str(i) in request.form:\n\t\t\tsearch.append(request.form[str(i)])\n\t\telse:\n\t\t\tbreak\n\t# store all selected attributes in a dict which can be easily added to GET body\n\ttuneable_dict = {}",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "intervalStart",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def intervalStart():\n\tplaylist = request.form['playlist']\n\tsession['device'] = request.form['device']\n\t# toggle shuffle on/off depending on user\n\tis_shuffle = False\n\tif 'shuffle' in request.form:\n\t\tis_shuffle = True\n\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "autocomplete",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def autocomplete():\n    search = request.args.get('q')\n    results = searchSpotify(session, search)\n    return jsonify(matching_results=results)\n\"\"\"\nCalled by front-side JS when an interval is over to skip to next song.\n\"\"\"\n@app.route('/playback/skip')\ndef playbackSkip():\n\tresponse = skipTrack(session)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "playbackSkip",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def playbackSkip():\n\tresponse = skipTrack(session)\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\t# return current track so picture and name can be displayed to user\n\tcurrent_playing = getTrack(session)\n\treturn jsonify(current_playing)\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "playbackPause",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def playbackPause():\n\tresponse = pausePlayback(session)\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\treturn \"success\"\n\"\"\"\nCalled by front-side JS when a user resumes a paused interval timer.\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "playbackResume",
+        "kind": 2,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "def playbackResume():\n\tresponse = startPlayback(session, session['device'])\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\t# return current track so picture and name can be displayed to user\n\tcurrent_playing = getTrackAfterResume(session)\n\treturn jsonify(current_playing)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tclient_id",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tclient_id = app.config['CLIENT_ID']\n\t# client_secret = app.config['CLIENT_SECRET']\n\tredirect_uri = app.config['REDIRECT_URI']\n\tscope = app.config['SCOPE']\n\t# state key used to protect against cross-site forgery attacks\n\tstate_key = createStateKey(15)\n\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tredirect_uri",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tredirect_uri = app.config['REDIRECT_URI']\n\tscope = app.config['SCOPE']\n\t# state key used to protect against cross-site forgery attacks\n\tstate_key = createStateKey(15)\n\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tscope",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tscope = app.config['SCOPE']\n\t# state key used to protect against cross-site forgery attacks\n\tstate_key = createStateKey(15)\n\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tstate_key",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tstate_key = createStateKey(15)\n\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response\n\"\"\"\nCalled after a new user has authorized the application through the Spotify API page.",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession['state_key']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tsession['state_key'] = state_key\n\t# redirect user to Spotify authorization page\n\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response\n\"\"\"\nCalled after a new user has authorized the application through the Spotify API page.\nStores user information in a session and redirects user back to the page they initally",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tauthorize_url",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tauthorize_url = 'https://accounts.spotify.com/pt/authorize?'\n\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response\n\"\"\"\nCalled after a new user has authorized the application through the Spotify API page.\nStores user information in a session and redirects user back to the page they initally\nattempted to visit.\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tparameters",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tparameters = 'response_type=code&client_id=' + client_id + \\\n            '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key\n\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response\n\"\"\"\nCalled after a new user has authorized the application through the Spotify API page.\nStores user information in a session and redirects user back to the page they initally\nattempted to visit.\n\"\"\"\n@app.route('/callback')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = make_response(redirect(authorize_url + parameters))\n\treturn response\n\"\"\"\nCalled after a new user has authorized the application through the Spotify API page.\nStores user information in a session and redirects user back to the page they initally\nattempted to visit.\n\"\"\"\n@app.route('/callback')\ndef callback():\n\t# make sure the response came from Spotify",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcode",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tcode = request.args.get('code')\n\t\tprint(session)\n\t\tsession.pop('state_key', None)\n\t\t# get access token to make requests on behalf of the user\n\t\tpayload = getToken(code)\n\t\tif payload != None:\n\t\t\tsession['token'] = payload[0]\n\t\t\tsession['refresh_token'] = payload[1]\n\t\t\tsession['token_expiration'] = time.time() + payload[2]\n\t\telse:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tpayload",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tpayload = getToken(code)\n\t\tif payload != None:\n\t\t\tsession['token'] = payload[0]\n\t\t\tsession['refresh_token'] = payload[1]\n\t\t\tsession['token_expiration'] = time.time() + payload[2]\n\t\telse:\n\t\t\treturn render_template('index.html', error='Failed to access token.')\n\tcurrent_user = getUserInformation(session)\n\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tsession['token']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\t\tsession['token'] = payload[0]\n\t\t\tsession['refresh_token'] = payload[1]\n\t\t\tsession['token_expiration'] = time.time() + payload[2]\n\t\telse:\n\t\t\treturn render_template('index.html', error='Failed to access token.')\n\tcurrent_user = getUserInformation(session)\n\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])\n\treturn redirect(session['previous_url'])\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tsession['refresh_token']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\t\tsession['refresh_token'] = payload[1]\n\t\t\tsession['token_expiration'] = time.time() + payload[2]\n\t\telse:\n\t\t\treturn render_template('index.html', error='Failed to access token.')\n\tcurrent_user = getUserInformation(session)\n\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])\n\treturn redirect(session['previous_url'])\n\"\"\"\nPage describes the web applications privacy policy as well as information about",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tsession['token_expiration']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\t\tsession['token_expiration'] = time.time() + payload[2]\n\t\telse:\n\t\t\treturn render_template('index.html', error='Failed to access token.')\n\tcurrent_user = getUserInformation(session)\n\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])\n\treturn redirect(session['previous_url'])\n\"\"\"\nPage describes the web applications privacy policy as well as information about\nthe features provided.",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tcurrent_user",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tcurrent_user = getUserInformation(session)\n\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])\n\treturn redirect(session['previous_url'])\n\"\"\"\nPage describes the web applications privacy policy as well as information about\nthe features provided.\n\"\"\"\n@app.route('/information',  methods=['GET'])\ndef information():",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession['user_id']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tsession['user_id'] = current_user['id']\n\tlogging.info('new user:' + session['user_id'])\n\treturn redirect(session['previous_url'])\n\"\"\"\nPage describes the web applications privacy policy as well as information about\nthe features provided.\n\"\"\"\n@app.route('/information',  methods=['GET'])\ndef information():\n\treturn render_template('information.html')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['previous_url']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['previous_url'] = '/tracks'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\ttrack_ids = getAllTopTracks(session)\n\tif track_ids == None:\n\t\treturn render_template('index.html', error='Failed to gather top tracks.')\n\treturn render_template('tracks.html', track_ids=track_ids)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcurrent_user",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\ttrack_ids = getAllTopTracks(session)\n\tif track_ids == None:\n\t\treturn render_template('index.html', error='Failed to gather top tracks.')\n\treturn render_template('tracks.html', track_ids=track_ids)\n\"\"\"\nCreate Feature: Page allows users to enter artists/tracks and creates a playlist based\non these entries.\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['user_id']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['user_id'] = current_user['id']\n\ttrack_ids = getAllTopTracks(session)\n\tif track_ids == None:\n\t\treturn render_template('index.html', error='Failed to gather top tracks.')\n\treturn render_template('tracks.html', track_ids=track_ids)\n\"\"\"\nCreate Feature: Page allows users to enter artists/tracks and creates a playlist based\non these entries.\n\"\"\"\n@app.route('/create',  methods=['GET'])",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\ttrack_ids",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\ttrack_ids = getAllTopTracks(session)\n\tif track_ids == None:\n\t\treturn render_template('index.html', error='Failed to gather top tracks.')\n\treturn render_template('tracks.html', track_ids=track_ids)\n\"\"\"\nCreate Feature: Page allows users to enter artists/tracks and creates a playlist based\non these entries.\n\"\"\"\n@app.route('/create',  methods=['GET'])\ndef create():",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['previous_url']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['previous_url'] = '/create'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\treturn render_template('create.html')\n\"\"\"\nInterval Timer Feature: Page displays a form for setting up the timer, which includes\na list of possible playlists to play and devices to play from. It also displays a",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcurrent_user",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\treturn render_template('create.html')\n\"\"\"\nInterval Timer Feature: Page displays a form for setting up the timer, which includes\na list of possible playlists to play and devices to play from. It also displays a\ncountdown timer.\n\"\"\"\n@app.route('/timer',  methods=['GET'])\ndef timer():",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['user_id']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['user_id'] = current_user['id']\n\treturn render_template('create.html')\n\"\"\"\nInterval Timer Feature: Page displays a form for setting up the timer, which includes\na list of possible playlists to play and devices to play from. It also displays a\ncountdown timer.\n\"\"\"\n@app.route('/timer',  methods=['GET'])\ndef timer():\n\t# make sure application is authorized for user",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['previous_url']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['previous_url'] = '/timer'\n\t\treturn redirect('/authorize')\n\t# collect user information\n\tif session.get('user_id') == None:\n\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\tdevice_names = getUserDevices(session)\n\tplaylist_names = getUserPlaylists(session)\n\tif device_names == None or playlist_names == None:\n\t\treturn render_template('index.html', error='Failed to get device ID and playlists.')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tcurrent_user",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tcurrent_user = getUserInformation(session)\n\t\tsession['user_id'] = current_user['id']\n\tdevice_names = getUserDevices(session)\n\tplaylist_names = getUserPlaylists(session)\n\tif device_names == None or playlist_names == None:\n\t\treturn render_template('index.html', error='Failed to get device ID and playlists.')\n\t# length is needed to iterate properly with Jinja\n\tdevice_length = len(device_names)\n\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tsession['user_id']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tsession['user_id'] = current_user['id']\n\tdevice_names = getUserDevices(session)\n\tplaylist_names = getUserPlaylists(session)\n\tif device_names == None or playlist_names == None:\n\t\treturn render_template('index.html', error='Failed to get device ID and playlists.')\n\t# length is needed to iterate properly with Jinja\n\tdevice_length = len(device_names)\n\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)\n\"\"\"",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tdevice_names",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tdevice_names = getUserDevices(session)\n\tplaylist_names = getUserPlaylists(session)\n\tif device_names == None or playlist_names == None:\n\t\treturn render_template('index.html', error='Failed to get device ID and playlists.')\n\t# length is needed to iterate properly with Jinja\n\tdevice_length = len(device_names)\n\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)\n\"\"\"\nCalled when a user saves a TopTracks playlist. For each playlist that a user saves, a new",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_names",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_names = getUserPlaylists(session)\n\tif device_names == None or playlist_names == None:\n\t\treturn render_template('index.html', error='Failed to get device ID and playlists.')\n\t# length is needed to iterate properly with Jinja\n\tdevice_length = len(device_names)\n\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)\n\"\"\"\nCalled when a user saves a TopTracks playlist. For each playlist that a user saves, a new\nplaylist is created and filled with TopTracks. If a user selects autoupdate, then the",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tdevice_length",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tdevice_length = len(device_names)\n\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)\n\"\"\"\nCalled when a user saves a TopTracks playlist. For each playlist that a user saves, a new\nplaylist is created and filled with TopTracks. If a user selects autoupdate, then the\nuser and playlist IDs are added to the database so they can be continuously updated.\n\"\"\"\n@app.route('/tracks/topplaylist',  methods=['POST'])\ndef createTopPlaylist():",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_length",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_length = len(playlist_names)\n\treturn render_template('timer.html', playlist_names=playlist_names, playlist_length=playlist_length, device_names=device_names, device_length=device_length)\n\"\"\"\nCalled when a user saves a TopTracks playlist. For each playlist that a user saves, a new\nplaylist is created and filled with TopTracks. If a user selects autoupdate, then the\nuser and playlist IDs are added to the database so they can be continuously updated.\n\"\"\"\n@app.route('/tracks/topplaylist',  methods=['POST'])\ndef createTopPlaylist():\n\t# save IDs in case user chose autoupdate",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_short",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_id_short = None\n\tplaylist_id_medium = None\n\tplaylist_id_long = None\n\tplaylist_uri = ''\n\t# create playlist, then get TopTracks, then fill playlist with TopTracks\n\tif 'short_term' in request.form:\n\tplaylist_id_short, playlist_uri = createPlaylist(\n            session, request.form['short_term_name'])\n\turi_list = getTopTracksURI(session, 'short_term', 50)\n\taddTracksPlaylist(session, playlist_id_short, uri_list)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_medium",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_id_medium = None\n\tplaylist_id_long = None\n\tplaylist_uri = ''\n\t# create playlist, then get TopTracks, then fill playlist with TopTracks\n\tif 'short_term' in request.form:\n\tplaylist_id_short, playlist_uri = createPlaylist(\n            session, request.form['short_term_name'])\n\turi_list = getTopTracksURI(session, 'short_term', 50)\n\taddTracksPlaylist(session, playlist_id_short, uri_list)\n\tif 'medium_term' in request.form:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_long",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_id_long = None\n\tplaylist_uri = ''\n\t# create playlist, then get TopTracks, then fill playlist with TopTracks\n\tif 'short_term' in request.form:\n\tplaylist_id_short, playlist_uri = createPlaylist(\n            session, request.form['short_term_name'])\n\turi_list = getTopTracksURI(session, 'short_term', 50)\n\taddTracksPlaylist(session, playlist_id_short, uri_list)\n\tif 'medium_term' in request.form:\n\tplaylist_id_medium, playlist_uri = createPlaylist(",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_uri",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist_uri = ''\n\t# create playlist, then get TopTracks, then fill playlist with TopTracks\n\tif 'short_term' in request.form:\n\tplaylist_id_short, playlist_uri = createPlaylist(\n            session, request.form['short_term_name'])\n\turi_list = getTopTracksURI(session, 'short_term', 50)\n\taddTracksPlaylist(session, playlist_id_short, uri_list)\n\tif 'medium_term' in request.form:\n\tplaylist_id_medium, playlist_uri = createPlaylist(\n            session, request.form['medium_term_name'])",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\turi_list",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\turi_list = getTopTracksURI(session, 'short_term', 50)\n\taddTracksPlaylist(session, playlist_id_short, uri_list)\n\tif 'medium_term' in request.form:\n\tplaylist_id_medium, playlist_uri = createPlaylist(\n            session, request.form['medium_term_name'])\n\turi_list = getTopTracksURI(session, 'medium_term', 50)\n\taddTracksPlaylist(session, playlist_id_medium, uri_list)\n\tif 'long_term' in request.form:\n\tplaylist_id_long, playlist_uri = createPlaylist(\n            session, request.form['long_term_name'])",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\turi_list",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\turi_list = getTopTracksURI(session, 'medium_term', 50)\n\taddTracksPlaylist(session, playlist_id_medium, uri_list)\n\tif 'long_term' in request.form:\n\tplaylist_id_long, playlist_uri = createPlaylist(\n            session, request.form['long_term_name'])\n\turi_list = getTopTracksURI(session, 'long_term', 50)\n\taddTracksPlaylist(session, playlist_id_long, uri_list)\n\t# if user selects autoupdate, add them to the database\n\tif 'auto_update' in request.form:\n\t\taddUser(session['user_id'], session['refresh_token'], playlist_id_short=playlist_id_short,",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\turi_list",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\turi_list = getTopTracksURI(session, 'long_term', 50)\n\taddTracksPlaylist(session, playlist_id_long, uri_list)\n\t# if user selects autoupdate, add them to the database\n\tif 'auto_update' in request.form:\n\t\taddUser(session['user_id'], session['refresh_token'], playlist_id_short=playlist_id_short,\n\t\t        playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t# send back the created playlist URI so the user is redirected to Spotify\n\treturn playlist_uri\n\"\"\"\nCalled when a user creates a playlist through the Create feature. All of the user entered",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tsearch",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tsearch = []\n\tfor i in range(0, 5):\n\t\tif str(i) in request.form:\n\t\t\tsearch.append(request.form[str(i)])\n\t\telse:\n\t\t\tbreak\n\t# store all selected attributes in a dict which can be easily added to GET body\n\ttuneable_dict = {}\n\tif 'acoustic_level' in request.form:\n\t\ttuneable_dict.update({'acoustic': request.form['slider_acoustic']})",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\ttuneable_dict",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\ttuneable_dict = {}\n\tif 'acoustic_level' in request.form:\n\t\ttuneable_dict.update({'acoustic': request.form['slider_acoustic']})\n\tif 'danceability_level' in request.form:\n\t\ttuneable_dict.update({'danceability': request.form['slider_danceability']})\n\tif 'energy_level' in request.form:\n\t\ttuneable_dict.update({'energy': request.form['slider_energy']})\n\tif 'popularity_level' in request.form:\n\t\ttuneable_dict.update({'popularity': request.form['slider_popularity']})\n\tif 'valence_level' in request.form:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\turi_list",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\turi_list = getRecommendedTracks(session, search, tuneable_dict)\n\taddTracksPlaylist(session, playlist_id, uri_list)\n\t# send back the created playlist URI so the user is redirected to Spotify\n\treturn playlist_uri\n\"\"\"\nCalled when a user starts the Interval Timer feature. The selected playlist and device\nare gathered from the POST data. User playback is started with this context.\n\"\"\"\n@app.route('/timer/start',  methods=['POST'])\ndef intervalStart():",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tplaylist = request.form['playlist']\n\tsession['device'] = request.form['device']\n\t# toggle shuffle on/off depending on user\n\tis_shuffle = False\n\tif 'shuffle' in request.form:\n\t\tis_shuffle = True\n\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:\n\t\tabort(403)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession['device']",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tsession['device'] = request.form['device']\n\t# toggle shuffle on/off depending on user\n\tis_shuffle = False\n\tif 'shuffle' in request.form:\n\t\tis_shuffle = True\n\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:\n\t\tabort(403)\n\t# if playback cannot be started on the selected device",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tis_shuffle",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tis_shuffle = False\n\tif 'shuffle' in request.form:\n\t\tis_shuffle = True\n\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:\n\t\tabort(403)\n\t# if playback cannot be started on the selected device\n\tif response == 404:\n\t\tabort(404)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tis_shuffle",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\t\tis_shuffle = True\n\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:\n\t\tabort(403)\n\t# if playback cannot be started on the selected device\n\tif response == 404:\n\t\tabort(404)\n\tresponse = startPlaybackContext(session, playlist, session['device'])\n\tif response == 403:",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = shuffle(session, session['device'], is_shuffle)\n\t# if the user does not have a premium account, this feature cannot be used\n\tif response == 403:\n\t\tabort(403)\n\t# if playback cannot be started on the selected device\n\tif response == 404:\n\t\tabort(404)\n\tresponse = startPlaybackContext(session, playlist, session['device'])\n\tif response == 403:\n\t\tabort(403)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = startPlaybackContext(session, playlist, session['device'])\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\t# playback takes a while to start\n\ttime.sleep(0.25)\n\t# return current track so picture and name can be displayed to user\n\tcurrent_playing = getTrackAfterResume(session)\n\treturn jsonify(current_playing)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tcurrent_playing",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tcurrent_playing = getTrackAfterResume(session)\n\treturn jsonify(current_playing)\n\"\"\"\nCalled when a user starts to enter an artist or track name within the Create feature.\nActs as an endpoint for autocomplete. Takes the entered text and sends back possible\nartist or track names.\n\"\"\"\n@app.route('/autocomplete', methods=['GET'])\ndef autocomplete():\n    search = request.args.get('q')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = skipTrack(session)\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\t# return current track so picture and name can be displayed to user\n\tcurrent_playing = getTrack(session)\n\treturn jsonify(current_playing)\n\"\"\"\nCalled by front-side JS when a user pauses the interval timer.",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tcurrent_playing",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tcurrent_playing = getTrack(session)\n\treturn jsonify(current_playing)\n\"\"\"\nCalled by front-side JS when a user pauses the interval timer.\n\"\"\"\n@app.route('/playback/pause')\ndef playbackPause():\n\tresponse = pausePlayback(session)\n\tif response == 403:\n\t\tabort(403)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = pausePlayback(session)\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\treturn \"success\"\n\"\"\"\nCalled by front-side JS when a user resumes a paused interval timer.\n\"\"\"\n@app.route('/playback/resume')",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tresponse",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tresponse = startPlayback(session, session['device'])\n\tif response == 403:\n\t\tabort(403)\n\tif response == 404:\n\t\tabort(404)\n\t# return current track so picture and name can be displayed to user\n\tcurrent_playing = getTrackAfterResume(session)\n\treturn jsonify(current_playing)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "\tcurrent_playing",
+        "kind": 5,
+        "importPath": "spotify.routes",
+        "description": "spotify.routes",
+        "peekOfCode": "\tcurrent_playing = getTrackAfterResume(session)\n\treturn jsonify(current_playing)",
+        "detail": "spotify.routes",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def get_db():\n    if 'db' not in g:\n        g.db = sqlite3.connect(\n            current_app.config['DATABASE'],\n            detect_types=sqlite3.PARSE_DECLTYPES\n        )\n        g.db.row_factory = sqlite3.Row\n    return g.db\ndef close_db(e=None):\n    db = g.pop('db', None)",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "close_db",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def close_db(e=None):\n    db = g.pop('db', None)\n    if db is not None:\n        db.close()\ndef init_db():\n    db = get_db()\n    with current_app.open_resource('schema.sql') as f:\n        db.executescript(f.read().decode('utf8'))\n@click.command('init-db')\n@with_appcontext",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def init_db():\n    db = get_db()\n    with current_app.open_resource('schema.sql') as f:\n        db.executescript(f.read().decode('utf8'))\n@click.command('init-db')\n@with_appcontext\ndef init_db_command():\n    \"\"\"Clear the existing data and create new tables.\"\"\"\n    init_db()\n    click.echo('Initialized the database.')",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "init_db_command",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def init_db_command():\n    \"\"\"Clear the existing data and create new tables.\"\"\"\n    init_db()\n    click.echo('Initialized the database.')\ndef init_app(app):\n    app.teardown_appcontext(close_db)\n    app.cli.add_command(init_db_command)",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "init_app",
+        "kind": 2,
+        "importPath": "db",
+        "description": "db",
+        "peekOfCode": "def init_app(app):\n    app.teardown_appcontext(close_db)\n    app.cli.add_command(init_db_command)",
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def create_app():\n    print(\"Criando factory\")\n    # App config\n    from auth import auth\n    print(\"Import auth\")\n    from club import club\n    print(\"Import club\")\n    from dashboard import dashboard\n    print(\"Import Dashboard\")\n    app = Flask(__name__)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = create_app()\n# print(app)\noauth = OAuth(app)\nprint(oauth)\n# oAuth Setup\ngoogle = oauth.register(\n    name='google',\n    client_id=os.getenv(\"GOOGLE_CLIENT_ID\"),\n    client_secret=os.getenv(\"GOOGLE_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"GOOGLE_ACCESS_TOKEN_URL\"),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oauth",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "oauth = OAuth(app)\nprint(oauth)\n# oAuth Setup\ngoogle = oauth.register(\n    name='google',\n    client_id=os.getenv(\"GOOGLE_CLIENT_ID\"),\n    client_secret=os.getenv(\"GOOGLE_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"GOOGLE_ACCESS_TOKEN_URL\"),\n    access_token_params=os.getenv(\"GOOGLE_ACCESS_TOKEN_PARAMS\"),  # None,\n    authorize_url=os.getenv(\"GOOGLE_AUTHORIZE_URL\"),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "google",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "google = oauth.register(\n    name='google',\n    client_id=os.getenv(\"GOOGLE_CLIENT_ID\"),\n    client_secret=os.getenv(\"GOOGLE_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"GOOGLE_ACCESS_TOKEN_URL\"),\n    access_token_params=os.getenv(\"GOOGLE_ACCESS_TOKEN_PARAMS\"),  # None,\n    authorize_url=os.getenv(\"GOOGLE_AUTHORIZE_URL\"),\n    authorize_params=os.getenv(\"GOOGLE_AUTHORIZE_PARAMS\"),  # None,\n    api_base_url=os.getenv(\"GOOGLE_API_BASE_URL\"),\n    # This is only needed if using openId to fetch user info",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "facebook",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "facebook = oauth.register(\n    name='facebook',\n    client_id=os.getenv(\"FACEBOOK_CLIENT_ID\"),\n    client_secret=os.getenv(\"FACEBOOK_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"FACEBOOK_ACCESS_TOKEN_URL\"),\n    access_token_params=os.getenv(\"FACEBOOK_ACCESS_TOKEN_PARAMS\"),  # None,\n    authorize_url=os.getenv(\"FACEBOOK_AUTHORIZE_URL\"),\n    authorize_params=os.getenv(\"FACEBOOK_AUTHORIZE_PARAMS\"),  # None,\n    api_base_url=os.getenv(\"FACEBOOK_API_BASE_URL\"),\n    # This is only needed if using openId to fetch user info",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "spotify",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "spotify = oauth.register(\n    name='spotify',\n    client_id=os.getenv(\"SPOTIFY_CLIENT_ID\"),\n    client_secret=os.getenv(\"SPOTIFY_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"SPOTIFY_ACCESS_TOKEN_URL\"),\n    access_token_params={'type': 'code'},\n    authorize_url=os.getenv(\"SPOTIFY_AUTHORIZE_URL\"),\n    authorize_params={'grant_type': 'authorization_code'},\n    api_base_url=os.getenv(\"SPOTIFY_API_BASE_URL\"),\n    # This is only needed if using openId to fetch user info",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "disqus",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "disqus = oauth.register(\n    name='disqus',\n    api_key=os.getenv(\"DISQUS_CLIENT_ID\"),\n    api_secret=os.getenv(\"DISQUS_CLIENT_SECRET\"),\n    client_id=os.getenv(\"DISQUS_CLIENT_ID\"),\n    client_secret=os.getenv(\"DISQUS_CLIENT_SECRET\"),\n    access_token_url=os.getenv(\"DISQUS_ACCESS_TOKEN_URL\"),\n    access_token_params={'type': 'code'},\n    authorize_url=os.getenv(\"DISQUS_AUTHORIZE_URL\"),\n    authorize_params={'grant_type': 'authorization_code'},",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "class User(Base):\n\t__tablename__ = 'users'\n\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64), index=True)\n\trefresh_token = Column(String(150), index=True, unique=True)\n\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "addUser",
+        "kind": 2,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "def addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "updatePlaylists",
+        "kind": 2,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "def updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t__tablename__",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t__tablename__ = 'users'\n\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64), index=True)\n\trefresh_token = Column(String(150), index=True, unique=True)\n\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tid",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tid = Column(Integer, primary_key=True)\n\tusername = Column(String(64), index=True)\n\trefresh_token = Column(String(150), index=True, unique=True)\n\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tusername",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tusername = Column(String(64), index=True)\n\trefresh_token = Column(String(150), index=True, unique=True)\n\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\trefresh_token",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\trefresh_token = Column(String(150), index=True, unique=True)\n\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\temail",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\temail = Column(String(30), index=True, unique=True)\n\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tprofile_pic",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tprofile_pic = Column(String(150))\n\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_short",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tplaylist_id_short = Column(String(30), index=True, unique=True)\n\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_medium",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tplaylist_id_medium = Column(String(30), index=True, unique=True)\n\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tplaylist_id_long",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tplaylist_id_long = Column(String(30), index=True, unique=True)\n\tdef __repr__(self):\n\t\treturn '<User {}>'.format(self.username)\ndef addUser(username, refresh_token, playlist_id_short=None, playlist_id_medium=None, playlist_id_long=None):\n\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tsession = Session()\n\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:\n\t\tuser = session.query(User).get(id_exists)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tid_exists",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tid_exists = session.query(User.id).filter_by(username=username).scalar()\n\t# new user\n\tif id_exists == None:\n\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:\n\t\tuser = session.query(User).get(id_exists)\n\t\tlogging.info('Auto user updated: ' + user.username)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tuser",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\tuser = User(username=username, refresh_token=refresh_token, playlist_id_short=playlist_id_short, playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)\n\t\tsession.add(user)\n\t\tlogging.info('New auto user: ' + username)\n\t#user already exists\n\telse:\n\t\tuser = session.query(User).get(id_exists)\n\t\tlogging.info('Auto user updated: ' + user.username)\n\t\t# only update playlist IDs that are new\n\t\tif playlist_id_short != None:\n\t\t\tuser.playlist_id_short = playlist_id_short",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tuser",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\tuser = session.query(User).get(id_exists)\n\t\tlogging.info('Auto user updated: ' + user.username)\n\t\t# only update playlist IDs that are new\n\t\tif playlist_id_short != None:\n\t\t\tuser.playlist_id_short = playlist_id_short\n\t\tif playlist_id_medium != None:\n\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_short",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tuser.playlist_id_short = playlist_id_short\n\t\tif playlist_id_medium != None:\n\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_medium",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tuser.playlist_id_medium = playlist_id_medium\n\t\tif playlist_id_long != None:\n\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tuser.playlist_id_long",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tuser.playlist_id_long = playlist_id_long\n\tsession.commit()\n\tsession.close()\ndef updatePlaylists():\n\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\tsession",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\tsession = Session()\n\t# attempt to update each user's playlists\n\tfor user in session.query(User):\n\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:\t\t",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tis_active",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\tis_active = False\n\t\t# authorize the application with Spotify API\n\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:\t\t\n\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\tpayload",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\tpayload = refreshToken(user.refresh_token)\n\t\t# if user account has been removed or authorization revoked, user is deleted\n\t\tif payload == None:\n\t\t\tsession.delete(user)\n\t\telse:\t\t\n\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\taccess_token",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\taccess_token = payload[0]\n\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_short\n\t\t\tif playlist != None:\n\t\t\t\t# if the playlist has not been deleted\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'short_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_short",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_short = None\n\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_medium\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'medium_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_medium",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_medium = None\n\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\tplaylist",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\tplaylist = user.playlist_id_long\n\t\t\tif playlist != None:\n\t\t\t\tif (dbClearPlaylist(access_token, playlist) != None):\n\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\turi_list",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\turi_list = dbGetTopTracksURI(access_token, 'long_term', 50)\n\t\t\t\t\tdbAddTracksPlaylist(access_token, playlist, uri_list)\n\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tis_active",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tis_active = True\n\t\t\t\telse:\n\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()\n\tlogging.info('Updated TopTracks Playlists')",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "\t\t\t\t\tuser.playlist_id_long",
+        "kind": 5,
+        "importPath": "models",
+        "description": "models",
+        "peekOfCode": "\t\t\t\t\tuser.playlist_id_long = None\n\t\t\t# if no playlists could be updated, then remove user\n\t\t\tif not is_active:\n\t\t\t\tsession.delete(user)\n\tsession.commit()\n\tsession.close()\n\tlogging.info('Updated TopTracks Playlists')",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "job",
+        "kind": 2,
+        "importPath": "scheduler",
+        "description": "scheduler",
+        "peekOfCode": "def job():\n    print(\"Rodando Tarefa...\")\n    print(\"Obtendo gêneros...\")\n    get_genres()\n    print(\"Obtendo destaques...\")\n    get_outliers()\n    print(\"Obtendo filmes...\")\n    get_movie()\n    print(\"Obtendo séries...\")\n    get_tv()",
+        "detail": "scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "songs",
+        "kind": 2,
+        "importPath": "scheduler",
+        "description": "scheduler",
+        "peekOfCode": "def songs():\n    print(\"Rodando Tarefa...\")\n@scheduler.scheduled_job('interval', seconds=10)\ndef printing():\n    print(\"Rodando Tarefa...\")\nscheduler.start()",
+        "detail": "scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "printing",
+        "kind": 2,
+        "importPath": "scheduler",
+        "description": "scheduler",
+        "peekOfCode": "def printing():\n    print(\"Rodando Tarefa...\")\nscheduler.start()",
+        "detail": "scheduler",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 5,
+        "importPath": "scheduler",
+        "description": "scheduler",
+        "peekOfCode": "scheduler = BackgroundScheduler()\n@scheduler.scheduled_job('interval', days=1)\ndef job():\n    print(\"Rodando Tarefa...\")\n    print(\"Obtendo gêneros...\")\n    get_genres()\n    print(\"Obtendo destaques...\")\n    get_outliers()\n    print(\"Obtendo filmes...\")\n    get_movie()",
+        "detail": "scheduler",
+        "documentation": {}
+    }
+]

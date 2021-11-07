@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="bg" style='background-image: url("data:;base64,{{ image }}");'>
+    <div id="banner__contents">
+        <h1 id="banner__title">{{title}}</h1>
+        <div id="banner__buttons">
+        </div>
+        <p id="banner__description">{{description}}</p>
+    </div>
+    <div id="banner__fadeBottom"></div>
+</div>
+{% endblock %}

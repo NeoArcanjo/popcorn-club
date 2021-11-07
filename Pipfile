@@ -48,10 +48,10 @@ Jinja2 = "*"
 MarkupSafe = "*"
 SQLAlchemy = "*"
 Werkzeug = "*"
-psycopg2-binary = "*"
 fontawesomefree = "*"
 l = "*"
 apscheduler = "*"
+flask-assets = "*"
 
 [dev-packages]
 

@@ -33,13 +33,18 @@ from .functions import refreshToken, checkTokenStatus, getAllTopTracks, getTopTr
 from flask import Blueprint, render_template, flash, redirect, request, session, make_response, jsonify, abort
 from flask import current_app as app, url_for
 
-spotify_bp = Blueprint('spotify', __name__, url_prefix='/spotify',
+spotify_bp = Blueprint('spotify', __name__, url_prefix='/soundtracks',
                        template_folder='templates', static_folder='static')
 
-
+def music_nav():
+    return [{'uri': url_for("spotify.tracks"), 'aria_label': "topTracks", 'name': 'TOPTRACKS'},
+           {'uri': url_for("spotify.create"), 'aria_label': "create",
+            'name': 'CREATE'},
+           {'uri': url_for("spotify.timer"), 'aria_label': "timer", 'name': 'TIMER'}]
+    
 @spotify_bp.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('spotify.html', nav=music_nav())
 
 
 """
@@ -50,7 +55,7 @@ the features provided.
 
 @spotify_bp.route('/information',  methods=['GET'])
 def information():
-    return render_template('information.html')
+    return render_template('information.html', nav=music_nav())
 
 
 """
@@ -63,7 +68,7 @@ periods.
 def tracks():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = '/tracks'
+        session['previous_url'] = url_for("spotify.tracks")
         return redirect(url_for('auth.login'))
 
     # collect user information
@@ -75,7 +80,7 @@ def tracks():
     track_ids = getAllTopTracks(session)
 
     if track_ids == None:
-        return render_template('index.html', error='Failed to gather top tracks.')
+        return render_template('spotify.html', nav=music_nav(), error='Failed to gather top tracks.')
 
     return render_template('tracks.html', track_ids=track_ids)
 
@@ -90,7 +95,7 @@ on these entries.
 def create():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = '/create'
+        session['previous_url'] = url_for("spotify.create")
         return redirect(url_for('auth.login'))
 
     # collect user information
@@ -100,7 +105,7 @@ def create():
 
         session['user_id'] = current_user['id']
 
-    return render_template('create.html')
+    return render_template('create.html', nav=music_nav())
 
 
 """
@@ -114,7 +119,7 @@ countdown timer.
 def timer():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = '/timer'
+        session['previous_url'] = url_for("spotify.timer")
         return redirect(url_for('auth.login'))
 
     # collect user information
@@ -128,7 +133,7 @@ def timer():
     playlist_names = getUserPlaylists(session)
 
     if device_names == None or playlist_names == None:
-        return render_template('index.html', error='Failed to get device ID and playlists.')
+        return render_template('spotify.html', nav=music_nav(), error='Failed to get device ID and playlists.')
 
     # length is needed to iterate properly with Jinja
     device_length = len(device_names)

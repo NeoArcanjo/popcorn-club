@@ -1,12 +1,9 @@
-{% extends "base.html" %}
-
-{% block title %}TopTracks{% endblock %}
+{% extends "root.html" %}
 
 {% block head %}
 {{ super() }}
-
 <script src="{{ url_for('static', filename='js/tracks.js') }}"></script>
-
+{% block title %}TopTracks{% endblock %}
 {% endblock %}
 
 

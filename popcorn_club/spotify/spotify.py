@@ -38,9 +38,8 @@ spotify_bp = Blueprint('spotify', __name__, url_prefix='/spotify',
 
 
 @spotify_bp.route('/')
-@spotify_bp.route('/index')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 
 """
@@ -70,7 +69,7 @@ def tracks():
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
-        print(current_user)
+        print(current_user["id"])
         session['user_id'] = current_user['id']
 
     track_ids = getAllTopTracks(session)
@@ -97,7 +96,8 @@ def create():
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
-        print(current_user)
+        print(current_user["id"])
+
         session['user_id'] = current_user['id']
 
     return render_template('create.html')
@@ -120,7 +120,8 @@ def timer():
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
-        print(current_user)
+        print(current_user["id"])
+
         session['user_id'] = current_user['id']
 
     device_names = getUserDevices(session)

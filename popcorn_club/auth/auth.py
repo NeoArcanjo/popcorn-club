@@ -59,7 +59,7 @@ def authorize_facebook():
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect('/')
+    return redirect(url_for('club.index'))
 
 
 @bp.route('/disqus/callback')
@@ -81,7 +81,7 @@ def authorize_disqus():
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect('/')
+    return redirect(url_for('club.index'))
 
 
 @bp.route('/spotify/callback')
@@ -91,7 +91,7 @@ def authorize_spotify():
     token = spotify.authorize_access_token()
     # userinfo contains stuff u specificed in the scrope
     user = oauth.spotify.userinfo()
-    print(user)
+
     session['token'] = token['access_token']
     session['refresh_token'] = token['refresh_token']
     session['token_expiration'] = time.time() + token['expires_in']
@@ -104,7 +104,7 @@ def authorize_spotify():
     session['user_id'] = user
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect('/')
+    return redirect(url_for('club.index'))
 
 
 @bp.route('/callback')
@@ -129,7 +129,7 @@ def logout():
     for key in list(session.keys()):
         session.pop(key)
     session.clear()
-    return redirect(url_for('index'))
+    return redirect(url_for('auth.login'))
 
 
 @bp.route('/register', methods=('GET', 'POST'))
@@ -199,9 +199,10 @@ def load_logged_in_user():
     if user_id is None:
         g.user = None
     else:
-        g.user = get_db().execute(
-            'SELECT * FROM user WHERE id = ?', (user_id,)
-        ).fetchone()
+        g.user = session.get('profile')
+        # g.user = get_db().execute(
+        #     'SELECT * FROM user WHERE id = ?', (user_id,)
+        # ).fetchone()
 
 
 # # @bp.route('/logout')

@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="/tracks">
+                        <a class="" href="{{url_for('spotify.tracks')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -51,7 +51,7 @@
 
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="/create">
+                        <a class="" href="{{url_for('spotify.create')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="/timer">
+                        <a class="" href="{{url_for('spotify.timer')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -88,6 +88,9 @@
             </div>
         </div>
     </div>
+    {% endblock %}
+    {% block script %}
+
     <!-- JavaScript dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"

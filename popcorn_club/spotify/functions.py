@@ -1,5 +1,4 @@
 from flask import render_template, redirect, request
-from . import app
 import base64
 import os
 import random as rand

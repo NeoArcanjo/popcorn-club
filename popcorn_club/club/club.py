@@ -2,7 +2,7 @@ import requests
 import random
 import json
 # from flask import Flask, render_template, request, redirect, url_for, session
-from flask import Blueprint, flash, g, render_template, request
+from flask import Blueprint, flash, g, render_template, request, url_for
 from flask import current_app as app
 from werkzeug.exceptions import HTTPException
 from base64 import b64encode
@@ -21,8 +21,7 @@ def search():
         f"search/multi?language=en-US&page=1&include_adult=false&query={search}&")
     results = results["results"]
     set_movie = results[0]
-
-    return render_template("search_result.html",  set_movie=set_movie, img_url=img_url, results=results)
+    return render_template("search_result.html", set_movie=set_movie, img_url=img_url, results=results)
 
 
 @bp.route('/')
@@ -30,13 +29,13 @@ def search():
 @bp.route('/home')
 @login_required
 def index():
-    with open('static/tmp/json/popular.json', 'r') as f:
+    with open('tmp/json/popular.json', 'r') as f:
         popular = json.load(f)
 
-    with open('static/tmp/json/trend.json', 'r') as f:
+    with open('tmp/json/trend.json', 'r') as f:
         trend = json.load(f)
 
-    with open('static/tmp/json/netflix.json', 'r') as f:
+    with open('tmp/json/netflix.json', 'r') as f:
         netflix = json.load(f)
 
     secure_random = random.SystemRandom()
@@ -49,21 +48,21 @@ def index():
 @bp.route('/movie')
 @login_required
 def movie():
-    with open(f'static/tmp/json/movie/genres.json', 'r') as f:
+    with open('tmp/json/movie/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 
     for genre in genres:
-        with open(f'static/tmp/json/movie/{genre["name"]}.json', 'r') as f:
+        with open(f'tmp/json/movie/{genre["name"]}.json', 'r') as f:
             genre["results"] = json.load(f)
 
-    with open('static/tmp/json/movie/popular.json', 'r') as f:
+    with open('tmp/json/movie/popular.json', 'r') as f:
         popular = json.load(f)
 
-    with open('static/tmp/json/movie/trend.json', 'r') as f:
+    with open('tmp/json/movie/trend.json', 'r') as f:
         trend = json.load(f)
 
-    with open('static/tmp/json/movie/netflix.json', 'r') as f:
+    with open('tmp/json/movie/netflix.json', 'r') as f:
         netflix = json.load(f)
 
     secure_random = random.SystemRandom()
@@ -76,21 +75,21 @@ def movie():
 @bp.route('/tv')
 @login_required
 def series():
-    with open(f'static/tmp/json/tv/genres.json', 'r') as f:
+    with open('tmp/json/tv/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 
     for genre in genres:
-        with open(f'static/tmp/json/tv/{genre["name"]}.json', 'r') as f:
+        with open(f'tmp/json/tv/{genre["name"]}.json', 'r') as f:
             genre["results"] = json.load(f)
 
-    with open('static/tmp/json/tv/popular.json', 'r') as f:
+    with open('tmp/json/tv/popular.json', 'r') as f:
         popular = json.load(f)
 
-    with open('static/tmp/json/tv/trend.json', 'r') as f:
+    with open('tmp/json/tv/trend.json', 'r') as f:
         trend = json.load(f)
 
-    with open('static/tmp/json/tv/netflix.json', 'r') as f:
+    with open('tmp/json/tv/netflix.json', 'r') as f:
         netflix = json.load(f)
 
     secure_random = random.SystemRandom()

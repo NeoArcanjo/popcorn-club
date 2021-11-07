@@ -11,8 +11,6 @@ bp = Blueprint('admin', __name__, url_prefix='/admin',
 @login_required
 def dashboard():
     return render_template('index.html')
-
-
 @bp.route("/buttons")
 @login_required
 def buttons():
@@ -47,11 +45,6 @@ def utilities_animation():
 @login_required
 def utilities_other():
     return render_template('utilities-other.html')
-
-
-@bp.route("/login2")
-def login2():
-    return render_template('login.html')
 
 
 @bp.route("/404")

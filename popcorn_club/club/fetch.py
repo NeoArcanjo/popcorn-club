@@ -12,7 +12,7 @@ def get_genres():
     tv = get_data('genre/tv/list?')
 
     for name, data in {"movie": movie, "tv": tv}.items():
-        path = f'static/tmp/json/{name}'
+        path = f'tmp/json/{name}'
         maybe_create(path)
         with open(f'{path}/genres.tmp.json', 'w') as f:
             f.write(json.dumps(data))
@@ -21,7 +21,7 @@ def get_genres():
 
 
 def get_outliers():
-    path = f'static/tmp/json'
+    path = 'tmp/json/json'
     maybe_create(path)
     popular = get_data(
         'discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&')
@@ -47,10 +47,10 @@ def get_outliers():
 
 
 def get_movie():
-    path = f'static/tmp/json/movie/'
+    path = f'tmp/json/movie/'
     maybe_create(path)
 
-    with open(f'static/tmp/json/movie/genres.json', 'r') as f:
+    with open(f'tmp/json/movie/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 
@@ -86,9 +86,9 @@ def get_movie():
 
 
 def get_tv():
-    path = f'static/tmp/json/tv'
+    path = f'tmp/json/tv'
     maybe_create(path)
-    with open(f'static/tmp/json/tv/genres.json', 'r') as f:
+    with open(f'tmp/json/tv/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 

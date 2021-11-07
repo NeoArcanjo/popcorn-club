@@ -37,7 +37,7 @@ def create_app(test_config=None):
     from .auth import auth
     from .dashboard import dashboard
     from .club import club
-    # from .spotify import spotify
+    from .spotify import spotify
     
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -68,7 +68,7 @@ def create_app(test_config=None):
     app.register_blueprint(auth.bp)
     app.register_blueprint(club.bp)
     app.register_blueprint(dashboard.bp)
-    # app.register_blueprint(spotify.bp)
+    app.register_blueprint(spotify.bp)
     
     # scheduler.start()
 

@@ -28,13 +28,13 @@
 # bootstrap = Bootstrap(app)
 import logging
 import time
-from .models import addUser
+# from .models import addUser
 from .functions import createStateKey, getToken, refreshToken, checkTokenStatus, getUserInformation, getAllTopTracks, getTopTracksID, getTopTracksURI, getTopArtists, getRecommendedTracks, startPlayback, startPlaybackContext, pausePlayback, shuffle, getUserPlaylists, getUserDevices, skipTrack, getTrack, getTrackAfterResume, createPlaylist, addTracksPlaylist, searchSpotify
 from flask import Blueprint, render_template, flash, redirect, request, session, make_response, jsonify, abort
 from flask import current_app as app
 
 bp = Blueprint('spotify', __name__, url_prefix='/spotify',
-               template_folder='templates', static_folder='static')
+               template_folder='./templates', static_folder='static')
 
 
 @bp.route('/')
@@ -228,10 +228,10 @@ def createTopPlaylist():
     uri_list = getTopTracksURI(session, 'long_term', 50)
     addTracksPlaylist(session, playlist_id_long, uri_list)
 
-    # if user selects autoupdate, add them to the database
-    if 'auto_update' in request.form:
-        addUser(session['user_id'], session['refresh_token'], playlist_id_short=playlist_id_short,
-                playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)
+    # # if user selects autoupdate, add them to the database
+    # if 'auto_update' in request.form:
+    #     addUser(session['user_id'], session['refresh_token'], playlist_id_short=playlist_id_short,
+    #             playlist_id_medium=playlist_id_medium, playlist_id_long=playlist_id_long)
 
     # send back the created playlist URI so the user is redirected to Spotify
     return playlist_uri

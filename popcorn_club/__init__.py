@@ -1,10 +1,10 @@
 import logging
-# # import scheduler
 # import sqlalchemy
 import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for
-# from .scheduler import scheduler
+from flask import render_template
+from .scheduler import scheduler
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -38,7 +38,7 @@ def create_app(test_config=None):
     from .dashboard import dashboard
     from .club import club
     from .spotify import spotify
-    
+    # from . import routes
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     # Session config
@@ -60,16 +60,26 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+    
+    app.register_blueprint(auth.bp)
+    app.register_blueprint(club.bp)
+    app.register_blueprint(dashboard.bp)
+    app.register_blueprint(spotify.spotify_bp)
+    
+    @app.route("/404")
+    def e404():
+        return render_template('404.html')
+
+
+    @app.route("/blank")
+    def blank():
+        return render_template('blank.html')
+
 
     @app.route('/')
     def index():
         return redirect(url_for('club.index'))
     
-    app.register_blueprint(auth.bp)
-    app.register_blueprint(club.bp)
-    app.register_blueprint(dashboard.bp)
-    app.register_blueprint(spotify.bp)
-    
-    # scheduler.start()
+    scheduler.start()
 
     return app

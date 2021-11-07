@@ -10,7 +10,9 @@ bp = Blueprint('admin', __name__, url_prefix='/admin',
 @bp.route("/dashboard")
 @login_required
 def dashboard():
-    return render_template('index.html')
+    return render_template('dashboard.html')
+
+
 @bp.route("/buttons")
 @login_required
 def buttons():
@@ -47,11 +49,6 @@ def utilities_other():
     return render_template('utilities-other.html')
 
 
-@bp.route("/404")
-def e404():
-    return render_template('404.html')
-
-
 @bp.route("/charts")
 @login_required
 def charts():
@@ -62,8 +59,3 @@ def charts():
 @login_required
 def tables():
     return render_template('tables.html')
-
-
-@bp.route("/blank")
-def blank():
-    return render_template('blank.html')

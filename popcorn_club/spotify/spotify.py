@@ -29,78 +29,18 @@
 import logging
 import time
 # from .models import addUser
-from .functions import createStateKey, getToken, refreshToken, checkTokenStatus, getUserInformation, getAllTopTracks, getTopTracksID, getTopTracksURI, getTopArtists, getRecommendedTracks, startPlayback, startPlaybackContext, pausePlayback, shuffle, getUserPlaylists, getUserDevices, skipTrack, getTrack, getTrackAfterResume, createPlaylist, addTracksPlaylist, searchSpotify
+from .functions import refreshToken, checkTokenStatus, getAllTopTracks, getTopTracksID, getTopTracksURI, getTopArtists, getRecommendedTracks, startPlayback, startPlaybackContext, pausePlayback, shuffle, getUserPlaylists, getUserDevices, skipTrack, getTrack, getTrackAfterResume, createPlaylist, addTracksPlaylist, searchSpotify
 from flask import Blueprint, render_template, flash, redirect, request, session, make_response, jsonify, abort
-from flask import current_app as app
+from flask import current_app as app, url_for
 
-bp = Blueprint('spotify', __name__, url_prefix='/spotify',
-               template_folder='./templates', static_folder='static')
+spotify_bp = Blueprint('spotify', __name__, url_prefix='/spotify',
+                       template_folder='templates', static_folder='static')
 
 
-@bp.route('/')
-@bp.route('/index')
+@spotify_bp.route('/')
+@spotify_bp.route('/index')
 def index():
     return render_template('index.html')
-
-
-"""
-Chamado pelo backend quando um usuário não autorizou o pedido a
-Acesse sua conta Spotify.Tenta autorizar um novo usuário redirecionando
-eles para a página de autorização do Spotify.
-"""
-
-
-@bp.route('/authorize')
-def authorize():
-    client_id = app.config['CLIENT_ID']
-    # client_secret = app.config['CLIENT_SECRET']
-    redirect_uri = app.config['REDIRECT_URI']
-    scope = app.config['SCOPE']
-
-    # state key used to protect against cross-site forgery attacks
-    state_key = createStateKey(15)
-    session['state_key'] = state_key
-    # redirect user to Spotify authorization page
-    authorize_url = 'https://accounts.spotify.com/pt/authorize?'
-    parameters = 'response_type=code&client_id=' + client_id + \
-        '&redirect_uri=' + redirect_uri + '&scope=' + scope + '&state=' + state_key
-    response = make_response(redirect(authorize_url + parameters))
-    return response
-
-
-"""
-Called after a new user has authorized the application through the Spotify API page.
-Stores user information in a session and redirects user back to the page they initally
-attempted to visit.
-"""
-
-
-@bp.route('/callback')
-def callback():
-    # make sure the response came from Spotify
-    if request.args.get('state') != session['state_key']:
-        return render_template('index.html', error='State failed.')
-    if request.args.get('error'):
-        return render_template('index.html', error='Spotify error.')
-    else:
-        code = request.args.get('code')
-        print(session)
-        session.pop('state_key', None)
-
-        # get access token to make requests on behalf of the user
-        payload = getToken(code)
-        if payload != None:
-            session['token'] = payload[0]
-            session['refresh_token'] = payload[1]
-            session['token_expiration'] = time.time() + payload[2]
-        else:
-            return render_template('index.html', error='Failed to access token.')
-
-    current_user = getUserInformation(session)
-    session['user_id'] = current_user['id']
-    logging.info('new user:' + session['user_id'])
-
-    return redirect(session['previous_url'])
 
 
 """
@@ -109,7 +49,7 @@ the features provided.
 """
 
 
-@bp.route('/information',  methods=['GET'])
+@spotify_bp.route('/information',  methods=['GET'])
 def information():
     return render_template('information.html')
 
@@ -120,16 +60,17 @@ periods.
 """
 
 
-@bp.route('/tracks',  methods=['GET'])
+@spotify_bp.route('/tracks',  methods=['GET'])
 def tracks():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = '/tracks'
-        return redirect('/authorize')
+        return redirect(url_for('auth.login'))
 
     # collect user information
     if session.get('user_id') == None:
-        current_user = getUserInformation(session)
+        current_user = session['profile']
+        print(current_user)
         session['user_id'] = current_user['id']
 
     track_ids = getAllTopTracks(session)
@@ -146,16 +87,17 @@ on these entries.
 """
 
 
-@bp.route('/create',  methods=['GET'])
+@spotify_bp.route('/create',  methods=['GET'])
 def create():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = '/create'
-        return redirect('/authorize')
+        return redirect(url_for('auth.login'))
 
     # collect user information
     if session.get('user_id') == None:
-        current_user = getUserInformation(session)
+        current_user = session['profile']
+        print(current_user)
         session['user_id'] = current_user['id']
 
     return render_template('create.html')
@@ -168,16 +110,17 @@ countdown timer.
 """
 
 
-@bp.route('/timer',  methods=['GET'])
+@spotify_bp.route('/timer',  methods=['GET'])
 def timer():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = '/timer'
-        return redirect('/authorize')
+        return redirect(url_for('auth.login'))
 
     # collect user information
     if session.get('user_id') == None:
-        current_user = getUserInformation(session)
+        current_user = session['profile']
+        print(current_user)
         session['user_id'] = current_user['id']
 
     device_names = getUserDevices(session)
@@ -200,7 +143,7 @@ user and playlist IDs are added to the database so they can be continuously upda
 """
 
 
-@bp.route('/tracks/topplaylist',  methods=['POST'])
+@spotify_bp.route('/tracks/topplaylist',  methods=['POST'])
 def createTopPlaylist():
 
     # save IDs in case user chose autoupdate
@@ -244,7 +187,7 @@ create a new playlist, find recommended tracks, and fill the playlist with these
 """
 
 
-@bp.route('/create/playlist',  methods=['POST'])
+@spotify_bp.route('/create/playlist',  methods=['POST'])
 def createSelectedPlaylist():
     # collect the IDs of the artists/tracks the user entered
     search = []
@@ -287,7 +230,7 @@ are gathered from the POST data. User playback is started with this context.
 """
 
 
-@bp.route('/timer/start',  methods=['POST'])
+@spotify_bp.route('/timer/start',  methods=['POST'])
 def intervalStart():
     playlist = request.form['playlist']
     session['device'] = request.form['device']
@@ -328,7 +271,7 @@ artist or track names.
 """
 
 
-@bp.route('/autocomplete', methods=['GET'])
+@spotify_bp.route('/autocomplete', methods=['GET'])
 def autocomplete():
     search = request.args.get('q')
     results = searchSpotify(session, search)
@@ -341,7 +284,7 @@ Called by front-side JS when an interval is over to skip to next song.
 """
 
 
-@bp.route('/playback/skip')
+@spotify_bp.route('/playback/skip')
 def playbackSkip():
     response = skipTrack(session)
 
@@ -360,7 +303,7 @@ Called by front-side JS when a user pauses the interval timer.
 """
 
 
-@bp.route('/playback/pause')
+@spotify_bp.route('/playback/pause')
 def playbackPause():
     response = pausePlayback(session)
 
@@ -376,7 +319,7 @@ Called by front-side JS when a user resumes a paused interval timer.
 """
 
 
-@bp.route('/playback/resume')
+@spotify_bp.route('/playback/resume')
 def playbackResume():
     response = startPlayback(session, session['device'])
 

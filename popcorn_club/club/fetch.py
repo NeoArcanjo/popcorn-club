@@ -127,12 +127,7 @@ def get_tv():
 
 
 def updateMedialists():
-    print("Rodando Tarefa...")
-    print("Obtendo gêneros...")
     get_genres()
-    print("Obtendo destaques...")
     get_outliers()
-    print("Obtendo filmes...")
     get_movie()
-    print("Obtendo séries...")
     get_tv()

@@ -13,26 +13,26 @@ def createStateKey(size):
     return ''.join(rand.SystemRandom().choice(string.ascii_uppercase + string.digits) for _ in range(size))
 
 
-def getToken(code):
-    token_url = 'https://accounts.spotify.com/api/token'
-    authorization = str(base64.urlsafe_b64encode(
-        f"{app.config['CLIENT_ID']}:{app.config['CLIENT_SECRET']}".encode('utf-8')), 'utf-8')
-    app.config['AUTHORIZATION'] = authorization
-    redirect_uri = app.config['REDIRECT_URI']
-    headers = {'Authorization': f"basic {authorization}", 'Accept': 'application/json',
-               'Content-Type': 'application/x-www-form-urlencoded'}
-    body = {'code': code, 'redirect_uri': redirect_uri,
-            'grant_type': 'authorization_code'}
-    post_response = requests.post(token_url, headers=headers, data=body)
+# def getToken(code):
+#     token_url = 'https://accounts.spotify.com/api/token'
+#     authorization = str(base64.urlsafe_b64encode(
+#         f"{app.config['CLIENT_ID']}:{app.config['CLIENT_SECRET']}".encode('utf-8')), 'utf-8')
+#     app.config['AUTHORIZATION'] = authorization
+#     redirect_uri = app.config['REDIRECT_URI']
+#     headers = {'Authorization': f"basic {authorization}", 'Accept': 'application/json',
+#                'Content-Type': 'application/x-www-form-urlencoded'}
+#     body = {'code': code, 'redirect_uri': redirect_uri,
+#             'grant_type': 'authorization_code'}
+#     post_response = requests.post(token_url, headers=headers, data=body)
 
-    print(post_response)
-    # 200 code indicates access token was properly granted
-    if post_response.status_code == 200:
-        json = post_response.json()
-        return json['access_token'], json['refresh_token'], json['expires_in']
-    else:
-        logging.error('getToken:' + str(post_response.status_code))
-        return None
+#     print(post_response)
+#     # 200 code indicates access token was properly granted
+#     if post_response.status_code == 200:
+#         json = post_response.json()
+#         return json['access_token'], json['refresh_token'], json['expires_in']
+#     else:
+#         logging.error('getToken:' + str(post_response.status_code))
+#         return None
 
 
 def refreshToken(refresh_token):
@@ -138,14 +138,14 @@ def makeDeleteRequest(session, url, data):
         return None
 
 
-def getUserInformation(session):
-    url = 'https://api.spotify.com/v1/me'
-    payload = makeGetRequest(session, url)
+# def getUserInformation(session):
+#     url = 'https://api.spotify.com/v1/me'
+#     payload = makeGetRequest(session, url)
 
-    if payload == None:
-        return None
+#     if payload == None:
+#         return None
 
-    return payload
+#     return payload
 
 
 def getAllTopTracks(session, limit=10):

@@ -2,10 +2,9 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from popcorn_club.spotify.models import updatePlaylists
 from popcorn_club.club.fetch import updateMedialists
 import zoneinfo
-from pytz import utc
 SP = zoneinfo.ZoneInfo("America/Sao_Paulo")
-
-scheduler = BackgroundScheduler(timezone=utc)
+print(SP)
+scheduler = BackgroundScheduler(timezone="America/Sao_Paulo")
 
 # @scheduler.scheduled_job('interval', days=1)
 scheduler.add_job(updateMedialists, trigger='interval', days=1)

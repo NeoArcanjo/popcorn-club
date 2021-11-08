@@ -52,6 +52,7 @@ fontawesomefree = "*"
 l = "*"
 apscheduler = "*"
 flask-assets = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 

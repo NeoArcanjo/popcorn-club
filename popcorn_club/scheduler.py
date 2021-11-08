@@ -1,6 +1,8 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from popcorn_club.spotify.models import updatePlaylists
 from popcorn_club.club.fetch import updateMedialists
+from tzlocal import get_localzone
+from datetime import datetime
 import zoneinfo
 SP = zoneinfo.ZoneInfo("America/Sao_Paulo")
 

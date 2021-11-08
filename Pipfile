@@ -54,6 +54,9 @@ apscheduler = "*"
 flask-assets = "*"
 psycopg2-binary = "*"
 tzlocal = "*"
+lesscpy = "*"
+cssmin = "*"
+jsmin = "*"
 
 [dev-packages]
 

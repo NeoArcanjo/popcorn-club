@@ -1,1 +1,1 @@
-web: gunicorn popcorn_club.wsgi
+web: gunicorn app:wsgi

@@ -4,7 +4,8 @@ import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for
 from flask import render_template
-from .scheduler import scheduler
+from flask_assets import Environment, Bundle
+# from .scheduler import scheduler
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -32,6 +33,7 @@ from .scheduler import scheduler
 # dotenv setup
 from dotenv import load_dotenv
 load_dotenv()
+assets = Environment()
 
 def create_app(test_config=None):
     from .auth import auth
@@ -41,6 +43,7 @@ def create_app(test_config=None):
     # from . import routes
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+
     # Session config
     app.config.from_mapping(
         SECRET_KEY=os.getenv("APP_SECRET_KEY"),
@@ -55,31 +58,47 @@ def create_app(test_config=None):
         # load the test config if passed in
         app.config.from_mapping(test_config)
 
-    # ensure the instance folder exists
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
-    
-    app.register_blueprint(auth.bp)
-    app.register_blueprint(club.bp)
-    app.register_blueprint(dashboard.bp)
-    app.register_blueprint(spotify.spotify_bp)
-    
-    @app.route("/404")
-    def e404():
-        return render_template('404.html')
+    # Initialize plugins
+    assets.init_app(app)
+    # scheduler.start()
+
+    with app.app_context():
+        # ensure the instance folder exists
+        try:
+            os.makedirs(app.instance_path)
+        except OSError:
+            pass
+        
+        app.register_blueprint(auth.bp)
+        app.register_blueprint(club.bp)
+        app.register_blueprint(dashboard.bp)
+        app.register_blueprint(spotify.spotify_bp)
+        
+        @app.route("/404")
+        def e404():
+            return render_template('404.html')
 
 
-    @app.route("/blank")
-    def blank():
-        return render_template('blank.html')
+        @app.route("/blank")
+        def blank():
+            return render_template('blank.html')
 
 
-    @app.route('/')
-    def index():
-        return redirect(url_for('club.index'))
-    
-    scheduler.start()
+        @app.route('/')
+        def index():
+            return redirect(url_for('club.index'))
+        
+        style_bundle = Bundle(
+            'src/less/*.less',
+            filters='less,cssmin',
+            output='dist/css/style.min.css',
+            extra={'rel': 'stylesheet/css'}
+        )
 
-    return app
+
+        # Register style bundle
+        assets.register('main_styles', style_bundle)
+
+        # Build LESS styles
+        style_bundle.build()
+        return app

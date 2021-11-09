@@ -1,11 +1,10 @@
 import logging
-# import sqlalchemy
+import sqlalchemy
 import os
 from datetime import timedelta
-from flask import Flask, redirect, url_for
-from flask import render_template
-from flask_assets import Environment, Bundle
-# from .scheduler import scheduler
+from flask import Flask, redirect, url_for, render_template
+# from flask_assets import Environment
+# from .assets import compile_assets
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -33,14 +32,13 @@ from flask_assets import Environment, Bundle
 # dotenv setup
 from dotenv import load_dotenv
 load_dotenv()
-assets = Environment()
+# assets = Environment()
 
 def create_app(test_config=None):
     from .auth import auth
     from .dashboard import dashboard
     from .club import club
     from .spotify import spotify
-    # from . import routes
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
 
@@ -59,8 +57,7 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
     # Initialize plugins
-    assets.init_app(app)
-    # scheduler.start()
+    # assets.init_app(app)
 
     with app.app_context():
         # ensure the instance folder exists
@@ -68,37 +65,24 @@ def create_app(test_config=None):
             os.makedirs(app.instance_path)
         except OSError:
             pass
-        
+
         app.register_blueprint(auth.bp)
         app.register_blueprint(club.bp)
         app.register_blueprint(dashboard.bp)
         app.register_blueprint(spotify.spotify_bp)
-        
+
         @app.route("/404")
         def e404():
             return render_template('404.html')
-
 
         @app.route("/blank")
         def blank():
             return render_template('blank.html')
 
-
         @app.route('/')
         def index():
             return redirect(url_for('club.index'))
-        
-        style_bundle = Bundle(
-            'src/less/*.less',
-            filters='less,cssmin',
-            output='dist/css/style.min.css',
-            extra={'rel': 'stylesheet/css'}
-        )
 
+        # compile_assets(assets)
 
-        # Register style bundle
-        assets.register('main_styles', style_bundle)
-
-        # Build LESS styles
-        style_bundle.build()
         return app

@@ -2,14 +2,17 @@
 from flask import current_app as app
 from flask_assets import Bundle
 
-
+app.register_blueprint(auth.bp)
+app.register_blueprint(club.bp)
+app.register_blueprint(dashboard.bp)
+app.register_blueprint(spotify.spotify_bp)
 def compile_static_assets(assets):
     """Configure and build asset bundles."""
 
     # Main asset bundles
-    main_style_bundle = Bundle(
-        'src/less/*.less',
-        'main_bp/homepage.less',
+    auth_style_bundle = Bundle(
+        'static/scss/*.scss',
+        'bp/homepage.less',
         filters='less,cssmin',
         output='dist/css/landing.css',
         extra={'rel': 'stylesheet/css'}

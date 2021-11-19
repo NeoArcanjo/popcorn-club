@@ -35,10 +35,13 @@ load_dotenv()
 # assets = Environment()
 
 def create_app(test_config=None):
-    from .auth import auth
-    from .dashboard import dashboard
-    from .club import club
-    from .spotify import spotify
+    # from .Admin import admin
+    from .Auth import auth
+    from .Main import routes
+    from .Dashboard import dashboard
+    # from .Documentation import documentation
+    # from .Landing import landing
+    from .Spotify import spotify
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
 
@@ -66,9 +69,13 @@ def create_app(test_config=None):
         except OSError:
             pass
 
+
+        # app.register_blueprint(admin.bp)
         app.register_blueprint(auth.bp)
-        app.register_blueprint(club.bp)
+        app.register_blueprint(routes.main_bp)
         app.register_blueprint(dashboard.bp)
+        # app.register_blueprint(documentation.bp)
+        # app.register_blueprint(landing.bp)
         app.register_blueprint(spotify.spotify_bp)
 
         @app.route("/404")

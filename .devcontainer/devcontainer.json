@@ -24,7 +24,10 @@
 		"github.copilot",
 		"github.codespaces",
 		"knisterpeter.vscode-github",
-		"humao.rest-client"
+		"humao.rest-client",
+		"sidthesloth.html5-boilerplate",
+		"mohd-akram.vscode-html-format",
+		"neptunedesign.vs-html-to-css"
 	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

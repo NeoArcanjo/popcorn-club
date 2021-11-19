@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  trabalhosistemasweb2021:
-    image: trabalhosistemasweb2021
+  popcornclub:
+    image: popcornclub
     build:
       context: .
       dockerfile: ./Dockerfile

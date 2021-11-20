@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="{{url_for('spotify.tracks')}}">
+                        <a class="" href="{{url_for('spotify_bp.tracks')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -51,7 +51,7 @@
 
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="{{url_for('spotify.create')}}">
+                        <a class="" href="{{url_for('spotify_bp.create')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <a class="" href="{{url_for('spotify.timer')}}">
+                        <a class="" href="{{url_for('spotify_bp.timer')}}">
                             <svg class="card-center card-img-top" width="100%" height="225"
                                 preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                                 aria-label="Placeholder: Top Tracks">
@@ -100,7 +100,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <!-- Script: Smooth scrolling between anchors in a same page -->
-    <script src="{{ url_for('spotify.static', filename='js/smooth-scroll.js') }}"></script>
+    <script src="{{ url_for('spotify_bp.static', filename='js/smooth-scroll.js') }}"></script>
     {% endblock %}
 
     {% block footer %}

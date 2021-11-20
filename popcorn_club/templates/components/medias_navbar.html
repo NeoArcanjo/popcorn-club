@@ -1,23 +1,23 @@
 <nav>
     <div class="leftRow">
-        <a href="{{url_for('club.index')}}"><img id="logo" src="{{url_for('static', filename = 'img/logo.png')}}"
+        <a href="{{url_for('main_bp.index')}}"><img id="logo" src="{{url_for('static', filename = 'img/logo.png')}}"
                 alt="Logo"></a>
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
-            <li><a href="{{url_for('admin.dashboard')}}">Dashboard</a></li>
+            <li><a href="{{url_for('dashboard_bp.dashboard')}}">Dashboard</a></li>
             <li><a href="#banner">Início</a></li>
             <li><a href="series">Séries</a></li>
             <li><a href="filmes">Filmes</a></li>
             <li><a href="#trends">Bombando</a></li>
             <li><a href="#mylist">Minha lista</a></li>
-            <li><a href="{{url_for('spotify.home')}}">SoundTracks</a></li>
+            <li><a href="{{url_for('spotify_bp.home')}}">SoundTracks</a></li>
             <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
     </div>
     <div class="rightRow">
         {% block search %}
 
-        <form class="form-inline accordion" action="{{url_for('club.search')}}" method="get">
+        <form class="form-inline accordion" action="{{url_for('main_bp.search')}}" method="get">
             <div class="input-group">
 
                 <input type="text" name="q" class="form-control form-control-sm" id="inlineFormInputGroup"

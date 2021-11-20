@@ -44,7 +44,6 @@ def index():
     return render_template('index.html', set_movie=set_movie, img_url=img_url, popular=popular, trend=trend, netflix=netflix)
 
 
-@main_bp.route('/filmes')
 @main_bp.route('/movie')
 @login_required
 def movie():
@@ -102,7 +101,15 @@ def series():
 @login_required
 def about(type, id):
     movie = get_data(f'{type}/{id}?')
-    return render_template('sobre.html', movie=movie, img_url=img_url)
+    aprovacao = ""
+    if "vote_average" in movie:
+        if movie["vote_average"] >= 8:
+            aprovacao = "badge-success"
+        elif movie["vote_average"] >= 6:
+            aprovacao = "badge-warning"
+        else:
+            aprovacao = "badge-danger"
+    return render_template('sobre.html', movie=movie, img_url=img_url, aprovacao=aprovacao)
 
 
 @main_bp.errorhandler(HTTPException)

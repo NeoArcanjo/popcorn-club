@@ -36,12 +36,14 @@ from flask import current_app as app, url_for
 spotify_bp = Blueprint('spotify_bp', __name__, url_prefix='/soundtracks',
                        template_folder='templates', static_folder='static')
 
+
 def music_nav():
-    return [{'uri': url_for("spotify.tracks"), 'aria_label': "topTracks", 'name': 'TOPTRACKS'},
-           {'uri': url_for("spotify.create"), 'aria_label': "create",
+    return [{'uri': url_for("spotify_bp.tracks"), 'aria_label': "topTracks", 'name': 'TOPTRACKS'},
+            {'uri': url_for("spotify_bp.create"), 'aria_label': "create",
             'name': 'CREATE'},
-           {'uri': url_for("spotify.timer"), 'aria_label': "timer", 'name': 'TIMER'}]
-    
+            {'uri': url_for("spotify_bp.timer"), 'aria_label': "timer", 'name': 'TIMER'}]
+
+
 @spotify_bp.route('/')
 def home():
     return render_template('spotify.html', nav=music_nav())
@@ -68,7 +70,7 @@ periods.
 def tracks():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify.tracks")
+        session['previous_url'] = url_for("spotify_bp.tracks")
         return redirect(url_for('auth_bp.login'))
 
     # collect user information
@@ -94,7 +96,7 @@ on these entries.
 def create():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify.create")
+        session['previous_url'] = url_for("spotify_bp.create")
         return redirect(url_for('auth_bp.login'))
 
     # collect user information
@@ -118,7 +120,7 @@ countdown timer.
 def timer():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify.timer")
+        session['previous_url'] = url_for("spotify_bp.timer")
         return redirect(url_for('auth_bp.login'))
 
     # collect user information

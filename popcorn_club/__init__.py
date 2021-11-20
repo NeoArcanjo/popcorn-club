@@ -33,6 +33,7 @@ from dotenv import load_dotenv
 load_dotenv()
 assets = Environment()
 
+
 def create_app(test_config=None):
     # from .Admin import admin
     from .Auth import auth
@@ -41,8 +42,6 @@ def create_app(test_config=None):
     # from .Documentation import documentation
     # from .Landing import landing
     from .Spotify import spotify
-    from .assets import compile_static_assets
-    # from .assets import compile_assets
 
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -65,12 +64,13 @@ def create_app(test_config=None):
     assets.init_app(app)
 
     with app.app_context():
+        from .assets import compile_static_assets
+
         # ensure the instance folder exists
         try:
             os.makedirs(app.instance_path)
         except OSError:
             pass
-
 
         # app.register_blueprint(admin.admin_bp)
         app.register_blueprint(auth.auth_bp)
@@ -90,10 +90,9 @@ def create_app(test_config=None):
 
         @app.route('/')
         def index():
-            return redirect(url_for('club.index'))
+            return redirect(url_for('main_bp.index'))
 
-        # compile_assets(assets)
         # Compile static assets
-        compile_static_assets(assets)  # Execute logic
+        # compile_static_assets(assets)  # Execute logic
 
         return app

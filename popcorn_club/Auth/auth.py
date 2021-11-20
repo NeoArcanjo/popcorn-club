@@ -4,11 +4,11 @@ from flask import current_app as app
 from werkzeug.security import check_password_hash, generate_password_hash
 from popcorn_club import oauth
 from popcorn_club.db import get_db
-import time 
+import time
 
 oauth = oauth.init_app(app)
 auth_bp = Blueprint('auth_bp', __name__, url_prefix='/auth',
-               template_folder='templates', static_folder='static')
+                    template_folder='templates', static_folder='static')
 
 
 @auth_bp.route('/disqus')
@@ -59,7 +59,7 @@ def authorize_facebook():
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect(url_for('club.index'))
+    return redirect(url_for('main_bp.index'))
 
 
 @auth_bp.route('/disqus/callback')
@@ -81,7 +81,7 @@ def authorize_disqus():
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect(url_for('club.index'))
+    return redirect(url_for('main_bp.index'))
 
 
 @auth_bp.route('/spotify/callback')
@@ -95,7 +95,7 @@ def authorize_spotify():
     session['token'] = token['access_token']
     session['refresh_token'] = token['refresh_token']
     session['token_expiration'] = time.time() + token['expires_in']
-    
+
     user['username'] = user['display_name']
     user['given_name'] = user['display_name']
     user['picture'] = user['images'][0]['url']
@@ -105,7 +105,7 @@ def authorize_spotify():
     session['user_id'] = user['id']
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = False
-    return redirect(url_for('club.index'))
+    return redirect(url_for('main_bp.index'))
 
 
 @auth_bp.route('/callback')
@@ -122,7 +122,7 @@ def authorize():
     session['profile'] = user_info
     # make the session permanant so it keeps existing after broweser gets closed
     session.permanent = True
-    return redirect(url_for('club.index'))
+    return redirect(url_for('main_bp.index'))
 
 
 @auth_bp.route('/logout')

@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url_for('club.index')}}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{url_for('main_bp.index')}}">
         <div class="sidebar-brand-icon rotate-n-15">
             <img src="{{url_for('static', filename='img/logo.png')}}" alt="Logo" width="50px">
         </div>
@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="{{url_for('admin.dashboard')}}">
+        <a class="nav-link" href="{{url_for('dashboard_bp.dashboard')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -36,8 +36,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="{{url_for('admin.buttons')}}">Buttons</a>
-                <a class="collapse-item" href="{{url_for('admin.cards')}}">Cards</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.buttons')}}">Buttons</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.cards')}}">Cards</a>
             </div>
         </div>
     </li>
@@ -52,10 +52,10 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="{{url_for('admin.utilities_color')}}">Colors</a>
-                <a class="collapse-item" href="{{url_for('admin.utilities_border')}}">Borders</a>
-                <a class="collapse-item" href="{{url_for('admin.utilities_animation')}}">Animations</a>
-                <a class="collapse-item" href="{{url_for('admin.utilities_other')}}">Other</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.utilities_color')}}">Colors</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.utilities_border')}}">Borders</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.utilities_animation')}}">Animations</a>
+                <a class="collapse-item" href="{{url_for('dashboard_bp.utilities_other')}}">Other</a>
             </div>
         </div>
     </li>
@@ -91,14 +91,14 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="{{url_for('admin.charts')}}">
+        <a class="nav-link" href="{{url_for('dashboard_bp.charts')}}">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="{{url_for('admin.tables')}}">
+        <a class="nav-link" href="{{url_for('dashboard_bp.tables')}}">
             <i class="fas fa-fw fa-table"></i>
             <span>Tables</span></a>
     </li>

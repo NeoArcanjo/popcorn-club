@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block header %}
+{% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block
+header %}
 <header id="banner" style='background-image: url({{img_url(set_movie["backdrop_path"])}});'>
     <div id="banner__contents">
         <h1 id="banner__title">{{set_movie["title"]}}</h1>
@@ -22,8 +23,10 @@
         <h2 class="row__title">Encontrados</h2>
         <div class="row__posters">
             {% for movie in results %}
-            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}' class="row__posterLarge">
-            <a href="{{url_for('club.about', type='movie', id=movie['id'])}}" class="title">{{movie["title"] if movie["title"] else
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
+                class="row__posterLarge">
+            <a href="{{url_for('main_bp.about', type='movie', id=movie['id'])}}" class="title">{{movie["title"] if
+                movie["title"] else
                 movie["name"]}}</a> {% endfor %}
         </div>
     </section>

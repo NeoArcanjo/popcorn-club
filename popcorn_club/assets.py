@@ -2,39 +2,86 @@
 from flask import current_app as app
 from flask_assets import Bundle
 
-app.register_blueprint(auth.bp)
-app.register_blueprint(club.bp)
-app.register_blueprint(dashboard.bp)
-app.register_blueprint(spotify.spotify_bp)
-def compile_static_assets(assets):
-    """Configure and build asset bundles."""
 
-    # Main asset bundles
+def compile_static_assets(assets):
+    """Create stylesheet bundles."""
+    
+    assets.auto_build = True
+    assets.debug = False
+    common_style_bundle = Bundle(
+        'src/less/*.less',
+        filters='less,cssmin',
+        output='dist/css/style.css',
+        extra={'rel': 'stylesheet/less'}
+    )
+    admin_style_bundle = Bundle(
+        'admin_bp/less/admin.less',
+        filters='less,cssmin',
+        output='dist/css/admin.css',
+        extra={'rel': 'stylesheet/less'}
+    )
     auth_style_bundle = Bundle(
-        'static/scss/*.scss',
-        'bp/homepage.less',
+        'auth_bp/less/auth.less',
+        filters='less,cssmin',
+        output='dist/css/auth.css',
+        extra={'rel': 'stylesheet/less'}
+    )
+    main_style_bundle = Bundle(
+        'main_bp/less/main.less',
+        filters='less,cssmin',
+        output='dist/css/main.css',
+        extra={'rel': 'stylesheet/less'}
+    )
+    dashboard_style_bundle = Bundle(
+        'dashboard_bp/less/dashboard.less',
+        filters='less,cssmin',
+        output='dist/css/dashboard.css',
+        extra={'rel': 'stylesheet/less'}
+    )
+    documentation_style_bundle = Bundle(
+        'documentation_bp/less/documentation.less',
+        filters='less,cssmin',
+        output='dist/css/documentation.css',
+        extra={'rel': 'stylesheet/less'}
+    )
+    landing_style_bundle = Bundle(
+        'landing_bp/less/landing.less',
         filters='less,cssmin',
         output='dist/css/landing.css',
-        extra={'rel': 'stylesheet/css'}
-    )
-    main_js_bundle = Bundle(
-        'src/js/main.js',
-        filters='jsmin',
-        output='dist/js/main.min.js'
+        extra={'rel': 'stylesheet/less'}
     )
 
-    # Admin asset bundleds
-    admin_style_bundle = Bundle(
-        'src/less/*.less',
-        'admin_bp/admin.less',
+    spotify_style_bundle = Bundle(
+        'spotify_bp/less/spotify.less',
         filters='less,cssmin',
-        output='dist/css/account.css',
-        extra={'rel': 'stylesheet/css'}
+        output='dist/css/spotify.css',
+        extra={'rel': 'stylesheet/less'}
     )
-    assets.register('main_styles', main_style_bundle)
-    assets.register('main_js', main_js_bundle)
-    assets.register('admin_styles', admin_style_bundle)
+
+    assets.register('common_style_bundle', common_style_bundle)
+    # assets.register('admin_style_bundle', admin_style_bundle)
+    assets.register('auth_style_bundle', auth_style_bundle)
+    assets.register('main_style_bundle', main_style_bundle)
+    assets.register('dashboard_style_bundle', dashboard_style_bundle)
+    # assets.register('documentation_style_bundle', documentation_style_bundle)
+    # assets.register('landing_style_bundle', landing_style_bundle)
+    assets.register('spotify_style_bundle', spotify_style_bundle)
+
     if app.config['FLASK_ENV'] == 'development':
-        main_style_bundle.build()
-        main_js_bundle.build()
+        common_style_bundle.build()
         admin_style_bundle.build()
+        auth_style_bundle.build()
+        dashboard_style_bundle.build()
+        documentation_style_bundle.build()
+        landing_style_bundle.build()
+        spotify_style_bundle.build()
+    return assets
+
+
+# {% assets "home_less_bundle" %}
+#   <link
+#     href="{{ ASSET_URL }}"
+#     rel="stylesheet"
+#     type="text/css"
+#   />
+# {% endassets %}

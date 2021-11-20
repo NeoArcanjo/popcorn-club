@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block header %}
+<header id="banner" style='background-image: url({{img_url(movie["backdrop_path"])}});'>
+    <div id="banner__contents">
+        <h1 id="banner__title">{{movie["title"] or movie["name"]}}
+            {% if movie["adult"] %}
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            {% endif %}
+        </h1>
+        <div id="banner__buttons">
+        </div>
+        <ul id="genres" class="">
+            {% for genre in movie["genres"] %}
+            <li class="badge badge-primary badge-pill lg">
+                {{genre["name"]}}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <ul>
+            <li>Nota: <i><span class='badge badge-counter {{aprovacao}}'>{{movie["vote_average"]}}</span></i></li>
+            <li>Avaliações: <i><span class='badge badge-counter {{aprovacao}}'>{{movie["vote_count"]}}</span></i></li>
+            <li>Site Oficial: <i><a href="{{movie['homepage']}}" target="_blank">{{movie["homepage"]}}</a></i></li>
+            <li>IMDB ID: <i class="fab fa-imdb" aria-hidden="true">{{movie['imdb_id']}}</i></li>
+        </ul>
+
+        <h2 class="row__title">Sinopse</h2>
+        <p id="banner__description">{{movie["overview"]}}</p>
+    </div>
+    <div id="banner__fadeBottom"></div>
+</header>
+{% endblock %}
+
+{% block content %}
+{% for production_company in movie["production_companies"] %}
+<div class="card shadow p-3 mb-5  rounded" style="width:20rem;">
+    <img src='{{ img_url(production_company["logo_path"])}}' alt='{{ production_company["name"]}}' class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">Produzido por:</h5>
+        <p class="card-text">{{ production_company["name"]}} - {{ production_company["origin_country"]}}</p>
+        <a href="#{{ production_company['id']}}" class="btn btn-primary">Site da Produtora</a>
+    </div>
+</div>
+{% endfor %}
+<div id="headrow">
+    <div class="row">
+        <div class="row__posters">
+            <img src='{{ img_url(movie["backdrop_path"], movie["poster_path"])}}' id='{{movie["id"]}}'
+                class="row__posterLarge">
+        </div>
+    </div>
+
+    {% if "seasons" in movie %}
+    <ul>
+        {% for season in movie["seasons"] %}
+        <li>
+
+            <div class="list-group" id='{{session["id"]}}'>
+                <a href="#" class="list-group-item ">Temporada: {{season["name"]}}</a>
+                <a href="#" class="list-group-item ">Episódios: <span
+                        class='badge badge-counter '>{{season["episode_count"]}}</span></a>
+                <a href="#" class="list-group-item ">Lançamento: {{season["air_date"]}}</a>
+                <a href="#" class="list-group-item ">Sinopse: {{season["overview"]}}</a>
+            </div>
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if movie["belongs_to_collection"] %}
+    <div class="row">
+        <h2 class="row__title">Outros Títulos nesta Franquia</h2>
+        <div class="row__posters">
+            <img src='{{ img_url(movie["belongs_to_collection"]["poster_path"], movie["belongs_to_collection"]["backdrop_path"])}}'
+                class="row__posterLarge">
+            <img src='{{ img_url(movie["belongs_to_collection"]["backdrop_path"], movie["belongs_to_collection"]["poster_path"])}}'
+                class="row__posterLarge">
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="mx4 container">
+        <h3>FICHA TÉCNICA</h3>
+        <ul class="align-items-center">
+            {% if "budget" in movie %}
+            <li class="">Orçamento: <a href="#">U$ {{movie['budget'] / 1000000}} (milhões de dólares)</a>
+            </li>
+            <li class="">Arrecadação: <a href="#">U$ {{movie['revenue'] / 1000000 }} (milhões de dólares)</a>
+            </li>
+            {% endif %}
+            <li>Popularidade: {{movie['popularity']}}</li>
+            <li>Duração: <i>{{movie["runtime"]}} minutos</i></li>
+            <li>Data de estreia: <i>{{movie["release_date"]}}</i></li>
+            <li>Status: <i>{{movie["status"]}}</i></li>
+            <li>Gêneros: {% for genre in movie["genres"] %}
+                <i class="badge badge-primary badge-pill lg">{{genre["name"]}}</i>
+                {% endfor %}
+            </li>
+            <li>País de Origem: {% for country in movie["production_countries"] %}
+                <i class="badge badge-primary badge-pill lg">{{country["name"]}}</i>
+                {% endfor %}
+            </li>
+            <li>Idiomas: {% for sl in movie["spoken_languages"] %}
+                <i class="badge badge-primary badge-pill lg">{{sl["name"]}}</i>
+                {% endfor %}
+            </li>
+            <li>Idioma original: <i>{{movie["original_language"]}}</i></li>
+            <li>Título original: <i>{{movie["original_title"]}}</i></li>
+            <li>Tagline: {{movie['tagline']}}</li>
+            <li>Elenco: <i>{{movie["cast"]}}</i></li>
+            <li>Homepage: {{movie['homepage']}}</li>
+            <li>Produzido por: {% for company in movie["production_companies"] %}
+                <i class="badge badge-primary badge-pill lg">{{company["name"]}}</i>
+                {% endfor %}
+            </li>
+            <li>Trailler: {{movie['video']}}</li>
+        </ul>
+    </div>
+
+    <!-- Soundtrack -->
+    <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
+
+</div>
+{%include "disqus.html" %}
+{% endblock %}

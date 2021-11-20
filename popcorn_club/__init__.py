@@ -3,8 +3,7 @@ import sqlalchemy
 import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for, render_template
-# from flask_assets import Environment
-# from .assets import compile_assets
+from flask_assets import Environment
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -32,13 +31,18 @@ from flask import Flask, redirect, url_for, render_template
 # dotenv setup
 from dotenv import load_dotenv
 load_dotenv()
-# assets = Environment()
+assets = Environment()
+
 
 def create_app(test_config=None):
-    from .auth import auth
-    from .dashboard import dashboard
-    from .club import club
-    from .spotify import spotify
+    # from .Admin import admin
+    from .Auth import auth
+    from .Main import routes
+    from .Dashboard import dashboard
+    # from .Documentation import documentation
+    # from .Landing import landing
+    from .Spotify import spotify
+
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
 
@@ -57,18 +61,23 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
     # Initialize plugins
-    # assets.init_app(app)
+    assets.init_app(app)
 
     with app.app_context():
+        from .assets import compile_static_assets
+
         # ensure the instance folder exists
         try:
             os.makedirs(app.instance_path)
         except OSError:
             pass
 
-        app.register_blueprint(auth.bp)
-        app.register_blueprint(club.bp)
-        app.register_blueprint(dashboard.bp)
+        # app.register_blueprint(admin.admin_bp)
+        app.register_blueprint(auth.auth_bp)
+        app.register_blueprint(routes.main_bp)
+        app.register_blueprint(dashboard.dashboard_bp)
+        # app.register_blueprint(documentation.documentation_bp)
+        # app.register_blueprint(landing.landing_bp)
         app.register_blueprint(spotify.spotify_bp)
 
         @app.route("/404")
@@ -81,8 +90,9 @@ def create_app(test_config=None):
 
         @app.route('/')
         def index():
-            return redirect(url_for('club.index'))
+            return redirect(url_for('main_bp.index'))
 
-        # compile_assets(assets)
+        # Compile static assets
+        # compile_static_assets(assets)  # Execute logic
 
         return app

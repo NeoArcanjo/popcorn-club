@@ -1,0 +1,81 @@
+{% extends "base_auth.html" %} {% block title %}Register{% endblock %}
+
+{%block navbar %}{% endblock %}{% block content %}
+<div class="d-flex align-items-center py-5 photo-overlay cover"
+    style="background-image: url({{url_for('static', filename = 'img/logo.png')}});">
+    <div class="container">
+        <div class="row">
+            <div class="text-white p-5 bg-dark-opaque col-12 col-lg-8 mx-auto">
+                <h1 class="display-3">PopCorn Club</h1>
+                <p class="">Clube para amantes da 7ª arte </p>
+                <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Criar uma conta!</h1>
+                </div>
+                <form class="user">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                placeholder="Nome">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                placeholder="Sobrenome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                            placeholder="Email Address">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                                placeholder="Password">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control form-control-user" id="exampleRepeatPassword"
+                                placeholder="Repeat Password">
+                        </div>
+                    </div>
+                    <a href={{url_for('auth_bp.login')}} class="btn btn-primary btn-user btn-block">
+                        Register Account
+                    </a>
+                    <hr>
+                    <a href={{url_for('auth_bp.google')}} class="btn btn-google btn-user btn-block">
+                        <i class="fab fa-google fa-fw"></i> Registrar com Google
+                    </a>
+
+                    <a href={{url_for('auth_bp.facebook')}} class="btn btn-facebook btn-user btn-block">
+                        <i class="fab fa-facebook-f fa-fw"></i> Registrar com Facebook
+                    </a>
+                    <a href={{url_for('auth_bp.disqus')}} class="btn btn-disqus btn-user btn-block">
+                        <i class="fas fa-comment fa-fw"></i> Registrar com Disqus
+                    </a>
+
+                    <a href={{url_for('auth_bp.spotify')}} class="btn btn-spotify btn-user btn-block">
+                        <i class="fab fa-spotify fa-fw"></i> Registrar com Spotify
+                    </a>
+                </form>
+                <hr>
+                <div class="text-center">
+                    <a class="small" href={{url_for('auth_bp.forgot_password')}}>Esqueceu a Senha?</a>
+                </div>
+                <div class="text-center">
+                    <a class="small" href={{url_for('auth_bp.login')}}>Já tem uma conta?
+                        Login!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+{{super()}}
+
+<!-- Custom scripts for all pages-->
+<script src="js/admin.min.js"></script>
+
+{% endblock %}

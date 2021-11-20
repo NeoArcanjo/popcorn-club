@@ -70,7 +70,6 @@ def movie():
     return render_template('filmes.html', set_movie=set_movie, img_url=img_url, genres=genres, popular=popular, trend=trend, netflix=netflix)
 
 
-@main_bp.route('/series')
 @main_bp.route('/tv')
 @login_required
 def series():

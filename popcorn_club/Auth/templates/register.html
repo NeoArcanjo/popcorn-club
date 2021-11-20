@@ -36,31 +36,31 @@
                                 placeholder="Repeat Password">
                         </div>
                     </div>
-                    <a href={{url_for('auth.login')}} class="btn btn-primary btn-user btn-block">
+                    <a href={{url_for('auth_bp.login')}} class="btn btn-primary btn-user btn-block">
                         Register Account
                     </a>
                     <hr>
-                    <a href={{url_for('auth.google')}} class="btn btn-google btn-user btn-block">
+                    <a href={{url_for('auth_bp.google')}} class="btn btn-google btn-user btn-block">
                         <i class="fab fa-google fa-fw"></i> Registrar com Google
                     </a>
 
-                    <a href={{url_for('auth.facebook')}} class="btn btn-facebook btn-user btn-block">
+                    <a href={{url_for('auth_bp.facebook')}} class="btn btn-facebook btn-user btn-block">
                         <i class="fab fa-facebook-f fa-fw"></i> Registrar com Facebook
                     </a>
-                    <a href={{url_for('auth.disqus')}} class="btn btn-disqus btn-user btn-block">
+                    <a href={{url_for('auth_bp.disqus')}} class="btn btn-disqus btn-user btn-block">
                         <i class="fas fa-comment fa-fw"></i> Registrar com Disqus
                     </a>
 
-                    <a href={{url_for('auth.spotify')}} class="btn btn-spotify btn-user btn-block">
+                    <a href={{url_for('auth_bp.spotify')}} class="btn btn-spotify btn-user btn-block">
                         <i class="fab fa-spotify fa-fw"></i> Registrar com Spotify
                     </a>
                 </form>
                 <hr>
                 <div class="text-center">
-                    <a class="small" href={{url_for('auth.forgot_password')}}>Esqueceu a Senha?</a>
+                    <a class="small" href={{url_for('auth_bp.forgot_password')}}>Esqueceu a Senha?</a>
                 </div>
                 <div class="text-center">
-                    <a class="small" href={{url_for('auth.login')}}>Já tem uma conta?
+                    <a class="small" href={{url_for('auth_bp.login')}}>Já tem uma conta?
                         Login!</a>
                 </div>
             </div>

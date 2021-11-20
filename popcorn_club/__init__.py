@@ -3,8 +3,7 @@ import sqlalchemy
 import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for, render_template
-# from flask_assets import Environment
-# from .assets import compile_assets
+from flask_assets import Environment
 
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
@@ -32,7 +31,7 @@ from flask import Flask, redirect, url_for, render_template
 # dotenv setup
 from dotenv import load_dotenv
 load_dotenv()
-# assets = Environment()
+assets = Environment()
 
 def create_app(test_config=None):
     # from .Admin import admin
@@ -42,6 +41,9 @@ def create_app(test_config=None):
     # from .Documentation import documentation
     # from .Landing import landing
     from .Spotify import spotify
+    from .assets import compile_static_assets
+    # from .assets import compile_assets
+
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
 
@@ -60,7 +62,7 @@ def create_app(test_config=None):
         app.config.from_mapping(test_config)
 
     # Initialize plugins
-    # assets.init_app(app)
+    assets.init_app(app)
 
     with app.app_context():
         # ensure the instance folder exists
@@ -70,12 +72,12 @@ def create_app(test_config=None):
             pass
 
 
-        # app.register_blueprint(admin.bp)
-        app.register_blueprint(auth.bp)
+        # app.register_blueprint(admin.admin_bp)
+        app.register_blueprint(auth.auth_bp)
         app.register_blueprint(routes.main_bp)
-        app.register_blueprint(dashboard.bp)
-        # app.register_blueprint(documentation.bp)
-        # app.register_blueprint(landing.bp)
+        app.register_blueprint(dashboard.dashboard_bp)
+        # app.register_blueprint(documentation.documentation_bp)
+        # app.register_blueprint(landing.landing_bp)
         app.register_blueprint(spotify.spotify_bp)
 
         @app.route("/404")
@@ -91,5 +93,7 @@ def create_app(test_config=None):
             return redirect(url_for('club.index'))
 
         # compile_assets(assets)
+        # Compile static assets
+        compile_static_assets(assets)  # Execute logic
 
         return app

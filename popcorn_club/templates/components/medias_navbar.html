@@ -43,7 +43,8 @@
         {% include "components/navbar/user_info.html" %}
 
         <!-- Logout Modal-->
-        {% include 'components/logout_modal.html' %} {% else %} <a href="{{url_for('auth.login')}}">Entrar</a>. {% endif
+        {% include 'components/logout_modal.html' %} {% else %} <a href="{{url_for('auth_bp.login')}}">Entrar</a>. {%
+        endif
         %}
     </div>
 </nav>

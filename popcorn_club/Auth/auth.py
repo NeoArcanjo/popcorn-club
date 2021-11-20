@@ -7,40 +7,40 @@ from popcorn_club.db import get_db
 import time 
 
 oauth = oauth.init_app(app)
-bp = Blueprint('auth', __name__, url_prefix='/auth',
+auth_bp = Blueprint('auth_bp', __name__, url_prefix='/auth',
                template_folder='templates', static_folder='static')
 
 
-@bp.route('/disqus')
+@auth_bp.route('/disqus')
 def disqus():
     disqus = oauth.create_client('disqus')  # create the disqus oauth client
-    redirect_uri = url_for('auth.authorize_disqus', _external=True)
+    redirect_uri = url_for('auth_bp.authorize_disqus', _external=True)
     return disqus.authorize_redirect(redirect_uri)
 
 
-@bp.route('/google')
+@auth_bp.route('/google')
 def google():
     google = oauth.create_client('google')  # create the google oauth client
-    redirect_uri = url_for('auth.authorize', _external=True)
+    redirect_uri = url_for('auth_bp.authorize', _external=True)
     return google.authorize_redirect(redirect_uri)
 
 
-@bp.route('/spotify')
+@auth_bp.route('/spotify')
 def spotify():
     spotify = oauth.create_client('spotify')  # create the spotify oauth client
-    redirect_uri = url_for('auth.authorize_spotify', _external=True)
+    redirect_uri = url_for('auth_bp.authorize_spotify', _external=True)
     return spotify.authorize_redirect(redirect_uri)
 
 
-@bp.route('/facebook')
+@auth_bp.route('/facebook')
 def facebook():
     # create the facebook oauth client
     facebook = oauth.create_client('facebook')
-    redirect_uri = url_for('auth.authorize_facebook', _external=True)
+    redirect_uri = url_for('auth_bp.authorize_facebook', _external=True)
     return facebook.authorize_redirect(redirect_uri)
 
 
-@bp.route('/facebook/callback')
+@auth_bp.route('/facebook/callback')
 def authorize_facebook():
     # create the facebook oauth client
     facebook = oauth.create_client('facebook')
@@ -62,7 +62,7 @@ def authorize_facebook():
     return redirect(url_for('club.index'))
 
 
-@bp.route('/disqus/callback')
+@auth_bp.route('/disqus/callback')
 def authorize_disqus():
     disqus = oauth.create_client('disqus')  # create the disqus oauth client
     # Access token from disqus (needed to get user info)
@@ -84,7 +84,7 @@ def authorize_disqus():
     return redirect(url_for('club.index'))
 
 
-@bp.route('/spotify/callback')
+@auth_bp.route('/spotify/callback')
 def authorize_spotify():
     spotify = oauth.create_client('spotify')  # create the spotify oauth client
     # Access token from spotify (needed to get user info)
@@ -108,7 +108,7 @@ def authorize_spotify():
     return redirect(url_for('club.index'))
 
 
-@bp.route('/callback')
+@auth_bp.route('/callback')
 def authorize():
     google = oauth.create_client('google')  # create the google oauth client
     # Access token from google (needed to get user info)
@@ -125,15 +125,15 @@ def authorize():
     return redirect(url_for('club.index'))
 
 
-@bp.route('/logout')
+@auth_bp.route('/logout')
 def logout():
     for key in list(session.keys()):
         session.pop(key)
     session.clear()
-    return redirect(url_for('auth.login'))
+    return redirect(url_for('auth_bp.login'))
 
 
-@bp.route('/register', methods=('GET', 'POST'))
+@auth_bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
         username = request.form['username']
@@ -163,13 +163,13 @@ def register():
     return render_template('register.html')
 
 
-@bp.route("/forgot-password")
+@auth_bp.route("/forgot-password")
 def forgot_password():
     return render_template('forgot-password.html')
 
 
-@bp.route('/', methods=('GET', 'POST'))
-@bp.route('/login', methods=('GET', 'POST'))
+@auth_bp.route('/', methods=('GET', 'POST'))
+@auth_bp.route('/login', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -193,7 +193,7 @@ def login():
     return render_template('login.html')
 
 
-@bp.before_app_request
+@auth_bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
     if user_id is None:
@@ -205,7 +205,7 @@ def load_logged_in_user():
         # ).fetchone()
 
 
-# # @bp.route('/logout')
+# # @auth_bp.route('/logout')
 # # def logout():
 # #     session.clear()
 # #     return redirect(url_for('index'))
@@ -215,7 +215,7 @@ def load_logged_in_user():
 #     @wraps(view)
 #     def wrapped_view(**kwargs):
 #         if g.user is None:
-#             return redirect(url_for('auth.login'))
+#             return redirect(url_for('auth_bp.login'))
 
 #         return view(**kwargs)
 
@@ -228,5 +228,5 @@ def login_required(view):
         user = dict(session).get('profile', None)
         if user:
             return view(*args, **kwargs)
-        return redirect(url_for('auth.login', next=request.url))
+        return redirect(url_for('auth_bp.login', next=request.url))
     return decorated_function

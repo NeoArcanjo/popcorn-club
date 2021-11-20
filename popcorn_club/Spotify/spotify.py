@@ -33,7 +33,7 @@ from .functions import refreshToken, checkTokenStatus, getAllTopTracks, getTopTr
 from flask import Blueprint, render_template, flash, redirect, request, session, make_response, jsonify, abort
 from flask import current_app as app, url_for
 
-spotify_bp = Blueprint('spotify', __name__, url_prefix='/soundtracks',
+spotify_bp = Blueprint('spotify_bp', __name__, url_prefix='/soundtracks',
                        template_folder='templates', static_folder='static')
 
 def music_nav():
@@ -69,7 +69,7 @@ def tracks():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = url_for("spotify.tracks")
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('auth_bp.login'))
 
     # collect user information
     if session.get('user_id') == None:
@@ -95,7 +95,7 @@ def create():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = url_for("spotify.create")
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('auth_bp.login'))
 
     # collect user information
     if session.get('user_id') == None:
@@ -119,7 +119,7 @@ def timer():
     # make sure application is authorized for user
     if session.get('token') == None or session.get('token_expiration') == None:
         session['previous_url'] = url_for("spotify.timer")
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('auth_bp.login'))
 
     # collect user information
     if session.get('user_id') == None:

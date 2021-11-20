@@ -9,7 +9,7 @@ from base64 import b64encode
 from .functions import get_data, img_url
 from popcorn_club.Auth.auth import login_required
 
-main_bp = Blueprint('club', __name__, url_prefix='/club',
+main_bp = Blueprint('main_bp', __name__, url_prefix='',
                template_folder='templates', static_folder='static')
 
 

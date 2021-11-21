@@ -4,7 +4,19 @@ import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for, render_template
 from flask_assets import Environment
+from popcorn_club.util_assets import bundles
 
+def compile_static_assets(assets):
+    """Create stylesheet bundles."""
+    assets.auto_build = True
+    assets.debug = True
+
+    assets.register(bundles)
+    
+    if app.config['ENV'] == 'development':
+        for bundle in bundles.values():
+            bundle.build()
+    return assets
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
@@ -48,6 +60,7 @@ def create_app(test_config=None):
 
     # Session config
     app.config.from_mapping(
+        FLASK_ENV='development',
         SECRET_KEY=os.getenv("APP_SECRET_KEY"),
         SESSION_COOKIE_NAME='google-login-session',
         PERMANENT_SESSION_LIFETIME=timedelta(minutes=5),
@@ -64,8 +77,6 @@ def create_app(test_config=None):
     assets.init_app(app)
 
     with app.app_context():
-        from .assets import compile_static_assets
-
         # ensure the instance folder exists
         try:
             os.makedirs(app.instance_path)
@@ -93,6 +104,6 @@ def create_app(test_config=None):
             return redirect(url_for('main_bp.index'))
 
         # Compile static assets
-        # compile_static_assets(assets)  # Execute logic
+        compile_static_assets(assets)  # Execute logic
 
         return app

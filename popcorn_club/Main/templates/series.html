@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block
 header %}
-<header id="banner" style='background-image: url({{img_url(set_show["backdrop_path"])}});'>
+<header id="banner" style='background-image: url("{{img_url(set_show.backdrop_path)}}");'>
     <div id="banner__contents">
         <h1 id="banner__title">{{set_show["name"]}}</h1>
         <div id="banner__buttons">
@@ -61,16 +61,16 @@ header %}
     <div class="row">
         <h2 class="row__title">{{genre["name"]}}</h2>
         <div class="row__posters">
+            
             {% for show in genre["results"] %}
             <img src='{{ img_url(show["backdrop_path"], show["poster_path"])}}' id='{{show["id"]}}'
                 class="row__posterLarge">
-            <a href="{{url_for('main_bp.about', type='tv', id=show['id'])}}" class="title">{{show["title"]}}</a> {%
+            <a href="{{url_for('main_bp.about', type='tv', id=show['id'])}}" class="title">{{show["title"] if
+            show["title"] else
+            show["name"]}}</a> {%
             endfor %}
         </div>
     </div>
     {% endfor %}
-
-    <!-- TODO criar aba para series, a seguir -->
-    <!-- TODO criar pagina de detalhes para cada filme -->
 </div>
 {% endblock %}

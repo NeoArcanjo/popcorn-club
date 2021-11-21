@@ -13,8 +13,12 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
-    <link href="{{url_for('main_bp.static', filename = 'css/admin.min.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+    {% assets "main_style" %}
+        <link href="{{ ASSET_URL }}" rel="stylesheet" type="text/css"  />
+    {% endassets %}
+    {% assets "common_style" %}
+    <link href="{{ ASSET_URL }}" rel="stylesheet" type="text/css" />
+    {% endassets %}
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">

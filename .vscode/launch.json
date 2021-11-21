@@ -1,6 +1,21 @@
 {
     "configurations": [
         {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "popcorn-club:popcorn_club/scheduler.updateMedialists (python3.9)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/",
+                "lambdaHandler": "popcorn_club/scheduler.updateMedialists"
+            },
+            "lambda": {
+                "runtime": "python3.9",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
             "name": "Docker: Python - Flask",
             "type": "docker",
             "request": "launch",

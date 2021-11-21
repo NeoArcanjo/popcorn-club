@@ -4,7 +4,19 @@ import os
 from datetime import timedelta
 from flask import Flask, redirect, url_for, render_template
 from flask_assets import Environment
+from popcorn_club.util_assets import bundles
 
+def compile_static_assets(assets):
+    """Create stylesheet bundles."""
+    assets.auto_build = True
+    assets.debug = True
+
+    assets.register(bundles)
+    
+    if app.config['ENV'] == 'development':
+        for bundle in bundles.values():
+            bundle.build()
+    return assets
 # # # engine = sqlalchemy.create_engine(
 # # #     os.getenv('DATABASE_URL'), pool_pre_ping=True)
 
@@ -65,8 +77,6 @@ def create_app(test_config=None):
     assets.init_app(app)
 
     with app.app_context():
-        from .app_assets import compile_static_assets
-
         # ensure the instance folder exists
         try:
             os.makedirs(app.instance_path)

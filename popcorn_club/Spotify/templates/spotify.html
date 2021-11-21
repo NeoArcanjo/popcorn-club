@@ -1,22 +1,19 @@
 {% extends "root.html" %}
 
-
 {% block head %}
 {{ super() }}
 {% block title %}Home{% endblock %}
 {% endblock %}
 
-
 {% block content %}
 
 <main role="main">
-
-
     <section class="jumbotron text-center">
         <div class="container site-info">
             <h1>Explore music in a new way</h1>
             <br>
-            <h3>Find your top Spotify tracks and create custom playlists with just a song or artist!</h3>
+            <h3>Find your top Spotify tracks and create custom playlists with
+                just a song or artist!</h3>
         </div>
     </section>
 
@@ -43,7 +40,9 @@
                             </svg>
                         </a>
                         <div class="card-body">
-                            <p class="card-text">Discover your most listened to tracks and create a TopTracks playlist
+                            <p class="card-text">Discover your
+                                most listened to tracks and
+                                create a TopTracks playlist
                                 that automatically updates.</p>
                         </div>
                     </div>
@@ -52,55 +51,60 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <a class="" href="{{url_for('spotify_bp.create')}}">
-                            <svg class="card-center card-img-top" width="100%" height="225"
-                                preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                                aria-label="Placeholder: Top Tracks">
+                            <svg class="card-center
+                                                card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid
+                                                slice" focusable="false" role="img" aria-label="Placeholder: Top
+                                                Tracks">
                                 <title>Discover</title>
                                 <rect width="100%" height="100%" fill="#000" /><text x="50%" y="50%" fill="#fff"
-                                    font-size="2em" pointer-events="none">Find Tracks</text>
+                                    font-size="2em" pointer-events="none">Find
+                                    Tracks</text>
                             </svg>
                         </a>
                         <div class="card-body">
-                            <p class="card-text">Enter several track names or artists and select tuneable attributes to
-                                create a playlist of similar music.</p>
+                            <p class="card-text">Enter
+                                several track names or
+                                artists and select tuneable
+                                attributes to
+                                create a playlist of similar
+                                music.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <a class="" href="{{url_for('spotify_bp.timer')}}">
-                            <svg class="card-center card-img-top" width="100%" height="225"
-                                preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
-                                aria-label="Placeholder: Top Tracks">
+                            <svg class="card-center
+                                                    card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid
+                                                    slice" focusable="false" role="img" aria-label="Placeholder: Top
+                                                    Tracks">
                                 <title>Discover</title>
                                 <rect width="100%" height="100%" fill="#000" /><text x="50%" y="50%" fill="#fff"
                                     font-size="2em" pointer-events="none">Timer</text>
                             </svg>
                         </a>
                         <div class="card-body">
-                            <p class="card-text">An interval timer that plays tracks for a specified amount of timer and
-                                then skips to the next track.</p>
+                            <p class="card-text">An
+                                interval timer that
+                                plays tracks for a
+                                specified amount of
+                                timer and
+                                then skips to the next
+                                track.</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
     {% endblock %}
     {% block script %}
 
-    <!-- JavaScript dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    {{super()}}
     <!-- Script: Smooth scrolling between anchors in a same page -->
-    <script src="{{ url_for('spotify_bp.static', filename='js/smooth-scroll.js') }}"></script>
+    {% assets "spotify_js" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
     {% endblock %}
 
     {% block footer %}

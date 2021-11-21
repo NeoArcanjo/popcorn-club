@@ -1,14 +1,14 @@
 """Compile static assets."""
 from flask_assets import Bundle
 
-spotify_style_bundle = Bundle(
-    'spotify_bp/src/scss/*.scss',
-    filters='pyScss',
-    output='dist/css/spotify.css'
-)
+Bundle('spotify_bp/src/scss/*.scss', filters='pyscss',
+       output='dist/css/spotify.%(version)s.css')
 
-spotify_style_bundle = Bundle(
-    'spotify_bp/src/css/*.css',
-    filters='cssmin',
-    output='dist/css/spotify.min.css'
-)
+spotify_bundles = {
+    "spotify_js": Bundle('spotify_bp/src/js/*.js',
+                         filters="jsmin",
+                         output="dist/js/spotify.%(version)s.js"),
+    "spotify_style": Bundle('spotify_bp/src/css/*.css',
+                            filters='cssmin',
+                            output='dist/css/spotify.%(version)s.css')
+}

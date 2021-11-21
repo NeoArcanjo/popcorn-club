@@ -1,7 +1,6 @@
 import requests
 import random
 import json
-# from flask import Flask, render_template, request, redirect, url_for, session
 from flask import Blueprint, flash, g, render_template, request, url_for
 from flask import current_app as app
 from werkzeug.exceptions import HTTPException

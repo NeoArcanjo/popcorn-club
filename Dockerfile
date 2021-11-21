@@ -26,7 +26,12 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 RUN apt update -y && \
     apt install -y git curl zsh sudo && \
     curl -L git.io/antigen > /home/appuser/antigen.zsh && \
-    curl -L https://gitlab.com/-/snippets/2163394/raw/main/.zshrc?inline=false > /home/appuser/.zshrc
+    curl -L https://gitlab.com/-/snippets/2163394/raw/main/.zshrc?inline=false > /home/appuser/.zshrc && \
+    curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
+    apt update -y && \
+    apt install -y nodejs
+
+RUN npm install -g less sass
 
 USER appuser
 

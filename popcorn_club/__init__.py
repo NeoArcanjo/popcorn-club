@@ -48,6 +48,7 @@ def create_app(test_config=None):
 
     # Session config
     app.config.from_mapping(
+        FLASK_ENV='development',
         SECRET_KEY=os.getenv("APP_SECRET_KEY"),
         SESSION_COOKIE_NAME='google-login-session',
         PERMANENT_SESSION_LIFETIME=timedelta(minutes=5),
@@ -64,7 +65,7 @@ def create_app(test_config=None):
     assets.init_app(app)
 
     with app.app_context():
-        from .assets import compile_static_assets
+        from .app_assets import compile_static_assets
 
         # ensure the instance folder exists
         try:
@@ -93,6 +94,6 @@ def create_app(test_config=None):
             return redirect(url_for('main_bp.index'))
 
         # Compile static assets
-        # compile_static_assets(assets)  # Execute logic
+        compile_static_assets(assets)  # Execute logic
 
         return app

@@ -57,6 +57,7 @@ tzlocal = "*"
 lesscpy = "*"
 cssmin = "*"
 jsmin = "*"
+pyscss = "*"
 
 [dev-packages]
 

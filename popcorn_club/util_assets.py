@@ -15,7 +15,7 @@ from flask_assets import Bundle
     #     output='dist/css/admin.css',
     #     extra={'rel': 'stylesheet/scss'}
     # )
-    
+
 bundles = {
     "common_js": Bundle('src/js/*.js', 'src/vendor/*/*.js',
                         filters="jsmin",
@@ -67,5 +67,4 @@ bundles = {
                             output='dist/css/spotify.%(version)s.css'),
                             "test_scss": Bundle('spotify_bp/src/scss/*.scss', filters='pyscss',
        output='dist/css/spotify.%(version)s.css')
-
 }

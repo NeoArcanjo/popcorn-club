@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title %}Index{% endblock %} {% block head %} {{ super() }} {% endblock %} {% block
 header %}
-<header id="banner" style='background-image: url({{img_url(set_movie["backdrop_path"])}});'>
+<header id="banner" style='background-image: url("{{img_url(set_movie.backdrop_path)}}");'>
     <div id="banner__contents">
         <h1 id="banner__title">{{set_movie["name"]}}</h1>
         <div id="banner__buttons">
@@ -69,8 +69,5 @@ header %}
         </div>
     </div>
     {% endfor %}
-
-    <!-- TODO criar aba para series, a seguir -->
-    <!-- TODO criar pagina de detalhes para cada filme -->
 </div>
 {% endblock %}

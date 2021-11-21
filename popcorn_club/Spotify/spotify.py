@@ -32,12 +32,13 @@ import time
 from .functions import refreshToken, checkTokenStatus, getAllTopTracks, getTopTracksID, getTopTracksURI, getTopArtists, getRecommendedTracks, startPlayback, startPlaybackContext, pausePlayback, shuffle, getUserPlaylists, getUserDevices, skipTrack, getTrack, getTrackAfterResume, createPlaylist, addTracksPlaylist, searchSpotify
 from flask import Blueprint, render_template, flash, redirect, request, session, make_response, jsonify, abort
 from flask import current_app as app, url_for
+from popcorn_club.Auth.auth import spotify_required
 
 spotify_bp = Blueprint('spotify_bp', __name__, url_prefix='/soundtracks',
                        template_folder='templates', static_folder='static')
 
 
-def music_nav():
+def nav_bar():
     return [{'uri': url_for("spotify_bp.tracks"), 'aria_label': "topTracks", 'name': 'TOPTRACKS'},
             {'uri': url_for("spotify_bp.create"), 'aria_label': "create",
             'name': 'CREATE'},
@@ -46,7 +47,7 @@ def music_nav():
 
 @spotify_bp.route('/')
 def home():
-    return render_template('spotify.html', nav=music_nav())
+    return render_template('spotify.html', nav=nav_bar())
 
 
 """
@@ -57,22 +58,16 @@ the features provided.
 
 @spotify_bp.route('/information',  methods=['GET'])
 def information():
-    return render_template('information.html', nav=music_nav())
+    return render_template('information.html', nav=nav_bar())
 
 
 """
 TopTracks Feature: This page displays a users TopTracks over several different time
 periods.
 """
-
-
 @spotify_bp.route('/tracks',  methods=['GET'])
+@spotify_required
 def tracks():
-    # make sure application is authorized for user
-    if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify_bp.tracks")
-        return redirect(url_for('auth_bp.login'))
-
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
@@ -81,7 +76,7 @@ def tracks():
     track_ids = getAllTopTracks(session)
 
     if track_ids == None:
-        return render_template('spotify.html', nav=music_nav(), error='Failed to gather top tracks.')
+        return render_template('spotify.html', nav=nav_bar(), error='Failed to gather top tracks.')
 
     return render_template('tracks.html', track_ids=track_ids)
 
@@ -90,15 +85,9 @@ def tracks():
 Create Feature: Page allows users to enter artists/tracks and creates a playlist based
 on these entries.
 """
-
-
 @spotify_bp.route('/create',  methods=['GET'])
+@spotify_required
 def create():
-    # make sure application is authorized for user
-    if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify_bp.create")
-        return redirect(url_for('auth_bp.login'))
-
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
@@ -106,7 +95,7 @@ def create():
 
         session['user_id'] = current_user['id']
 
-    return render_template('create.html', nav=music_nav())
+    return render_template('create.html', nav=nav_bar())
 
 
 """
@@ -114,15 +103,10 @@ Interval Timer Feature: Page displays a form for setting up the timer, which inc
 a list of possible playlists to play and devices to play from. It also displays a
 countdown timer.
 """
-
-
 @spotify_bp.route('/timer',  methods=['GET'])
+@spotify_required
 def timer():
-    # make sure application is authorized for user
-    if session.get('token') == None or session.get('token_expiration') == None:
-        session['previous_url'] = url_for("spotify_bp.timer")
-        return redirect(url_for('auth_bp.login'))
-
+    # TODO: criar um require spotify authorization
     # collect user information
     if session.get('user_id') == None:
         current_user = session['profile']
@@ -132,7 +116,7 @@ def timer():
     playlist_names = getUserPlaylists(session)
 
     if device_names == None or playlist_names == None:
-        return render_template('spotify.html', nav=music_nav(), error='Failed to get device ID and playlists.')
+        return render_template('spotify.html', nav=nav_bar(), error='Failed to get device ID and playlists.')
 
     # length is needed to iterate properly with Jinja
     device_length = len(device_names)
@@ -146,11 +130,8 @@ Called when a user saves a TopTracks playlist. For each playlist that a user sav
 playlist is created and filled with TopTracks. If a user selects autoupdate, then the
 user and playlist IDs are added to the database so they can be continuously updated.
 """
-
-
 @spotify_bp.route('/tracks/topplaylist',  methods=['POST'])
 def createTopPlaylist():
-
     # save IDs in case user chose autoupdate
     playlist_id_short = None
     playlist_id_medium = None
@@ -190,8 +171,6 @@ Called when a user creates a playlist through the Create feature. All of the use
 artists/track IDs are gathered from the POST data, as well as any tuneable attributes. Then
 create a new playlist, find recommended tracks, and fill the playlist with these tracks.
 """
-
-
 @spotify_bp.route('/create/playlist',  methods=['POST'])
 def createSelectedPlaylist():
     # collect the IDs of the artists/tracks the user entered
@@ -233,8 +212,6 @@ def createSelectedPlaylist():
 Called when a user starts the Interval Timer feature. The selected playlist and device
 are gathered from the POST data. User playback is started with this context.
 """
-
-
 @spotify_bp.route('/timer/start',  methods=['POST'])
 def intervalStart():
     playlist = request.form['playlist']
@@ -274,8 +251,6 @@ Called when a user starts to enter an artist or track name within the Create fea
 Acts as an endpoint for autocomplete. Takes the entered text and sends back possible
 artist or track names.
 """
-
-
 @spotify_bp.route('/autocomplete', methods=['GET'])
 def autocomplete():
     search = request.args.get('q')
@@ -287,8 +262,6 @@ def autocomplete():
 """
 Called by front-side JS when an interval is over to skip to next song.
 """
-
-
 @spotify_bp.route('/playback/skip')
 def playbackSkip():
     response = skipTrack(session)
@@ -306,8 +279,6 @@ def playbackSkip():
 """
 Called by front-side JS when a user pauses the interval timer.
 """
-
-
 @spotify_bp.route('/playback/pause')
 def playbackPause():
     response = pausePlayback(session)
@@ -322,8 +293,6 @@ def playbackPause():
 """
 Called by front-side JS when a user resumes a paused interval timer.
 """
-
-
 @spotify_bp.route('/playback/resume')
 def playbackResume():
     response = startPlayback(session, session['device'])

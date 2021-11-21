@@ -5,27 +5,17 @@
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
             {% for item in nav %}
-            <li><a href="{{item.uri}}">{{item.name}}</a></li>
+            <li><a href="{{item.uri}}" aria-label={{item.aria_label}}>{{item.name}}</a></li>
             {% endfor %}
-            <li><a href="{{url_for('dashboard_bp.dashboard')}}">Dashboard</a></li>
-            <li><a href="#banner">Início</a></li>
-            <li><a href="series">Séries</a></li>
-            <li><a href="filmes">Filmes</a></li>
-            <li><a href="#trends">Bombando</a></li>
-            <li><a href="#mylist">Minha lista</a></li>
-            <li><a href="{{url_for('spotify_bp.home')}}">SoundTracks</a></li>
-            <div class="closeMenu"><i class="fa fa-times"></i></div>
+            <div class="closeMenu" class="visible"><i class="fa fa-times"></i></div>
         </ul>
     </div>
     <div class="rightRow">
         {% block search %}
-
-        <form class="form-inline accordion" action="{{url_for('main_bp.search')}}" method="get">
+        <form class="form-inline" action="{{url_for('main_bp.search')}}" method="get">
             <div class="input-group">
-
                 <input type="text" name="q" class="form-control form-control-sm" id="inlineFormInputGroup"
                     placeholder="Busca">
-
                 <div class="input-group-append">
                     <button class="btn btn-primary btn-sm" type="submit">
                         <i class="fa fa-search"></i>
@@ -47,7 +37,6 @@
 
         <!-- Logout Modal-->
         {% include 'components/logout_modal.html' %} {% else %} <a href="{{url_for('auth_bp.login')}}">Entrar</a>. {%
-        endif
-        %}
+        endif %}
     </div>
 </nav>

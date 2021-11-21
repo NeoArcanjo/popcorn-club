@@ -10,6 +10,7 @@
     color: white;
 }
 
+
 :root {
     --black1: #000000;
     --grayback: #141414;
@@ -335,3 +336,5 @@ span.buttonText {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.default-backgound {background-color: var(--grayback) !important;}

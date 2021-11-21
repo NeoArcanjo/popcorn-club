@@ -230,3 +230,18 @@ def login_required(view):
             return view(*args, **kwargs)
         return redirect(url_for('auth_bp.login', next=request.url))
     return decorated_function
+
+
+def spotify_required(view):
+    @wraps(view)
+    def decorated_function(*args, **kwargs):
+        if session.get('token') == None or session.get('token_expiration') == None:
+            session['previous_url'] = url_for("spotify_bp.timer")
+            return redirect(url_for('auth_bp.login', next=request.url))
+        return view(*args, **kwargs)
+
+        # user = dict(session).get('profile', None)
+        # if user:
+        #     return view(*args, **kwargs)
+        # return redirect(url_for('auth_bp.login', next=request.url))
+    return decorated_function

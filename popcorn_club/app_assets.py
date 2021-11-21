@@ -4,17 +4,21 @@ from flask_assets import Bundle
 
 
 def compile_static_assets(assets):
-    print(assets)
     """Create stylesheet bundles."""
     
     assets.auto_build = True
-    assets.debug = False
+    assets.debug = True
+    # common_style_bundle = Bundle(
+    #     'src/scss/*.scss',
+    #     'src/scss/*/*.scss',
+    #     filters='scss',
+    #     output='dist/css/style.css',
+    #     extra={'rel': 'stylesheet/scss'}
+    # )
     common_style_bundle = Bundle(
-        'src/scss/*.scss',
-        'src/scss/*/*.scss',
-        filters='scss',
-        output='dist/css/style.css',
-        extra={'rel': 'stylesheet/scss'}
+        'src/css/*.css',
+        filters='cssmin',
+        output='dist/css/style.css'
     )
     # admin_style_bundle = Bundle(
     #     'admin_bp/less/admin.less',

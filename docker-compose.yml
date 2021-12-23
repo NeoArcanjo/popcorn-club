@@ -12,8 +12,9 @@ services:
       - 5000:5000
     volumes:
       - api_data:/tmp/json
-    # depends_on:
-    #   - adminer
+    depends_on:
+      - adminer
+      - db
 
   adminer:
     image: adminer:latest
@@ -24,17 +25,17 @@ services:
     ports:
       - "8080:8080"
 
-  # db:
-  #   image: postgres:13
-  #   container_name: popcornclub-db
-  #   environment:
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: T5sbHDJPfGk2QBqRlD02UBbC6Vb23JR9ePoJvX5SuxCKFOildxyTDIHJ56hIRyHX
-  #   restart: always
-  #   volumes:
-  #     - pgdata:/var/lib/postgresql/data
-  #   ports:
-  #     - "5432:5432"
+  db:
+    image: postgres:13
+    container_name: popcornclub-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: T5sbHDJPfGk2QBqRlD02UBbC6Vb23JR9ePoJvX5SuxCKFOildxyTDIHJ56hIRyHX
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 volumes:
   api_data:
-  # pg_data:
+  pg_data:

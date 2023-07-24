@@ -69,13 +69,13 @@ periods.
 @spotify_required
 def tracks():
     # collect user information
-    if session.get('user_id') == None:
+    if session.get('user_id') is None:
         current_user = session['profile']
         session['user_id'] = current_user['id']
 
     track_ids = getAllTopTracks(session)
 
-    if track_ids == None:
+    if track_ids is None:
         return render_template('spotify.html', nav=nav_bar(), error='Failed to gather top tracks.')
 
     return render_template('tracks.html', track_ids=track_ids)
@@ -89,7 +89,7 @@ on these entries.
 @spotify_required
 def create():
     # collect user information
-    if session.get('user_id') == None:
+    if session.get('user_id') is None:
         current_user = session['profile']
         print(current_user["id"])
 
@@ -108,14 +108,14 @@ countdown timer.
 def timer():
     # TODO: criar um require spotify authorization
     # collect user information
-    if session.get('user_id') == None:
+    if session.get('user_id') is None:
         current_user = session['profile']
         session['user_id'] = current_user['id']
 
     device_names = getUserDevices(session)
     playlist_names = getUserPlaylists(session)
 
-    if device_names == None or playlist_names == None:
+    if device_names is None or playlist_names is None:
         return render_template('spotify.html', nav=nav_bar(), error='Failed to get device ID and playlists.')
 
     # length is needed to iterate properly with Jinja
@@ -184,20 +184,19 @@ def createSelectedPlaylist():
     # store all selected attributes in a dict which can be easily added to GET body
     tuneable_dict = {}
     if 'acoustic_level' in request.form:
-        tuneable_dict.update({'acoustic': request.form['slider_acoustic']})
+        tuneable_dict['acoustic'] = request.form['slider_acoustic']
 
     if 'danceability_level' in request.form:
-        tuneable_dict.update(
-            {'danceability': request.form['slider_danceability']})
+        tuneable_dict['danceability'] = request.form['slider_danceability']
 
     if 'energy_level' in request.form:
-        tuneable_dict.update({'energy': request.form['slider_energy']})
+        tuneable_dict['energy'] = request.form['slider_energy']
 
     if 'popularity_level' in request.form:
-        tuneable_dict.update({'popularity': request.form['slider_popularity']})
+        tuneable_dict['popularity'] = request.form['slider_popularity']
 
     if 'valence_level' in request.form:
-        tuneable_dict.update({'valence': request.form['slider_valence']})
+        tuneable_dict['valence'] = request.form['slider_valence']
 
     playlist_id, playlist_uri = createPlaylist(
         session, request.form['playlist_name'])
@@ -217,11 +216,7 @@ def intervalStart():
     playlist = request.form['playlist']
     session['device'] = request.form['device']
 
-    # toggle shuffle on/off depending on user
-    is_shuffle = False
-    if 'shuffle' in request.form:
-        is_shuffle = True
-
+    is_shuffle = 'shuffle' in request.form
     response = shuffle(session, session['device'], is_shuffle)
 
     # if the user does not have a premium account, this feature cannot be used

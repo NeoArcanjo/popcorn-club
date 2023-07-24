@@ -17,7 +17,7 @@ def page(page):
             collection.append(r.json())
         results = collection
 
-    return render_template('%s.html' % page, results=results, title=page)
+    return render_template(f'{page}.html', results=results, title=page)
 
 # url = "https://pokeapi.co/api/v2/pokemon?offset=" + this.state.offset + "&limit=" + this.state.loadNumber
 
@@ -42,9 +42,9 @@ def search(page):
             results = collection
 
         if type(results) is list:
-            return render_template('%s.html' % page, results=results, title=page)
+            return render_template(f'{page}.html', results=results, title=page)
         else:
-            return render_template('about-%s.html' % page, result=results)
+            return render_template(f'about-{page}.html', result=results)
     elif results.status_code == 404:
         return render_template('not_found.html')
     else:
@@ -59,4 +59,4 @@ def about(page, name):
     url = f"https://pokeapi.co/api/v2/{page}/{name}"
 
     results = requests.get(url)
-    return render_template('about-%s.html' % page, result=results.json())
+    return render_template(f'about-{page}.html', result=results.json())

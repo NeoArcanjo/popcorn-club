@@ -44,12 +44,10 @@ def refreshToken(refresh_token):
     body = {'refresh_token': refresh_token, 'grant_type': 'refresh_token'}
     post_response = requests.post(token_url, headers=headers, data=body)
 
-    # 200 code indicates access token was properly granted
     if post_response.status_code == 200:
         return post_response.json()['access_token'], post_response.json()['expires_in']
-    else:
-        logging.error('refreshToken:' + str(post_response.status_code))
-        return None
+    logging.error(f'refreshToken:{post_response.status_code}')
+    return None
 
 
 def checkTokenStatus(session):
@@ -67,42 +65,46 @@ def checkTokenStatus(session):
 
 
 def makeGetRequest(session, url, params={}):
-    headers = {"Authorization": "Bearer {}".format(session['token'])}
+    headers = {"Authorization": f"Bearer {session['token']}"}
     response = requests.get(url, headers=headers, params=params)
 
     # 200 code indicates request was successful
     if response.status_code == 200:
         return response.json()
 
-    # if a 401 error occurs, update the access token
     elif response.status_code == 401 and checkTokenStatus(session) != None:
         return makeGetRequest(session, url, params)
     else:
-        logging.error('makeGetRequest:' + str(response.status_code))
+        logging.error(f'makeGetRequest:{response.status_code}')
         return None
 
 
 def makePutRequest(session, url, params={}, data={}):
-    headers = {"Authorization": "Bearer {}".format(
-        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'}
+    headers = {
+        "Authorization": f"Bearer {session['token']}",
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+    }
     response = requests.put(url, headers=headers, params=params, data=data)
 
     # if request succeeds or specific errors occured, status code is returned
-    if response.status_code == 204 or response.status_code == 403 or response.status_code == 404 or response.status_code == 500:
+    if response.status_code in {204, 403, 404, 500}:
         return response.status_code
 
-    # if a 401 error occurs, update the access token
     elif response.status_code == 401 and checkTokenStatus(session) != None:
         return makePutRequest(session, url, data)
     else:
-        logging.error('makePutRequest:' + str(response.status_code))
+        logging.error(f'makePutRequest:{response.status_code}')
         return None
 
 
 def makePostRequest(session, url, data):
 
-    headers = {"Authorization": "Bearer {}".format(
-        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/json'}
+    headers = {
+        "Authorization": f"Bearer {session['token']}",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
     response = requests.post(url, headers=headers, data=data)
 
     # both 201 and 204 indicate success, however only 201 responses have body information
@@ -111,30 +113,31 @@ def makePostRequest(session, url, data):
     if response.status_code == 204:
         return response
 
-    # if a 401 error occurs, update the access token
     elif response.status_code == 401 and checkTokenStatus(session) != None:
         return makePostRequest(session, url, data)
-    elif response.status_code == 403 or response.status_code == 404:
+    elif response.status_code in {403, 404}:
         return response.status_code
     else:
-        logging.error('makePostRequest:' + str(response.status_code))
+        logging.error(f'makePostRequest:{response.status_code}')
         return None
 
 
 def makeDeleteRequest(session, url, data):
-    headers = {"Authorization": "Bearer {}".format(
-        session['token']), 'Accept': 'application/json', 'Content-Type': 'application/json'}
+    headers = {
+        "Authorization": f"Bearer {session['token']}",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
     response = requests.delete(url, headers=headers, data=data)
 
     # 200 code indicates request was successful
     if response.status_code == 200:
         return response.json()
 
-    # if a 401 error occurs, update the access token
     elif response.status_code == 401 and checkTokenStatus(session) != None:
         return makeDeleteRequest(session, url, data)
     else:
-        logging.error('makeDeleteRequest:' + str(response.status_code))
+        logging.error(f'makeDeleteRequest:{response.status_code}')
         return None
 
 
@@ -154,17 +157,13 @@ def getAllTopTracks(session, limit=10):
     time_range = ['short_term', 'medium_term', 'long_term']
 
     for time in time_range:
-        track_range_ids = []
-
         params = {'limit': limit, 'time_range': time}
         payload = makeGetRequest(session, url, params)
 
-        if payload == None:
+        if payload is None:
             return None
 
-        for track in payload['items']:
-            track_range_ids.append(track['id'])
-
+        track_range_ids = [track['id'] for track in payload['items']]
         track_ids.append(track_range_ids)
 
     return track_ids
@@ -175,14 +174,7 @@ def getTopTracksID(session, time, limit=25):
     params = {'limit': limit, 'time_range': time}
     payload = makeGetRequest(session, url, params)
 
-    if payload == None:
-        return None
-
-    track_ids = []
-    for track in payload['items']:
-        track_ids.append(track['id'])
-
-    return track_ids
+    return None if payload is None else [track['id'] for track in payload['items']]
 
 
 def getTopTracksURI(session, time, limit=25):
@@ -190,14 +182,10 @@ def getTopTracksURI(session, time, limit=25):
     params = {'limit': limit, 'time_range': time}
     payload = makeGetRequest(session, url, params)
 
-    if payload == None:
+    if payload is None:
         return None
 
-    track_uri = []
-    for track in payload['items']:
-        track_uri.append(track['uri'])
-
-    return track_uri
+    return [track['uri'] for track in payload['items']]
 
 
 def getTopArtists(session, time, limit=10):
@@ -205,14 +193,10 @@ def getTopArtists(session, time, limit=10):
     params = {'limit': limit, 'time_range': time}
     payload = makeGetRequest(session, url, params)
 
-    if payload == None:
+    if payload is None:
         return None
 
-    artist_ids = []
-    for artist in payload['items']:
-        artist_ids.append(artist['id'])
-
-    return artist_ids
+    return [artist['id'] for artist in payload['items']]
 
 
 def getRecommendedTracks(session, search, tuneable_dict, limit=25):
@@ -221,28 +205,26 @@ def getRecommendedTracks(session, search, tuneable_dict, limit=25):
     for item in search:
 
         # tracks IDs start with a 't:' to identify them
-        if item[0:2] == 't:':
-            track_ids += item[2:] + ","
+        if item[:2] == 't:':
+            track_ids += f"{item[2:]},"
 
         # artist IDs start with an 'a:' to identify them
-        if item[0:2] == 'a:':
-            artist_ids += item[2:] + ","
+        if item[:2] == 'a:':
+            artist_ids += f"{item[2:]},"
 
     url = 'https://api.spotify.com/v1/recommendations'
-    params = {'limit': limit,
-              'seed_tracks': track_ids[0:-1], 'seed_artists': artist_ids[0:-1]}
-    params.update(tuneable_dict)
+    params = {
+        'limit': limit,
+        'seed_tracks': track_ids[:-1],
+        'seed_artists': artist_ids[:-1],
+    }
+    params |= tuneable_dict
     payload = makeGetRequest(session, url, params)
 
-    if payload == None:
+    if payload is None:
         return None
 
-    rec_track_uri = []
-
-    for track in payload['tracks']:
-        rec_track_uri.append(track['uri'])
-
-    return rec_track_uri
+    return [track['uri'] for track in payload['tracks']]
 
 
 def getUserPlaylists(session, limit=20):
@@ -256,12 +238,10 @@ def getUserPlaylists(session, limit=20):
         params = {'limit': limit, 'offset': offset}
         payload = makeGetRequest(session, url, params)
 
-        if payload == None:
+        if payload is None:
             return None
 
-        for item in payload['items']:
-            playlist.append([item['name'], item['uri']])
-
+        playlist.extend([item['name'], item['uri']] for item in payload['items'])
         total = payload['total']
         offset += limit
 
@@ -272,24 +252,20 @@ def getUserDevices(session):
     url = 'https://api.spotify.com/v1/me/player/devices'
     payload = makeGetRequest(session, url)
 
-    if payload == None:
+    if payload is None:
         return None
 
-    device_list = []
-    for device in payload['devices']:
-
-        # restricted devices cannot be accessed by the application
-        if device['is_restricted'] != True:
-            device_list.append([device['name'], device['id']])
-
-    return device_list
+    return [
+        [device['name'], device['id']]
+        for device in payload['devices']
+        if device['is_restricted'] != True
+    ]
 
 
 def startPlayback(session, device):
     url = 'https://api.spotify.com/v1/me/player/play'
     params = {'device_id': device}
-    payload = makePutRequest(session, url, params)
-    return payload
+    return makePutRequest(session, url, params)
 
 
 def startPlaybackContext(session, playlist, device):
@@ -297,35 +273,31 @@ def startPlaybackContext(session, playlist, device):
     params = {'device_id': device}
     data = "{\"context_uri\":\"" + playlist + \
         "\",\"offset\":{\"position\":0},\"position_ms\":0}"
-    payload = makePutRequest(session, url, params, data)
-    return payload
+    return makePutRequest(session, url, params, data)
 
 
 def pausePlayback(session):
     url = 'https://api.spotify.com/v1/me/player/pause'
-    payload = makePutRequest(session, url)
-    return payload
+    return makePutRequest(session, url)
 
 
 def shuffle(session, device, is_shuffle=True):
     url = 'https://api.spotify.com/v1/me/player/shuffle'
     params = {'state': is_shuffle, 'device_id': device}
-    payload = makePutRequest(session, url, params)
-    return payload
+    return makePutRequest(session, url, params)
 
 
 def skipTrack(session):
     url = 'https://api.spotify.com/v1/me/player/next'
     data = {}
-    payload = makePostRequest(session, url, data)
-    return payload
+    return makePostRequest(session, url, data)
 
 
 def getTrack(session):
     url = 'https://api.spotify.com/v1/me/player/currently-playing'
     payload = makeGetRequest(session, url)
 
-    if payload == None:
+    if payload is None:
         return None
 
     # check to make sure the newest track is being grabbed (progress must be under 5000ms)
@@ -333,7 +305,7 @@ def getTrack(session):
         time.sleep(0.2)
         payload = makeGetRequest(session, url)
 
-        if payload == None:
+        if payload is None:
             return None
 
     name = payload['item']['name']
@@ -346,7 +318,7 @@ def getTrackAfterResume(session):
     url = 'https://api.spotify.com/v1/me/player/currently-playing'
     payload = makeGetRequest(session, url)
 
-    if payload == None:
+    if payload is None:
         return None
 
     name = payload['item']['name']
@@ -362,27 +334,21 @@ def createPlaylist(session, playlist_name):
         "\",\"description\":\"Created by Discover Daily\"}"
     payload = makePostRequest(session, url, data)
 
-    if payload == None:
-        return None
-
-    return payload['id'], payload['uri']
+    return None if payload is None else (payload['id'], payload['uri'])
 
 
 def addTracksPlaylist(session, playlist_id, uri_list):
-    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
+    url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
 
-    uri_str = ""
-    for uri in uri_list:
-        uri_str += "\"" + uri + "\","
-
-    data = "{\"uris\": [" + uri_str[0:-1] + "]}"
+    uri_str = "".join("\"" + uri + "\"," for uri in uri_list)
+    data = "{\"uris\": [" + uri_str[:-1] + "]}"
     makePostRequest(session, url, data)
 
     return
 
 
 def getTracksPlaylist(session, playlist_id, limit=100):
-    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
+    url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
 
     offset = 0
     track_uri = []
@@ -394,12 +360,10 @@ def getTracksPlaylist(session, playlist_id, limit=100):
                   'fields': 'total,items(track(uri))', 'offset': offset}
         payload = makeGetRequest(session, url, params)
 
-        if payload == None:
+        if payload is None:
             return None
 
-        for item in payload['items']:
-            track_uri.append(item['track']['uri'])
-
+        track_uri.extend(item['track']['uri'] for item in payload['items'])
         total = payload['total']
         offset += limit
 
@@ -408,19 +372,16 @@ def getTracksPlaylist(session, playlist_id, limit=100):
 
 def searchSpotify(session, search, limit=4):
     url = 'https://api.spotify.com/v1/search'
-    params = {'limit': limit, 'q': search + "*", 'type': 'artist,track'}
+    params = {'limit': limit, 'q': f"{search}*", 'type': 'artist,track'}
     payload = makeGetRequest(session, url, params)
 
-    if payload == None:
+    if payload is None:
         return None
 
-    # response includes both artist and track names
-    results = []
-    for item in payload['artists']['items']:
-
-        # append 'a:' to artist URIs so artists and tracks can be distinguished
-        results.append([item['name'], 'a:' + item['id'], item['popularity']])
-
+    results = [
+        [item['name'], 'a:' + item['id'], item['popularity']]
+        for item in payload['artists']['items']
+    ]
     for item in payload['tracks']['items']:
 
         # track names will include both the name of the track and all artists
@@ -429,42 +390,34 @@ def searchSpotify(session, search, limit=4):
             full_name += artist['name'] + ", "
 
         # append 't:' to track URIs so tracks and artists can be distinguished
-        results.append(
-            [full_name[0:-2], 't:' + item['id'], item['popularity']])
+        results.append([full_name[:-2], 't:' + item['id'], item['popularity']])
 
     # sort them by popularity (highest first)
     results.sort(key=lambda x: int(x[2]), reverse=True)
 
-    results_json = []
-    for item in results:
-        results_json.append({'label': item[0], 'value': item[1]})
-
-    return results_json
+    return [{'label': item[0], 'value': item[1]} for item in results]
 
 
 def dbAddTracksPlaylist(access_token, playlist_id, uri_list):
-    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
+    url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
 
-    headers = {"Authorization": "Bearer {}".format(
-        access_token), 'Accept': 'application/json', 'Content-Type': 'application/json'}
-    uri_str = ""
-    for uri in uri_list:
-        uri_str += "\"" + uri + "\","
-
-    data = "{\"uris\": [" + uri_str[0:-1] + "]}"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
+    uri_str = "".join("\"" + uri + "\"," for uri in uri_list)
+    data = "{\"uris\": [" + uri_str[:-1] + "]}"
 
     payload = requests.post(url, headers=headers, data=data)
 
-    if payload.status_code == 201:
-        return "success"
-    else:
-        return None
+    return "success" if payload.status_code == 201 else None
 
 
 def dbGetTracksPlaylist(access_token, playlist_id, limit=100):
-    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
+    url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
 
-    headers = {"Authorization": "Bearer {}".format(access_token)}
+    headers = {"Authorization": f"Bearer {access_token}"}
     offset = 0
     track_uri = []
 
@@ -480,9 +433,7 @@ def dbGetTracksPlaylist(access_token, playlist_id, limit=100):
         else:
             return None
 
-        for item in payload['items']:
-            track_uri.append(item['track']['uri'])
-
+        track_uri.extend(item['track']['uri'] for item in payload['items'])
         total = payload['total']
         offset += limit
 
@@ -490,28 +441,25 @@ def dbGetTracksPlaylist(access_token, playlist_id, limit=100):
 
 
 def dbClearPlaylist(access_token, playlist_id):
-    url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
+    url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
     uri_list = dbGetTracksPlaylist(access_token, playlist_id)
 
-    uri_str = ""
-    for uri in uri_list:
-        uri_str += "{\"uri\":\"" + uri + "\"},"
-
-    data = "{\"tracks\": [" + uri_str[0:-1] + "]}"
-    headers = {"Authorization": "Bearer {}".format(
-        access_token), 'Accept': 'application/json', 'Content-Type': 'application/json'}
+    uri_str = "".join("{\"uri\":\"" + uri + "\"}," for uri in uri_list)
+    data = "{\"tracks\": [" + uri_str[:-1] + "]}"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
     payload = requests.delete(url, headers=headers, data=data)
 
-    if payload.status_code == 200:
-        return "success"
-    else:
-        return None
+    return "success" if payload.status_code == 200 else None
 
 
 def dbGetTopTracksURI(access_token, time, limit=25):
     url = 'https://api.spotify.com/v1/me/top/tracks'
     params = {'limit': limit, 'time_range': time}
-    headers = {"Authorization": "Bearer {}".format(access_token)}
+    headers = {"Authorization": f"Bearer {access_token}"}
     payload = requests.get(url, headers=headers, params=params)
 
     if payload.status_code == 200:
@@ -519,8 +467,4 @@ def dbGetTopTracksURI(access_token, time, limit=25):
     else:
         return None
 
-    track_uri = []
-    for track in payload['items']:
-        track_uri.append(track['uri'])
-
-    return track_uri
+    return [track['uri'] for track in payload['items']]

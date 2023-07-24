@@ -196,10 +196,7 @@ def login():
 @auth_bp.before_app_request
 def load_logged_in_user():
     user_id = session.get('user_id')
-    if user_id is None:
-        g.user = None
-    else:
-        g.user = session.get('profile')
+    g.user = None if user_id is None else session.get('profile')
         # g.user = get_db().execute(
         #     'SELECT * FROM user WHERE id = ?', (user_id,)
         # ).fetchone()
@@ -235,13 +232,17 @@ def login_required(view):
 def spotify_required(view):
     @wraps(view)
     def decorated_function(*args, **kwargs):
-        if session.get('token') == None or session.get('token_expiration') == None:
+        if (
+            session.get('token') is None
+            or session.get('token_expiration') is None
+        ):
             session['previous_url'] = url_for("spotify_bp.timer")
             return redirect(url_for('auth_bp.login', next=request.url))
         return view(*args, **kwargs)
 
-        # user = dict(session).get('profile', None)
-        # if user:
-        #     return view(*args, **kwargs)
-        # return redirect(url_for('auth_bp.login', next=request.url))
+            # user = dict(session).get('profile', None)
+            # if user:
+            #     return view(*args, **kwargs)
+            # return redirect(url_for('auth_bp.login', next=request.url))
+
     return decorated_function

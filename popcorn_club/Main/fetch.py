@@ -47,10 +47,10 @@ def get_outliers():
 
 
 def get_movie():
-    path = f'tmp/json/movie/'
+    path = 'tmp/json/movie/'
     maybe_create(path)
 
-    with open(f'tmp/json/movie/genres.json', 'r') as f:
+    with open('tmp/json/movie/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 
@@ -86,9 +86,9 @@ def get_movie():
 
 
 def get_tv():
-    path = f'tmp/json/tv'
+    path = 'tmp/json/tv'
     maybe_create(path)
-    with open(f'tmp/json/tv/genres.json', 'r') as f:
+    with open('tmp/json/tv/genres.json', 'r') as f:
         genres = json.load(f)
     genres = genres["genres"]
 

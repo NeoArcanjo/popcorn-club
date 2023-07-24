@@ -67,7 +67,7 @@ def updatePlaylists():
 		payload = refreshToken(user.refresh_token)
 
 		# if user account has been removed or authorization revoked, user is deleted
-		if payload == None:
+		if payload is None:
 			session.delete(user)
 		else:
 			access_token = payload[0]
@@ -76,22 +76,22 @@ def updatePlaylists():
 			if playlist != None:
 
 				# if the playlist has not been deleted
-				if (dbClearPlaylist(access_token, playlist) != None):
+				if dbClearPlaylist(access_token, playlist) is None:
+					user.playlist_id_short = None
+
+				else:
 					uri_list = dbGetTopTracksURI(access_token, 'short_term', 50)
 					dbAddTracksPlaylist(access_token, playlist, uri_list)
 					is_active = True
-				else:
-					user.playlist_id_short = None
-
 			playlist = user.playlist_id_medium
 			if playlist != None:
-				if (dbClearPlaylist(access_token, playlist) != None):
+				if dbClearPlaylist(access_token, playlist) is None:
+					user.playlist_id_medium = None
+
+				else:
 					uri_list = dbGetTopTracksURI(access_token, 'medium_term', 50)
 					dbAddTracksPlaylist(access_token, playlist, uri_list)
 					is_active = True
-				else:
-					user.playlist_id_medium = None
-
 			playlist = user.playlist_id_long
 			if playlist != None:
 				if (dbClearPlaylist(access_token, playlist) != None):

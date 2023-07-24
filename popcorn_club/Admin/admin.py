@@ -12,7 +12,7 @@ bp = Blueprint('admin_bp', __name__, url_prefix='/admin',
 @admin_bp.route("/dashboard")
 @login_required
 def dashboard():
-    return render_template(f'crm-dashboard.html')
+    return render_template('crm-dashboard.html')
 
 
 @admin_bp.route("/buttons")
